@@ -1,8 +1,5 @@
-.container {
-  width: 400px;
-  height: 300px;
-  display: flex;
-  border: 1px solid rgb(151, 74, 212);
+.chart {
+  display: inline-block;
 }
 
 .bar {
