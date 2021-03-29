@@ -1,3 +1,90 @@
+// Render histogram for age group
+function HistChart( data ) {
+
+  const self = this
+
+  console.log( 'hi2');
+  data.forEach( function( d ) {
+    d.age_resp = +d['age.resp'];
+    d.books_per_year = +d['books.per.year'];
+  });
+  this.hist_data = data;
+
+  // Define the dimensions and margins of the graph
+  margin = { top: 10, right: 30, bottom: 30, left: 30 },
+      width = 260 - margin.left - margin.right,
+      height = 300 - margin.top - margin.bottom;
+
+  // Append the svg object to the appropriate div.
+  this.svg = d3.select( 'div#age_read_hist' )
+    .append( 'svg' )
+      .attr( 'width', width + margin.left + margin.right )
+      .attr( 'height', height + margin.top + margin.bottom )
+      .append( 'g' )
+        .attr( 'transform', 'translate( ' + margin.left + ', ' + margin.top + ' )' );
+
+  // X axis: scale and draw.
+  this.xScale = d3.scaleLinear()
+      .domain( [0, 200] )     // 200 is hard coded max. Use: d3.max(data, function(d) { return +d['books_per_year'] }) for calculated max.
+      .range( [0, width] );
+  this.svg.append( 'g' )
+      .attr( 'transform', 'translate( 0, ' + height + ' )' )
+      .call( d3.axisBottom( this.xScale ) );
+
+  // Set the parameters for the histogram function.
+  this.histogram = d3.histogram()
+      .value( function( d ){ return d.books_per_year; } )   // I need to give the vector of value
+      .domain( self.xScale.domain() )  // then the domain of the graphic
+      .thresholds( self.xScale.ticks( 20 ) ); // then the numbers of bins
+
+  // Filter to extract data for a specific age group.
+  this.group_data = function( data, age_group ) {
+    if( typeof( age_group ) == 'undefined' ) { age_group = [50,59] };
+    // s = ( Math.floor( Math.random() * 8 ) + 1 ) * 10
+    return data.filter( function( d ){ return ( +d['age.resp'] > age_group[0] & +d['age.resp'] <= age_group[1] ) } )
+  }
+
+  this.render = function( age_group ) {
+    bins = self.histogram( self.group_data( self.hist_data, age_group ) );
+
+    // Y axis: scale and draw (remove as it is redranw):
+    self.svg.select( '#yaxis' ).remove();
+    yScale = d3.scaleLinear()
+        .range( [height, 0] );
+        // yScale.domain( [ 0, d3.max( bins, function( d ){ return d.length; } ) ] );   // d3.hist has to be called before the Y axis obviously
+        yScale.domain( [ 0, 800 ] );
+    self.svg.append( 'g' )
+        .call( d3.axisLeft( yScale ) )
+        .attr( 'id', 'yaxis' );
+
+    // append the bar rectangles to the svg element (remove for redraw):
+    self.svg.selectAll( 'rect' ).remove();
+    self.svg.selectAll( 'rect' )
+        .data ( bins )
+        .enter()
+        .append( 'rect' )
+          .attr( 'x', 1 )
+          .attr( 'transform', function( d ){ return 'translate( ' + self.xScale( d.x0 ) + ', ' + yScale( d.length ) + ' )'; })
+          .attr( 'width', function( d ){ return self.xScale( d.x1 ) - self.xScale( d.x0 ) -1 ; })
+          .attr( 'height', function( d ){ return height - yScale( d.length ); })
+          .style( 'fill', '#69b3a2' );
+  }
+
+  // Expects array [ lower_age, upper_age ]
+  this.update = function( age_group ) {
+    self.render( age_group );
+  }
+
+}
+
+function create_hist_chart( data ) {
+  hist_chart = new HistChart( data );
+  hist_chart.render();
+}
+d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/age_read.csv' ).then( create_hist_chart );
+
+
+// Render the mean books oer year chart
 d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/age_read_mean.csv' ).then( function( data ) {
   data.forEach( function( d ) {
     d.age_group = d.age_group;
@@ -32,10 +119,20 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ag
     .enter()
     .append( 'rect' )
     .classed( 'bar', true )
-    .attr( 'width', function( data ){ return xScale( data.mean ) } )
+    .attr( 'width', function( d ){ return xScale( d.mean ) } )
     .attr( 'height', yScale.bandwidth() )
-    .attr( 'y', function( data ){ return yScale( data.age_group ) } )
-    .on( 'click', function(){ console.log( 'Until it goes "click".' ) } );
+    .attr( 'y', function( d ){ return yScale( d.age_group ) } )
+    .attr( 'fill', function( d ){
+        fill = 'steelblue';
+        if( d.age_group=='50 - 59' ) { fill = '#69b3a2' };
+        return fill
+      } )
+    .on( 'click', function( d,i ){
+        d3.selectAll( '.bar' ).style( 'fill', 'steelblue' )
+        d3.select( this ).style( 'fill', '#69b3a2');
+        // Splits and maps e.g. '10 - 19' to [ 10, 19 ].
+        hist_chart.update( i.age_group.split( ' - ' ).map( function(x) { return +x } ) )
+      } );
 
   svg.append('g')
     .attr( 'fill', 'white' )
@@ -68,76 +165,4 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ag
       .attr( 'transform', 'translate( 0, ' + height + ' )')
       .call( d3.axisBottom( xScale ).ticks( width/100, 's' ) )
 
-});
-
-d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/age_read.csv' ).then( function( data ) {
-  data.forEach( function( d ) {
-    d.age_resp = +d['age.resp'];
-    d.books_per_year = +d['books.per.year'];
-  });
-
-  var group_data = function() {
-    s = ( Math.floor( Math.random() * 8 ) + 1 ) * 10
-    return data.filter( function( d ){ return ( +d['age.resp'] > s & +d['age.resp'] < s+10 ) } )
-  }
-
-  // set the dimensions and margins of the graph
-  var margin = { top: 10, right: 30, bottom: 30, left: 30 },
-      width = 260 - margin.left - margin.right,
-      height = 300 - margin.top - margin.bottom;
-
-  // append the svg object to the body of the page
-  var svg = d3.select( 'div#age_read_hist' )
-    .append( 'svg' )
-      .attr( 'width', width + margin.left + margin.right )
-      .attr( 'height', height + margin.top + margin.bottom )
-      .append( 'g' )
-        .attr( 'transform', 'translate( ' + margin.left + ', ' + margin.top + ' )' );
-
-  render_hist = function() {
-
-    // X axis: scale and draw:
-    var x = d3.scaleLinear()
-        .domain( [0, 200] )     // can use this instead of 1000 to have the max of data: d3.max(data, function(d) { return +d.price })
-        .range( [0, width] );
-    svg.append( 'g' )
-        .attr( 'transform', 'translate( 0, ' + height + ' )' )
-        .call( d3.axisBottom( x ) );
-
-    // set the parameters for the histogram
-    var histogram = d3.histogram()
-        .value( function( d ){ return d.books_per_year; } )   // I need to give the vector of value
-        .domain( x.domain() )  // then the domain of the graphic
-        .thresholds( x.ticks( 20 ) ); // then the numbers of bins
-
-    // And apply this function to data to get the bins
-    var bins = histogram( group_data() );
-
-    svg.select( '#yaxis' ).remove();
-
-    // Y axis: scale and draw:
-    var y = d3.scaleLinear()
-        .range( [height, 0] );
-        y.domain( [ 0, d3.max( bins, function( d ){ return d.length; } ) ] );   // d3.hist has to be called before the Y axis obviously
-    svg.append( 'g' )
-        .call( d3.axisLeft( y ) )
-        .attr( 'id', 'yaxis' );
-
-    svg.selectAll( 'rect' ).remove();
-
-    // append the bar rectangles to the svg element
-    svg.selectAll( 'rect' )
-        .data (bins )
-        .enter()
-        .append( 'rect' )
-          .attr( 'x', 1 )
-          .attr( 'transform', function( d ){ return 'translate( ' + x( d.x0 ) + ', ' + y( d.length ) + ' )'; })
-          .attr( 'width', function( d ){ return x( d.x1 ) - x( d.x0 ) -1 ; })
-          .attr( 'height', function( d ){ return height - y( d.length ); })
-          .style( 'fill', '#69b3a2' )
-          .on( 'click', render_hist );
-
-  }
-
-  render_hist();
 });
