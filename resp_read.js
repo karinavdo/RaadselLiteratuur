@@ -4,8 +4,8 @@ function HistChart( data ) {
   const self = this
 
   data.forEach( function( d ) {
-    d.age_resp = +d['age.resp'];
-    d.books_per_year = +d['books.per.year'];
+    d.age_resp = +d['respondent.id'];
+    d.books_per_year = +d['book.id'];
   });
   this.hist_data = data;
 
@@ -80,88 +80,4 @@ function create_hist_chart( data ) {
   hist_chart = new HistChart( data );
   hist_chart.render();
 }
-d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/age_read.csv' ).then( create_hist_chart );
-
-
-// Render the mean books oer year chart
-d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/age_read_mean.csv' ).then( function( data ) {
-  data.forEach( function( d ) {
-    d.age_group = d.age_group;
-    d.mean = +d.mean;
-  });
-
-  // var margin = ({top: 30, right: 0, bottom: 10, left: 60})
-  // set the dimensions and margins of the graph
-  var margin = { top: 10, right: 30, bottom: 30, left: 50 },
-      width = 400 - margin.left - margin.right,
-      height = 300 - margin.top - margin.bottom;
-
-  var svg = d3.select( 'div#age_read_mean' )
-    .append( 'svg' )
-    .attr( 'width', width + margin.left + margin.right )
-    .attr( 'height', height + margin.top + margin.bottom )
-      .append( 'g' )
-      .attr( 'transform', 'translate( ' + margin.left + ', ' + margin.top + ' )' );
-
-  var xScale = d3
-    .scaleLinear().domain( [ 0, 60 ] ).range( [ 0, width ] );
-
-  var yScale = d3
-    .scaleBand()
-    .domain( data.map( function( d ){ return d.age_group } ) )
-    .rangeRound( [ 0, height ] )
-    .padding( 0.2 );
-
-  var bars = svg
-    .selectAll( '.bar' )
-    .data( data )
-    .enter()
-    .append( 'rect' )
-    .classed( 'bar', true )
-    .attr( 'width', function( d ){ return xScale( d.mean ) } )
-    .attr( 'height', yScale.bandwidth() )
-    .attr( 'y', function( d ){ return yScale( d.age_group ) } )
-    .attr( 'fill', function( d ){
-        fill = 'steelblue';
-        if( d.age_group=='50 - 59' ) { fill = '#69b3a2' };
-        return fill
-      } )
-    .on( 'click', function( d,i ){
-        d3.selectAll( '.bar' ).style( 'fill', 'steelblue' )
-        d3.select( this ).style( 'fill', '#69b3a2');
-        // Splits and maps e.g. '10 - 19' to [ 10, 19 ].
-        hist_chart.update( i.age_group.split( ' - ' ).map( function(x) { return +x } ) )
-      } );
-
-  svg.append('g')
-    .attr( 'fill', 'white' )
-    .attr( 'text-anchor', 'end' )
-    .attr( 'font-family', 'sans-serif' )
-    .attr( 'font-size', 12 )
-    .selectAll( 'text' )
-      .data( data )
-      .join( 'text' )
-        .attr( 'x', function( d ){ return xScale( d.mean ) } )
-        .attr( 'y', function( d ){ return yScale( d.age_group ) + yScale.bandwidth() / 2 } )
-        .attr( 'dy', '0.35em')
-        .attr( 'dx', -4 )
-        .text( function( d ){ return d.mean.toFixed( 2 ) } )
-          .call(
-            function( text ){
-              return text.filter(
-                function( d ){ return ( xScale( d.mean ) - xScale( 0 ) ) < 20 }
-              ) // In case of short bars
-              .attr( 'dx', +4 )
-              .attr( 'fill', 'black' )
-              .attr( 'text-anchor', 'start' )
-            }
-          );
-
-  svg.append( 'g' )
-      .call( d3.axisLeft( yScale ).tickFormat( data.age_group ).tickSizeOuter(0) )
-
-  svg.append( 'g' )
-      .attr( 'transform', 'translate( 0, ' + height + ' )')
-      .call( d3.axisBottom( xScale ).ticks( width/100, 's' ) )
-
-});
+d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/resp_read.csv' ).then( create_hist_chart );
