@@ -1,8 +1,19 @@
-<div class="sidebar">
-  <div class="container sidebar-sticky">
+
+<div id="hamburger_container">
+  <div id="hamburger_icon" class="openbtn" onclick="toggleSidebar()">
+    <div id="hamburger">
+      <div id="bun_top"></div>
+      <div id="patty"></div>
+      <div id="bun_bottom"></div>
+    </div>
+  </div>
+</div>
+
+<div class="sidebar" id="sidebar">
+  <div class="sidebar_cloak" id="sidebar_cloak">
     <div class="sidebar-about">
       <h1>
-        <a href="{{ site.baseurl }}">
+        <a href="{{ site.baseurl }}/">
           {{ site.title }}
         </a>
       </h1>
@@ -10,7 +21,7 @@
     </div>
 
     <nav class="sidebar-nav">
-      <a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.baseurl }}">Home</a>
+      <a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.baseurl }}/">Home</a>
 
       {% comment %}
         The code below dynamically generates a sidebar nav of pages with
@@ -21,7 +32,7 @@
       {% for node in pages_list %}
         {% if node.title != null %}
           {% if node.layout == "page" %}
-            <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ site.baseurl }}{{ node.url }}">{{ node.title }}</a>
+            <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}{% if node.level == 2 %} level2{% endif %}" href="{{ site.baseurl }}{{ node.url }}">{{ node.title }}</a>
           {% endif %}
         {% endif %}
       {% endfor %}
@@ -34,3 +45,44 @@
     <p>&copy; {{ site.time | date: '%Y' }}. All rights reserved.</p>
   </div>
 </div>
+
+
+
+<script>
+
+// These functions hide or reveal the links in the side bar after the
+// sidebar has been rolled up out of view or out in to view. We need to
+// hide an unhide those links because otherwise their remnants in the
+// collapsed sidebar are still clickable.
+document.getElementById( 'sidebar_cloak' ).addEventListener( 'transitionend', function(e) {
+  const sideBarCloak = document.getElementById( "sidebar_cloak" );
+  if( e.propertyName == 'opacity' ) {
+    if( sideBarCloak.style.opacity.startsWith( '0' ) ) {
+      sideBarCloak.style.visibility = 'hidden';
+    }
+  }
+});
+document.getElementById( 'sidebar_cloak' ).addEventListener( 'transitionstart', function(e) {
+  const sideBarCloak = document.getElementById( "sidebar_cloak" );
+  if( e.propertyName == 'opacity' ) {
+    if( sideBarCloak.style.opacity.startsWith( '1' ) ) {
+      sideBarCloak.style.visibility = 'visible';
+    }
+  }
+});
+
+// This function collapses or uncollapses the sidebar.
+const toggleSidebar = function() {
+  const sideBar = document.getElementById( 'sidebar' );
+  const sideBarCloak = document.getElementById( 'sidebar_cloak' );
+  if( sideBar.style.width == '' || sideBar.style.width == "0vw" ) {
+    sideBar.style.width = '25vw';
+    hamburger_container.style.width = '25vw';
+    sideBarCloak.style.opacity = '100%';
+  } else {
+    sideBar.style.width = '0vw';
+    hamburger_container.style.width = '1rem';
+    sideBarCloak.style.opacity = '0%';
+  }
+}
+</script>
