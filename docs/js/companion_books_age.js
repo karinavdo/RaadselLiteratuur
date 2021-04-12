@@ -80,11 +80,11 @@ function create_hist_chart( data ) {
   hist_chart = new HistChart( data );
   hist_chart.render();
 }
-d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/age_read.csv' ).then( create_hist_chart );
+d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/books_age_read.csv' ).then( create_hist_chart );
 
 
 // Render the mean books oer year chart
-d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/age_read_mean.csv' ).then( function( data ) {
+d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/books_age_mean.csv' ).then( function( data ) {
   data.forEach( function( d ) {
     d.age_group = d.age_group;
     d.mean = +d.mean;
