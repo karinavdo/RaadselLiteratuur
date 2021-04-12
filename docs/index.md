@@ -4,7 +4,7 @@
 
 title:
 ---
-<svg class="riddle_title_logo" viewBox="0 0 1633.32 1188.37" style="border: 1px solid red">
+<svg class="riddle_title_logo" viewBox="0 0 1633.32 1188.37">
 <!-- orignal dimensions: 1499px x 1091px -->
  <defs>
   <style type="text/css">
