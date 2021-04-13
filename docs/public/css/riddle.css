@@ -8,48 +8,34 @@
   padding-bottom: 0.2rem;
 }
 
-#sidebar_cloak {
+.collapsed #sidebar_cloak {
   transition: 0.5s;
   opacity: 0%;
   z-index: 2;
   visibility: hidden;
 }
 
+#sidebar_cloak {
+  opacity: 100%;
+}
+
 #hamburger_container {
   position: fixed;
-  top: 0px;
-  width: 1rem;
+  top: 1rem;
+  width: 25vw;
+  height: 40px;
+  background-color: #444;
   z-index: 2;
   transition: 0.5s;
 }
+
+#hamburger_container.collapsed {
+  width: 1rem;
+}
+
 #hamburger_icon {
   position: absolute;
-  top: 1rem;
   right: -19px;
   height: 40px;
   width: 40px;
-  border-radius: 50% 50%;
-  background: #eed9c7;
-  border: 0.11em solid #978e86;
-}
-#hamburger {
-  position: relative;
-  left: 20%;
-  top: 20%;
-  width: 60%;
-  height: 60%;
-}
-#bun_top, #patty, #bun_bottom {
-  position: absolute;
-  top: 0%;
-  height: 20%;
-  width: 100%;
-  background-color: #bb7536;
-  border-radius: 20%;
-}
-#patty {
-  top: 40%;
-}
-#bun_bottom {
-  top: 80%;
 }

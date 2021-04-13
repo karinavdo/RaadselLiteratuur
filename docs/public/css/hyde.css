@@ -29,6 +29,7 @@ html {
 /* Small devices */
 .sidebar {
   text-align: center;
+  width: 25vw;
   padding: 2rem 1rem;
   color: rgba(255,255,255,.5);
   background-color: #ecbd93;
@@ -43,10 +44,15 @@ html {
     top: 0px;
     left: 0px;
     bottom: 0px;
-    width: 0vw;
+    width: 25vw;
     text-align: left;
     transition: 0.5s;
   }
+}
+
+.sidebar.collapsed {
+  width: 0vw;
+  padding: 2rem 0.4rem;
 }
 
 /* Sidebar links */
