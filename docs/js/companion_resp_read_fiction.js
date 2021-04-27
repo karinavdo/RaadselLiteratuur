@@ -1,6 +1,6 @@
 d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/resp_read_fiction.csv' ).then( function( data ) {
 
-  const xAxisTitle = 'Number of books read of genre fiction';
+  const xAxisTitle = 'Books read in genre fiction';
   const yAxisTitle = 'Number of respondents';
 
   data.forEach( function( d ) {
@@ -89,5 +89,10 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/re
         .attr( 'transform', 'rotate(-90)' )
         .attr( 'style', 'font-size:80%' )
         .text( yAxisTitle );
+
+  var ticks = svg.selectAll(".tick text");
+  ticks.each(function(_,i){
+      if(i%2 !== 0) d3.select(this).remove();
+  });
 
 });
