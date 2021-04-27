@@ -1,6 +1,6 @@
-d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/resp_read_fiction.csv' ).then( function( data ) {
+d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/resp_read_romantic.csv' ).then( function( data ) {
 
-  const xAxisTitle = 'Number of books read of genre fiction';
+  const xAxisTitle = 'Number of books read of genre romantic';
   const yAxisTitle = 'Number of respondents';
 
   data.forEach( function( d ) {
@@ -19,7 +19,7 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/re
       plot_height = figure_height - plot_margin.top - plot_margin.bottom;
 
   // Append the svg object to the appropriate div.
-  const svg = d3.select( 'div#resp_read_fiction' )
+  const svg = d3.select( 'div#resp_read_suspense' )
     .append( 'svg' )
       .attr( 'width', plot_width + plot_margin.left + plot_margin.right )
       .attr( 'height', plot_height + plot_margin.top + plot_margin.bottom )

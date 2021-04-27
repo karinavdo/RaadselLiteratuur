@@ -39,3 +39,7 @@
   height: 40px;
   width: 40px;
 }
+
+.chart_float {
+  float: left;
+}
