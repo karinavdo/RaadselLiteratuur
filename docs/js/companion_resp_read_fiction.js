@@ -1,6 +1,6 @@
-d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/resp_read.csv' ).then( function( data ) {
+d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/resp_read_fiction.csv' ).then( function( data ) {
 
-  const xAxisTitle = 'Number of books read';
+  const xAxisTitle = 'Number of books read of genre fiction';
   const yAxisTitle = 'Number of respondents';
 
   data.forEach( function( d ) {
@@ -8,7 +8,7 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/re
     d.book_id = +d['book.id'];
   });
 
-  const figure_height = 600;
+  const figure_height = 400;
   const figure_width = 400;
 
   // Define the dimensions and margins of the graph
