@@ -8,7 +8,7 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/re
     d.book_id = +d['book.id'];
   });
 
-  const figure_height = 400;
+  const figure_height = 350;
   const figure_width = 250;
 
   // Define the dimensions and margins of the graph
