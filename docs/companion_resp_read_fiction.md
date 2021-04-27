@@ -9,5 +9,7 @@ level:  2
 <script src="https://d3js.org/d3.v6.min.js" defer></script>
 <script src="https://d3js.org/d3-scale.v3.min.js" defer></script>
 <script src="js/companion_resp_read_fiction.js" defer></script>
+<script src="js/companion_resp_read_suspense.js" defer></script>
 
-<div class="chart" id="resp_read"></div>
+<div class="chart" id="resp_read_fiction"></div>
+<div class="chart" id="resp_read_suspense"></div>
