@@ -1,11 +1,11 @@
-d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/resp_read.csv' ).then( function( data ) {
+d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/chart_3-1_books-per-year.csv' ).then( function( data ) {
 
-  const xAxisTitle = 'Number of books read';
+  const xAxisTitle = 'Number of books read annually';
   const yAxisTitle = 'Number of respondents';
 
   data.forEach( function( d ) {
     d.resp_id = +d['respondent.id'];
-    d.book_id = +d['book.id'];
+    d.book_per_year = +d['books.per.year'];
   });
 
   const figure_height = 600;
@@ -19,7 +19,7 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/re
       plot_height = figure_height - plot_margin.top - plot_margin.bottom;
 
   // Append the svg object to the appropriate div.
-  const svg = d3.select( 'div#resp_read' )
+  const svg = d3.select( 'div#chart_3-1_books-per-year' )
     .append( 'svg' )
       .attr( 'width', plot_width + plot_margin.left + plot_margin.right )
       .attr( 'height', plot_height + plot_margin.top + plot_margin.bottom )
@@ -36,7 +36,7 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/re
 
   // Set the parameters for the histogram function.
   const histogram = d3.histogram()
-      .value( function( d ){ return d.book_id; } )   // I need to give the vector of value
+      .value( function( d ){ return d.book_per_year; } )   // I need to give the vector of value
       .domain( xScale.domain() )  // then the domain of the graphic
       .thresholds( xScale.ticks( 30 ) ); // then the numbers of bins
 
