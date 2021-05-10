@@ -1,11 +1,11 @@
-d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/chart_3-2_read-of-401.csv' ).then( function( data ) {
+d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/chart_3-2_rated-of-401.csv' ).then( function( data ) {
 
-  const xAxisTitle = 'Number of books read from the 401 titles';
+  const xAxisTitle = 'Number of books rated from the 401 titles';
   const yAxisTitle = 'Number of respondents';
 
   data.forEach( function( d ) {
     d.resp_id = +d['respondent_id'];
-    d.books_read = +d['books.read'];
+    d.books_rated = +d['books_rated'];
   });
 
   const figure_height = 600;
@@ -36,7 +36,7 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ch
 
   // Set the parameters for the histogram function.
   const histogram = d3.histogram()
-      .value( function( d ){ return d.books_read; } )   // I need to give the vector of value
+      .value( function( d ){ return d.books_rated; } )   // I need to give the vector of value
       .domain( xScale.domain() )  // then the domain of the graphic
       .thresholds( xScale.ticks( 30 ) ); // then the numbers of bins
 
