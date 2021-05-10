@@ -1,4 +1,4 @@
-d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/chart_3-2_rated-of-401.csv' ).then( function( data ) {
+d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/chart_3-3_rated-of-401.csv' ).then( function( data ) {
 
   const xAxisTitle = 'Number of books rated from the 401 titles';
   const yAxisTitle = 'Number of respondents';
