@@ -8,7 +8,7 @@ level:  2
 
 <script src="https://d3js.org/d3.v6.min.js" defer></script>
 <script src="https://d3js.org/d3-scale.v3.min.js" defer></script>
-<script src="js/companion_books_age.js" defer></script>
+<script src="js/companion_chart_3-1-1_books-per-year_agegroups.js" defer></script>
 
-<div class="chart" id="age_read_mean"></div>
-<div class="chart" id="age_read_hist"></div>
+<div class="chart" id="chart_3-1-1_books-per-year_agegroups_mean"></div>
+<div class="chart" id="chart_3-1-1_books-per-year_agegroups_hist"></div>

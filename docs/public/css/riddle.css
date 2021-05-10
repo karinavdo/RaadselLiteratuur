@@ -1,3 +1,9 @@
+.container {
+  /* NOTE: Overrides the max-width set by pool.css. */
+  /* TODO: This needs checking for responsiveness (smaller screens) */
+  max-width: 52rem;
+}
+
 .riddle_title_logo {
   width: 100%;
   align: center;

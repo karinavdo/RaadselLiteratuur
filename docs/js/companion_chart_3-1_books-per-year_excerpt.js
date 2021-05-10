@@ -19,7 +19,7 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ch
       plot_height = figure_height - plot_margin.top - plot_margin.bottom;
 
   // Append the svg object to the appropriate div.
-  const svg = d3.select( 'div#chart_3-1_books-per-year' )
+  const svg = d3.select( 'div#chart_3-1_books-per-year_excerpt' )
     .append( 'svg' )
       .attr( 'width', plot_width + plot_margin.left + plot_margin.right )
       .attr( 'height', plot_height + plot_margin.top + plot_margin.bottom )
@@ -28,7 +28,7 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ch
 
   // X axis: scale and draw.
   const xScale = d3.scaleLinear()
-      .domain( [0, 700] )     // 200 is hard coded max. Use: d3.max(data, function(d) { return +d['books_per_year'] }) for calculated max.
+      .domain( [0, 350] )     // 200 is hard coded max. Use: d3.max(data, function(d) { return +d['books_per_year'] }) for calculated max.
       .range( [0, plot_width] );
   svg.append( 'g' )
       .attr( 'transform', 'translate( 0, ' + plot_height + ' )' )

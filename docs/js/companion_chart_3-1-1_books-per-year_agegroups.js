@@ -15,7 +15,7 @@ function HistChart( data ) {
       height = 300 - margin.top - margin.bottom;
 
   // Append the svg object to the appropriate div.
-  this.svg = d3.select( 'div#age_read_hist' )
+  this.svg = d3.select( 'div#chart_3-1-1_books-per-year_agegroups_hist' )
     .append( 'svg' )
       .attr( 'width', width + margin.left + margin.right )
       .attr( 'height', height + margin.top + margin.bottom )
@@ -80,11 +80,11 @@ function create_hist_chart( data ) {
   hist_chart = new HistChart( data );
   hist_chart.render();
 }
-d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/books_age_read.csv' ).then( create_hist_chart );
+d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/chart_3-1-1_books-per-year_agegroups_hist.csv' ).then( create_hist_chart );
 
 
 // Render the mean books oer year chart
-d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/books_age_mean.csv' ).then( function( data ) {
+d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/chart_3-1-1_books-per-year_agegroups_mean.csv' ).then( function( data ) {
   data.forEach( function( d ) {
     d.age_group = d.age_group;
     d.mean = +d.mean;
@@ -96,7 +96,7 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/bo
       width = 400 - margin.left - margin.right,
       height = 300 - margin.top - margin.bottom;
 
-  var svg = d3.select( 'div#age_read_mean' )
+  var svg = d3.select( 'div#chart_3-1-1_books-per-year_agegroups_mean' )
     .append( 'svg' )
     .attr( 'width', width + margin.left + margin.right )
     .attr( 'height', height + margin.top + margin.bottom )
