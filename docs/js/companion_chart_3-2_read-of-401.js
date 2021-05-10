@@ -1,4 +1,4 @@
-d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/chart_3-1_books-per-year.csv' ).then( function( data ) {
+d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/chart_3-2_read-of-401.csv' ).then( function( data ) {
 
   const xAxisTitle = 'Number of books read annually';
   const yAxisTitle = 'Number of respondents';
