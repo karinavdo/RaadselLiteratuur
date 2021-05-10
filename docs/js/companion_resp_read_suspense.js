@@ -1,6 +1,6 @@
 d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/resp_read_suspense.csv' ).then( function( data ) {
 
-  const xAxisTitle = 'Books read in genre suspense';
+  const xAxisTitle = 'Suspense';
   const yAxisTitle = 'Number of respondents';
 
   data.forEach( function( d ) {

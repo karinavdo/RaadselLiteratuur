@@ -45,7 +45,7 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ch
   const yScale = d3.scaleLinear()
       .range( [plot_height, 0] );
       // yScale.domain( [ 0, d3.max( bins, function( d ){ return d.length; } ) ] );   // d3.hist has to be called before the Y axis obviously
-      yScale.domain( [ 0, 5000 ] );
+      yScale.domain( [ 0, 6000 ] );
   svg.append( 'g' )
         .call( d3.axisLeft( yScale ) )
         .attr( 'id', 'yaxis' )

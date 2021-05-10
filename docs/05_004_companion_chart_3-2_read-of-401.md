@@ -2,7 +2,7 @@
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
-title:  "3.2 Books read of the 401 titles"
+title:  "3.2 &amp; 3.3: Titles read out of 401"
 level:  2
 ---
 

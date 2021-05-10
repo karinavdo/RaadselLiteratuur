@@ -1,6 +1,6 @@
 d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/resp_read_other.csv' ).then( function( data ) {
 
-  const xAxisTitle = 'Books read in genre other';
+  const xAxisTitle = 'Other';
   const yAxisTitle = 'Number of respondents';
 
   data.forEach( function( d ) {
