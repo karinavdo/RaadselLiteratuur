@@ -8,7 +8,7 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ch
   //   d.book_per_year = +d['books.per.year'];
   // });
 
-  const figure_height = 600;
+  const figure_height = 400;
   const figure_width = 400;
 
   // Define the dimensions and margins of the graph
@@ -27,11 +27,11 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ch
         .attr( 'transform', 'translate( ' + plot_margin.left + ', ' + plot_margin.top + ' )' );
 
   // List of subgroups = header of the csv files = soil condition here
-  var subgroups = data.columns.slice(1)
+  const subgroups = data.columns.slice(2)
 
   // List of groups = species here = value of the first column called group -> I show them on the X axis
-  var groups = d3.map(data, function(d){return(d.score)}).keys()
-  console.log( groups )
+  const groups = d3.map(data, function(d){return(d.score)})
+
   // Add X axis
   var x = d3.scaleBand()
       .domain(groups)
@@ -39,7 +39,7 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ch
       .padding([0.2])
   svg.append("g")
     .attr("transform", "translate(0," + plot_height + ")")
-    .call(d3.axisBottom(x).tickSize(0));
+    .call(d3.axisBottom(x).tickSize(5));
 
   // Add Y axis
   var y = d3.scaleLinear()
@@ -54,10 +54,8 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ch
     .range([0, x.bandwidth()])
     .padding([0.05])
 
-  // color palette = one color per subgroup
-  var color = d3.scaleOrdinal()
-    .domain(subgroups)
-    .range(['#e41a1c','#377eb8','#4daf4a'])
+  const color = d3.scaleOrdinal()
+      .range( [ "#7b6888", "#d0743c", "#98abc5", "#6b486b", "#8a89a6", "#a05d56", "#ff8c00" ] )
 
   // Show the bars
   svg.append("g")
@@ -66,7 +64,7 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ch
     .data(data)
     .enter()
     .append("g")
-      .attr("transform", function(d) { return "translate(" + x(d.group) + ",0)"; })
+      .attr("transform", function(d) { return "translate(" + x(d.score) + ",0)"; })
     .selectAll("rect")
     .data(function(d) { return subgroups.map(function(key) { return {key: key, value: d[key]}; }); })
     .enter().append("rect")
