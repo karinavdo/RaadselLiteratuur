@@ -1,4 +1,4 @@
-d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/chart_4-1_sarah.csv' ).then( function( data ) {
+d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/chart_4-2_mean.csv' ).then( function( data ) {
 
   const xAxisTitle = 'Number of books read annually';
   const yAxisTitle = 'Number of respondents';
@@ -19,7 +19,7 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ch
       plot_height = figure_height - plot_margin.top - plot_margin.bottom;
 
   // Append the svg object to the appropriate div.
-  const svg = d3.select( 'div#chart_4-1_sarah' )
+  const svg = d3.select( 'div#chart_4-2_mean' )
     .append( 'svg' )
       .attr( 'width', plot_width + plot_margin.left + plot_margin.right )
       .attr( 'height', plot_height + plot_margin.top + plot_margin.bottom )
