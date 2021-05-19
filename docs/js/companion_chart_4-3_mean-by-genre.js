@@ -1,4 +1,4 @@
-d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/chart_4-3_mean-by0genre.csv' ).then( function( data ) {
+d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/chart_4-3_mean-by-genre.csv' ).then( function( data ) {
 
   const xAxisTitle = 'Number of books read annually';
   const yAxisTitle = 'Number of respondents';
@@ -43,7 +43,7 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ch
 
   // Add Y axis
   var y = d3.scaleLinear()
-    .domain([0, 400])
+    .domain([0, 120])
     .range([ plot_height, 0 ]);
   svg.append("g")
     .call(d3.axisLeft(y));
@@ -55,7 +55,7 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ch
     .padding([0.09])
 
   const color = d3.scaleOrdinal()
-      .range( [ "#7b6888", "#d0743c", "#98abc5", "#6b486b", "#8a89a6", "#a05d56", "#ff8c00" ] )
+      .range( [ "#6b486b", "#a05d56", "#d0743c", "#ff8c00", "#98abc5", "#8a89a6", "#7b6888" ] )
 
   // Show the bars
   svg.append("g")
