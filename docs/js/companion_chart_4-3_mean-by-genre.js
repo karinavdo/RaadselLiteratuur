@@ -9,7 +9,7 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ch
   // });
 
   const figure_height = 400;
-  const figure_width = 500;
+  const figure_width = 600;
 
   // Define the dimensions and margins of the graph
   // const margin = { top: 10, right: 30, bottom: 30, left: 40 },
