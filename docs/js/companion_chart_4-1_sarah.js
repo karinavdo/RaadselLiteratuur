@@ -55,7 +55,7 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ch
     .padding([0.09])
 
   const color = d3.scaleOrdinal()
-      .range( [ "#7b6888", "#d0743c", "#98abc5", "#6b486b", "#8a89a6", "#a05d56", "#ff8c00" ] )
+    .range( [ '#f9c8dd', '#b2bddb', '#6c84ce', '#77b5bf', '#d85040', '#c4be84', '#f2c484', '#eacb92' ] )
 
   // Show the bars
   svg.append("g")

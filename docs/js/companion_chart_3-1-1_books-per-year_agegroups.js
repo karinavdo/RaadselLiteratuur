@@ -66,7 +66,7 @@ function HistChart( data ) {
           .attr( 'transform', function( d ){ return 'translate( ' + self.xScale( d.x0 ) + ', ' + yScale( d.length ) + ' )'; })
           .attr( 'width', function( d ){ return self.xScale( d.x1 ) - self.xScale( d.x0 ) -1 ; })
           .attr( 'height', function( d ){ return height - yScale( d.length ); })
-          .style( 'fill', '#69b3a2' );
+          .style( 'fill', '#77b5bf' );
   }
 
   // Expects array [ lower_age, upper_age ]
@@ -122,13 +122,13 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ch
     .attr( 'height', yScale.bandwidth() )
     .attr( 'y', function( d ){ return yScale( d.age_group ) } )
     .attr( 'fill', function( d ){
-        fill = 'steelblue';
-        if( d.age_group=='50 - 59' ) { fill = '#69b3a2' };
+        fill = '#6c84ce';
+        if( d.age_group=='50 - 59' ) { fill = '#77b5bf' };
         return fill
       } )
     .on( 'click', function( d,i ){
-        d3.selectAll( '.bar' ).style( 'fill', 'steelblue' )
-        d3.select( this ).style( 'fill', '#69b3a2');
+        d3.selectAll( '.bar' ).style( 'fill', '#6c84ce' )
+        d3.select( this ).style( 'fill', '#77b5bf');
         // Splits and maps e.g. '10 - 19' to [ 10, 19 ].
         hist_chart.update( i.age_group.split( ' - ' ).map( function(x) { return +x } ) )
       } );

@@ -4,9 +4,16 @@
   max-width: 52rem;
 }
 
-.riddle_title_logo {
+#riddle_title_logo {
   width: 100%;
   align: center;
+}
+
+#riddle_title_book {
+  width:10%;
+  position:relative;
+  top:-390px;
+  z-index:-1;"
 }
 
 .level2 {
@@ -25,12 +32,19 @@
   opacity: 100%;
 }
 
+.sidebar-about h1 {
+  font-family: 'Odibee Sans', serif;
+  font-size: 1.75rem;
+  text-decoration: underline;
+  color: #d7ead8; /* NOTE: affects only the underline due to anchor coloring. */
+}
+
 #hamburger_container {
   position: fixed;
   top: 1rem;
   width: 25vw;
   height: 40px;
-  background-color: #444;
+  /* background-color: #444; */
   z-index: 2;
   transition: 0.5s;
 }
@@ -44,6 +58,17 @@
   right: -19px;
   height: 40px;
   width: 40px;
+  transform: rotate(180deg);
+  transition: 1.5s;
+}
+
+#hamburger_container.collapsed > #hamburger_icon {
+  position: absolute;
+  right: -19px;
+  height: 40px;
+  width: 40px;
+  transform: rotate(0deg);
+  transition: 1.5s;
 }
 
 .chart_float {
