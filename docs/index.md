@@ -10,7 +10,6 @@ title:
  <defs>
   <style type="text/css">
    <![CDATA[
-      @import url('https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap');
     .fil0 {fill:#D7EAD8}
     .fnt0 {font-weight:normal;font-size:204.86px;font-family:'Odibee Sans'}
     .fnt1 {font-weight:normal;font-size:351.19px;font-family:'Odibee Sans'}
