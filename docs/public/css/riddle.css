@@ -14,7 +14,15 @@
 #riddle_title_book {
   width:10%;
   position:relative;
-  top:-390px;
+  top:-370px;
+  z-index:-1;"
+}
+
+#riddle_title_chart {
+  width:10%;
+  position:relative;
+  top:-150px;
+  left: 350px;
   z-index:-1;"
 }
 
