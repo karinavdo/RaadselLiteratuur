@@ -75,8 +75,7 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ch
 });
 
 
-d3.csv( '/riddle_d3/public/chart_N1_sentence-length.csv' ).then( function( data ) {
-  // d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/chart_N1_sentence-length.csv' ).then( function( data ) {
+d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/chart_N1_sentence-length.csv' ).then( function( data ) {
 
   const xAxisTitle = 'Number of books read annually';
   const yAxisTitle = 'Number of respondents';
