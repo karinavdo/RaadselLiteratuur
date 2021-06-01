@@ -1,7 +1,9 @@
 d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/chart_3-1_books-per-year.csv' ).then( function( data ) {
 
-  const xAxisTitle = 'Number of books read annually';
-  const yAxisTitle = 'Number of respondents';
+  const xAxisTitle_en = 'Number of books read annually';
+  const yAxisTitle_en = 'Number of respondents';
+  const xAxisTitle_nl = 'Aantal gelezen boeken per jaar';
+  const yAxisTitle_nl = 'Aantal respondenten';
 
   data.forEach( function( d ) {
     d.resp_id = +d['respondent.id'];
@@ -28,17 +30,18 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ch
 
   // X axis: scale and draw.
   const xScale = d3.scaleLinear()
-      .domain( [0, 350] )     // 200 is hard coded max. Use: d3.max(data, function(d) { return +d['books_per_year'] }) for calculated max.
+      .domain( [0, 200] )     // 200 is hard coded max. Use: d3.max(data, function(d) { return +d['books_per_year'] }) for calculated max.
       .range( [0, plot_width] );
   svg.append( 'g' )
       .attr( 'transform', 'translate( 0, ' + plot_height + ' )' )
-      .call( d3.axisBottom( xScale ) );
+      .call( d3.axisBottom( xScale ) )
+      .attr( 'style', 'font-size:11pt; font-family:Helvetica Neue;' );
 
   // Set the parameters for the histogram function.
   const histogram = d3.histogram()
       .value( function( d ){ return d.book_per_year; } )   // I need to give the vector of value
       .domain( xScale.domain() )  // then the domain of the graphic
-      .thresholds( xScale.ticks( 30 ) ); // then the numbers of bins
+      .thresholds( xScale.ticks( 20 ) ); // then the numbers of bins
 
   const bins = histogram( data );
 
@@ -47,8 +50,10 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ch
       // yScale.domain( [ 0, d3.max( bins, function( d ){ return d.length; } ) ] );   // d3.hist has to be called before the Y axis obviously
       yScale.domain( [ 0, 5000 ] );
   svg.append( 'g' )
-        .call( d3.axisLeft( yScale ) )
+        .call( d3.axisLeft( yScale )
+               .tickFormat( x =>  numformat( x ) ) )
         .attr( 'id', 'yaxis' )
+        .attr( 'style', 'font-size:11pt; font-family:Helvetica Neue;' );
 
   // Draw bars
   svg.selectAll( 'rect' )
@@ -59,7 +64,7 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ch
         .attr( 'transform', function( d ){ return 'translate( ' + xScale( d.x0 ) + ', ' + yScale( d.length ) + ' )'; })
         .attr( 'width', function( d ){ return xScale( d.x1 ) - xScale( d.x0 ) -1 ; })
         .attr( 'height', function( d ){ return plot_height - yScale( d.length ); })
-        .style( 'fill', '#77b5bf' );
+        .style( 'fill', '#ddd' ); // Temporarily exchange original color '#77b5bf' for gray for print purpose.
 
 
   // Same thing but now for x axis
@@ -71,8 +76,8 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ch
       .attr( 'transform', 'translate(' + xAxisLabelX + ', ' + xAxisLabelY + ')' )
       .append( 'text' )
         .attr( 'text-anchor', 'middle' )
-        .attr( 'style', 'font-size:80%' )
-        .text( xAxisTitle );
+        .attr( 'style', 'font-size:11pt; font-family:PT Sans;' )
+        .text( xAxisTitle_nl );
 
   // Render x and y axes labels
   // Compute the space left between axis ticks and edge of figure.
@@ -87,7 +92,7 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ch
       .append( 'text' )
         .attr( 'text-anchor', 'middle' )
         .attr( 'transform', 'rotate(-90)' )
-        .attr( 'style', 'font-size:80%' )
-        .text( yAxisTitle );
+        .attr( 'style', 'font-size:11pt; font-family:PT Sans;' )
+        .text( yAxisTitle_nl );
 
 });
