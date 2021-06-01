@@ -5,6 +5,9 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ch
   const xAxisTitle_nl = 'Aantal gelezen boeken per jaar';
   const yAxisTitle_nl = 'Aantal respondenten';
 
+  const axisStyle = 'font-size:11pt; font-family:PT Sans;'
+  const scaleStyle = 'font-size:11pt; font-family:Helvetica Neue;'
+
   data.forEach( function( d ) {
     d.resp_id = +d['respondent.id'];
     d.book_per_year = +d['books.per.year'];
@@ -35,7 +38,7 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ch
   svg.append( 'g' )
       .attr( 'transform', 'translate( 0, ' + plot_height + ' )' )
       .call( d3.axisBottom( xScale ).ticks(5) )
-      .attr( 'style', 'font-size:11pt; font-family:Helvetica Neue;' );
+      .attr( 'style', scaleStyle );
 
   // Set the parameters for the histogram function.
   const histogram = d3.histogram()
@@ -53,7 +56,7 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ch
         .call( d3.axisLeft( yScale )
                .tickFormat( x => numformat( x ) ) )
         .attr( 'id', 'yaxis' )
-        .attr( 'style', 'font-size:11pt; font-family:Helvetica Neue;' );
+        .attr( 'style', scaleStyle );
 
   // Draw bars
   svg.selectAll( 'rect' )
@@ -76,7 +79,7 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ch
       .attr( 'transform', 'translate(' + xAxisLabelX + ', ' + xAxisLabelY + ')' )
       .append( 'text' )
         .attr( 'text-anchor', 'middle' )
-        .attr( 'style', 'font-size:11pt; font-family:PT Sans;' ) // Was font-size: 80% which is smaller but looks way smarter!
+        .attr( 'style', axisStyle ) // Was font-size: 80% which is smaller but looks way smarter!
         .text( xAxisTitle_nl );
 
   // Render x and y axes labels
@@ -92,7 +95,7 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ch
       .append( 'text' )
         .attr( 'text-anchor', 'middle' )
         .attr( 'transform', 'rotate(-90)' )
-        .attr( 'style', 'font-size:11pt; font-family:PT Sans;' )
+        .attr( 'style', axisStyle )
         .text( yAxisTitle_nl );
 
 });

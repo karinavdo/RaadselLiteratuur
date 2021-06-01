@@ -2,6 +2,11 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ch
 
   const xAxisTitle = 'Number of books read annually';
   const yAxisTitle = 'Number of respondents';
+  const xAxisTitle_nl = 'Mean sentence length';
+  const yAxisTitle_nl = 'Literariness score';
+
+  const axisStyle = 'font-size:11pt; font-family:PT Sans;'
+  const scaleStyle = 'font-size:11pt; font-family:Helvetica Neue;'
 
   // data.forEach( function( d ) {
   //   d.resp_id = +d['respondent.id'];
@@ -32,14 +37,17 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ch
     .range([ 0, plot_width ]);
   svg.append("g")
     .attr("transform", "translate(0," + plot_height + ")")
-    .call(d3.axisBottom(x));
+    .call( d3.axisBottom( x ) )
+    .attr( 'style', scaleStyle );
 
   // Add Y axis
   const y = d3.scaleLinear()
     .domain([2, 7])
     .range([ plot_height, 0]);
   svg.append("g")
-    .call(d3.axisLeft(y));
+    .call( d3.axisLeft( y ).ticks( 5 ) )
+    .attr( 'id', 'yaxis' )
+    .attr( 'style', scaleStyle );
 
   // Add dots
   svg.append('g')
@@ -50,7 +58,7 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ch
       .attr("cx", function (d) { return x(d.avg_sentence_length); } )
       .attr("cy", function (d) { return y(d.literariness_read); } )
       .attr("r", 2.5)
-      .style("fill", "#77b5bf")
+      .style("fill", bar_colors[2] )
 
   linearRegression = ss.linearRegression( data.map( d => [ +d.avg_sentence_length, +d.literariness_read ] ) )
   linearRegressionLine = ss.linearRegressionLine( linearRegression )
@@ -66,11 +74,39 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ch
   line = d3.line()
          .x(d => x(d.x))
          .y(d => y(d.y))
+         line_style = 'stroke:' + bar_colors[3] + ';fill:none;stroke-width:1.5;stroke-dasharray: 3,5;'
   svg.append('path')
-     .classed('regressionLine', true)
-     .datum(regressionPoints)
-     .attr('d', line);
+    .attr( 'style', line_style )
+    .datum(regressionPoints)
+    .attr('d', line);
 
+  // Same thing but now for x axis
+  // const gutter_height = plot_margin.bottom - d3.select('#xaxis').node().getBBox().height
+  const gutter_height = 30;
+  const xAxisLabelY = figure_height - ( plot_margin.bottom / 2 );
+  const xAxisLabelX = plot_width / 2;
+  svg.append( 'g' )
+     .attr( 'transform', 'translate(' + xAxisLabelX + ', ' + xAxisLabelY + ')' )
+     .append( 'text' )
+       .attr( 'text-anchor', 'middle' )
+       .attr( 'style', axisStyle ) // Was font-size: 80% which is smaller but looks way smarter!
+       .text( xAxisTitle_nl );
+
+  // Render x and y axes labels
+  // Compute the space left between axis ticks and edge of figure.
+  const gutter_width = plot_margin.left - d3.select('#yaxis').node().getBBox().width
+  // Calculate center of gutter
+  const yAxisLabelX = -plot_margin.left + ( gutter_width / 2 )
+  // Calculate center of y axis
+  const yAxisLabelY = plot_margin.top + plot_height / 2;
+  // Put y axis label center on calculated spot
+  svg.append( 'g' )
+     .attr( 'transform', 'translate(' + yAxisLabelX + ', ' + yAxisLabelY + ')' )
+     .append( 'text' )
+       .attr( 'text-anchor', 'middle' )
+       .attr( 'transform', 'rotate(-90)' )
+       .attr( 'style', axisStyle )
+       .text( yAxisTitle_nl );
 
 });
 
@@ -79,6 +115,11 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ch
 
   const xAxisTitle = 'Number of books read annually';
   const yAxisTitle = 'Number of respondents';
+  const xAxisTitle_nl = 'Mean sentence variance';
+  const yAxisTitle_nl = 'Literariness score';
+
+  const axisStyle = 'font-size:11pt; font-family:PT Sans;'
+  const scaleStyle = 'font-size:11pt; font-family:Helvetica Neue;'
 
   // data.forEach( function( d ) {
   //   d.resp_id = +d['respondent.id'];
@@ -109,14 +150,17 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ch
     .range([ 0, plot_width ]);
   svg.append("g")
     .attr("transform", "translate(0," + plot_height + ")")
-    .call(d3.axisBottom(x));
+    .call( d3.axisBottom( x ) )
+    .attr( 'style', scaleStyle );
 
   // Add Y axis
   const y = d3.scaleLinear()
     .domain([2, 7])
     .range([ plot_height, 0]);
   svg.append("g")
-    .call(d3.axisLeft(y));
+    .call( d3.axisLeft( y ).ticks( 5 ) )
+    .attr( 'id', 'yaxis' )
+    .attr( 'style', scaleStyle );
 
   // Add dots
   svg.append('g')
@@ -127,7 +171,7 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ch
       .attr("cx", function (d) { return x(d.sentence_length_variance); } )
       .attr("cy", function (d) { return y(d.literariness_read); } )
       .attr("r", 2.5)
-      .style("fill", "#77b5bf")
+      .style("fill", bar_colors[2] )
 
   linearRegression = ss.linearRegression( data.map( d => [ +d.sentence_length_variance, +d.literariness_read ] ) )
   linearRegressionLine = ss.linearRegressionLine( linearRegression )
@@ -143,9 +187,38 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ch
   line = d3.line()
          .x(d => x(d.x))
          .y(d => y(d.y))
+  line_style = 'stroke:' + bar_colors[3] + ';fill:none;stroke-width:1.5;stroke-dasharray: 3,5;'
   svg.append('path')
-     .classed('regressionLine', true)
+     .attr( 'style', line_style )
      .datum(regressionPoints)
      .attr('d', line);
+
+  // Same thing but now for x axis
+  // const gutter_height = plot_margin.bottom - d3.select('#xaxis').node().getBBox().height
+  const gutter_height = 30;
+  const xAxisLabelY = figure_height - ( plot_margin.bottom / 2 );
+  const xAxisLabelX = plot_width / 2;
+  svg.append( 'g' )
+    .attr( 'transform', 'translate(' + xAxisLabelX + ', ' + xAxisLabelY + ')' )
+    .append( 'text' )
+      .attr( 'text-anchor', 'middle' )
+      .attr( 'style', axisStyle ) // Was font-size: 80% which is smaller but looks way smarter!
+      .text( xAxisTitle_nl );
+
+  // Render x and y axes labels
+  // Compute the space left between axis ticks and edge of figure.
+  const gutter_width = plot_margin.left - d3.select('#yaxis').node().getBBox().width
+  // Calculate center of gutter
+  const yAxisLabelX = -plot_margin.left + ( gutter_width / 2 )
+  // Calculate center of y axis
+  const yAxisLabelY = plot_margin.top + plot_height / 2;
+  // Put y axis label center on calculated spot
+  svg.append( 'g' )
+    .attr( 'transform', 'translate(' + yAxisLabelX + ', ' + yAxisLabelY + ')' )
+    .append( 'text' )
+      .attr( 'text-anchor', 'middle' )
+      .attr( 'transform', 'rotate(-90)' )
+      .attr( 'style', axisStyle )
+      .text( yAxisTitle_nl );
 
 });

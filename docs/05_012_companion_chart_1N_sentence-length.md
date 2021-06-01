@@ -17,7 +17,11 @@ path.regressionLine {
 <script src="https://d3js.org/d3.v6.min.js" defer></script>
 <script src="https://d3js.org/d3-scale.v3.min.js" defer></script>
 <script src="https://unpkg.com/simple-statistics@7.7.0/dist/simple-statistics.min.js" defer></script>
+<script src="js/companion_utils_locale-nl.js" defer></script>
+<script src="js/companion_utils_colors.js" defer></script>
+<script src="js/companion_utils_svg2png.js" defer></script>
+
 <script src="js/companion_chart_N1_sentence-length.js" defer></script>
 
-<div class="chart" id="chart_N1_sentence-length"></div>
-<div class="chart" id="chart_N1_sentence-length-variance"></div>
+<div class="chart_float" id="chart_N1_sentence-length"></div>
+<div class="chart_float" id="chart_N1_sentence-length-variance"></div>

@@ -3,15 +3,23 @@ const container_grays = d3.select( 'div#gray_example_box' )
 
 style_boiler_plate = 'width:80px; height:80px; border:1px solid black;margin-bottom:10px;margin-right:20px;background-color:';
 
+data = bar_colors
+clrs = data.map( function( d ) {
+    return { 'color': d };
+});
+
+console.log( clrs );
+
 container_colors.selectAll( 'div' )
-    .data( [ { 'color': '#f9c8dd' },
-             { 'color': '#b2bddb' },
-             { 'color': '#6c84ce' },
-             { 'color': '#77b5bf' },
-             { 'color': '#d85040' },
-             { 'color': '#c4be84' },
-             { 'color': '#f2c484' },
-             { 'color': '#eacb92' } ] )
+    .data( clrs )
+    // .data( [ { 'color': '#f9c8dd' },
+    //          { 'color': '#b2bddb' },
+    //          { 'color': '#6c84ce' },
+    //          { 'color': '#77b5bf' },
+    //          { 'color': '#d85040' },
+    //          { 'color': '#c4be84' },
+    //          { 'color': '#f2c484' },
+    //          { 'color': '#eacb92' } ] )
     .enter()
     .append( 'div' )
       .attr( 'style', function(d){ return style_boiler_plate + d.color + ';'; } );

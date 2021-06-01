@@ -8,13 +8,11 @@ level:  2
 
 <script src="https://d3js.org/d3.v6.min.js" defer></script>
 <script src="https://d3js.org/d3-scale.v3.min.js" defer></script>
-<script src="js/companion_chart_11-1_male-matthew.js" defer></script>
 <script src="js/companion_utils_locale-nl.js" defer></script>
 <script src="js/companion_utils_colors.js" defer></script>
-
-<!-- Add the following line to be able to print charts to png -->
 <script src="js/companion_utils_svg2png.js" defer></script>
 
+<script src="js/companion_chart_11-1_male-matthew.js" defer></script>
 
-<div class="chart" id="chart_11-1_male-matthew"></div>
-<div class="chart" id="chart_11-2_male-matthew-all"></div>
+<div class="chart_float" id="chart_11-1_male-matthew"></div>
+<div class="chart_float" id="chart_11-2_male-matthew-all"></div>

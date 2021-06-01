@@ -1,7 +1,12 @@
 d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/chart_3-3_rated-of-401.csv' ).then( function( data ) {
 
-  const xAxisTitle = 'Number of books rated from the 401 titles';
-  const yAxisTitle = 'Number of respondents';
+  const xAxisTitle_en = 'Number of books rated from the 401 titles';
+  const yAxisTitle_en = 'Number of respondents';
+  const xAxisTitle_nl = 'Aantal boeken gescored van 401 titels';
+  const yAxisTitle_nl = 'Aantal respondenten';
+
+  const axisStyle = 'font-size:11pt; font-family:PT Sans;'
+  const scaleStyle = 'font-size:11pt; font-family:Helvetica Neue;'
 
   data.forEach( function( d ) {
     d.resp_id = +d['respondent.id'];
@@ -19,7 +24,7 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ch
       plot_height = figure_height - plot_margin.top - plot_margin.bottom;
 
   // Append the svg object to the appropriate div.
-  const svg = d3.select( 'div#chart_3-2_read-of-401' )
+  const svg = d3.select( 'div#chart_3-3_rated-of-401' )
     .append( 'svg' )
       .attr( 'width', plot_width + plot_margin.left + plot_margin.right )
       .attr( 'height', plot_height + plot_margin.top + plot_margin.bottom )
@@ -32,7 +37,8 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ch
       .range( [0, plot_width] );
   svg.append( 'g' )
       .attr( 'transform', 'translate( 0, ' + plot_height + ' )' )
-      .call( d3.axisBottom( xScale ) );
+      .call( d3.axisBottom( xScale ).ticks(5) )
+      .attr( 'style', scaleStyle );
 
   // Set the parameters for the histogram function.
   const histogram = d3.histogram()
@@ -47,8 +53,10 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ch
       // yScale.domain( [ 0, d3.max( bins, function( d ){ return d.length; } ) ] );   // d3.hist has to be called before the Y axis obviously
       yScale.domain( [ 0, 6000 ] );
   svg.append( 'g' )
-        .call( d3.axisLeft( yScale ) )
+        .call( d3.axisLeft( yScale )
+               .tickFormat( x => numformat( x ) ) )
         .attr( 'id', 'yaxis' )
+        .attr( 'style', scaleStyle );
 
   // Draw bars
   svg.selectAll( 'rect' )
@@ -71,8 +79,8 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ch
       .attr( 'transform', 'translate(' + xAxisLabelX + ', ' + xAxisLabelY + ')' )
       .append( 'text' )
         .attr( 'text-anchor', 'middle' )
-        .attr( 'style', 'font-size:80%' )
-        .text( xAxisTitle );
+        .attr( 'style', axisStyle )
+        .text( xAxisTitle_nl );
 
   // Render x and y axes labels
   // Compute the space left between axis ticks and edge of figure.
@@ -87,7 +95,7 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ch
       .append( 'text' )
         .attr( 'text-anchor', 'middle' )
         .attr( 'transform', 'rotate(-90)' )
-        .attr( 'style', 'font-size:80%' )
-        .text( yAxisTitle );
+        .attr( 'style', axisStyle )
+        .text( yAxisTitle_nl );
 
 });

@@ -1,7 +1,12 @@
 d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/chart_4-4_quality-by-genre.csv' ).then( function( data ) {
 
-  const xAxisTitle = 'Number of books read annually';
+  const xAxisTitle = 'Score';
   const yAxisTitle = 'Number of respondents';
+  const xAxisTitle_nl = 'Score';
+  const yAxisTitle_nl = 'Aantal respondenten';
+
+  const axisStyle = 'font-size:11pt; font-family:PT Sans;'
+  const scaleStyle = 'font-size:11pt; font-family:Helvetica Neue;'
 
   // data.forEach( function( d ) {
   //   d.resp_id = +d['respondent.id'];
@@ -9,12 +14,12 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ch
   // });
 
   const figure_height = 400;
-  const figure_width = 600;
+  const figure_width = 780;
 
   // Define the dimensions and margins of the graph
   // const margin = { top: 10, right: 30, bottom: 30, left: 40 },
   // Not sure yet if setting larger margins is best for axis labels plotting
-  const plot_margin = { top: 20, right: 20, bottom: 70, left: 80 },
+  const plot_margin = { top: 20, right: 200, bottom: 70, left: 80 },
       plot_width = figure_width - plot_margin.left - plot_margin.right,
       plot_height = figure_height - plot_margin.top - plot_margin.bottom;
 
@@ -39,14 +44,17 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ch
       .padding([0.2])
   svg.append("g")
     .attr("transform", "translate(0," + plot_height + ")")
-    .call(d3.axisBottom(x).tickSize(5));
+    .call( d3.axisBottom( x ).tickSize( 5 ) )
+    .attr( 'style', scaleStyle );
 
   // Add Y axis
   var y = d3.scaleLinear()
-    .domain([0, 120])
+    .domain([0, 160])
     .range([ plot_height, 0 ]);
   svg.append("g")
-    .call(d3.axisLeft(y));
+    .call( d3.axisLeft( y ) )
+    .attr( 'id', 'yaxis' )
+    .attr( 'style', scaleStyle );
 
   // Another scale for subgroup position?
   var xSubgroup = d3.scaleBand()
@@ -73,5 +81,69 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ch
       .attr("width", xSubgroup.bandwidth() )
       .attr("height", function(d) { return plot_height - y(d.value); })
       .attr("fill", function(d) { return color(d.key); });
+
+  // Same thing but now for x axis
+  // const gutter_height = plot_margin.bottom - d3.select('#xaxis').node().getBBox().height
+  const gutter_height = 30;
+  const xAxisLabelY = figure_height - ( plot_margin.bottom / 2 );
+  const xAxisLabelX = plot_width / 2;
+  svg.append( 'g' )
+      .attr( 'transform', 'translate(' + xAxisLabelX + ', ' + xAxisLabelY + ')' )
+      .append( 'text' )
+        .attr( 'text-anchor', 'middle' )
+        .attr( 'style', axisStyle ) // Was font-size: 80% which is smaller but looks way smarter!
+        .text( xAxisTitle_nl );
+
+  // Render x and y axes labels
+  // Compute the space left between axis ticks and edge of figure.
+  const gutter_width = plot_margin.left - d3.select('#yaxis').node().getBBox().width
+  // Calculate center of gutter
+  const yAxisLabelX = -plot_margin.left + ( gutter_width / 2 )
+  // Calculate center of y axis
+  const yAxisLabelY = plot_margin.top + plot_height / 2;
+  // Put y axis label center on calculated spot
+  svg.append( 'g' )
+      .attr( 'transform', 'translate(' + yAxisLabelX + ', ' + yAxisLabelY + ')' )
+      .append( 'text' )
+        .attr( 'text-anchor', 'middle' )
+        .attr( 'transform', 'rotate(-90)' )
+        .attr( 'style', axisStyle )
+        .text( yAxisTitle_nl );
+
+
+  // Let's try a legend
+
+  // Add one dot in the legend for each name.
+  var keys = [ 'quality_fiction',
+               'quality_suspense',
+               'quality_romantic',
+               'quality_other' ]
+  var keys_nl = { 'quality_fiction': 'Literaire roman',
+                  'quality_suspense': 'Spanning',
+                  'quality_romantic': 'Romantiek',
+                  'quality_other': 'Overig' }
+
+  var size = 17
+  svg.selectAll( 'legend_key' )
+    .data( keys )
+    .enter()
+    .append( 'rect' )
+      .attr( 'x', 530 )
+      .attr( 'y', function(d,i){ return 100 + i*( size+10 ) } ) // 100 is where the first dot appears. 25 is the distance between dots
+      .attr( 'width', size )
+      .attr( 'height', size )
+      .style( 'fill', function(d){ return color( d ) } )
+
+  // Add one dot in the legend for each name.
+  svg.selectAll( 'legend_key_labels' )
+    .data( keys )
+    .enter()
+    .append( 'text' )
+      .attr( 'x', 535 + size*1.2 )
+      .attr( 'y', function(d,i){ return 105 + i*( size+10 ) + ( size/2 ) } ) // 100 is where the first dot appears. 25 is the distance between dots
+      .attr( 'style', axisStyle )
+      .text( function(d){ return keys_nl[ d ] } )
+      .attr( 'text-anchor', 'left' )
+      .style( 'alignment-baseline', 'middle' )
 
 });
