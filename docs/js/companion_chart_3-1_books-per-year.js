@@ -64,7 +64,7 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ch
         .attr( 'transform', function( d ){ return 'translate( ' + xScale( d.x0 ) + ', ' + yScale( d.length ) + ' )'; })
         .attr( 'width', function( d ){ return xScale( d.x1 ) - xScale( d.x0 ) -1 ; })
         .attr( 'height', function( d ){ return plot_height - yScale( d.length ); })
-        .style( 'fill', '#ddd' ); // Temporarily exchange original color '#77b5bf' for gray for print purpose.
+        .style( 'fill', bar_colors[2] ); // Temporarily exchange original color '#77b5bf' for gray for print purpose.
 
 
   // Same thing but now for x axis

@@ -55,7 +55,7 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ch
     .padding([0.09])
 
   const color = d3.scaleOrdinal()
-    .range( [ '#77b5bf', '#f2c484', '#f9c8dd', '#b2bddb', '#6c84ce', '#d85040', '#c4be84', '#eacb92' ] )
+    .range( bar_colors )
 
   // Show the bars
   svg.append("g")
@@ -132,7 +132,7 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ch
       .attr("cx", function (d) { return x(d.rank); } )
       .attr("cy", function (d) { return y(d.male_authors); } )
       .attr("r", 2.5)
-      .style("fill", "#77b5bf")
+      .style("fill", bar_colors[0] )
 
   svg.append('g')
     .selectAll( "dot" )
@@ -142,5 +142,5 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ch
       .attr("cx", function (d) { return x(d.rank); } )
       .attr("cy", function (d) { return y(d.female_authors); } )
       .attr("r", 2.5)
-      .style("fill", "#f2c484")
+      .style("fill", bar_colors[1] )
 });

@@ -11,9 +11,10 @@ level:  2
 <script src="js/companion_chart_3-1_books-per-year.js" defer></script>
 <script src="js/companion_chart_3-1_books-per-year_excerpt.js" defer></script>
 <script src="js/companion_utils_locale-nl.js" defer></script>
+<script src="js/companion_utils_colors.js" defer></script>
 
 <!-- Add the following line to be able to print charts to png -->
-<!--script src="js/companion_utils_svg2png.js" defer></script-->
+<script src="js/companion_utils_svg2png.js" defer></script>
 
 <div class="chart_float" id="chart_3-1_books-per-year"></div>
 <div class="chart_float" id="chart_3-1_books-per-year_excerpt"></div>

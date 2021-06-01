@@ -1,3 +1,5 @@
+var bar_colors = BAR_GRAYS;
+
 const svg_to_canvas_button = document.createElement( 'div' )
 svg_to_canvas_button.setAttribute( 'id', 'svg_to_canvas_button' )
 svg_to_canvas_button.setAttribute( 'onClick', 'save_chart();' )
@@ -8,7 +10,8 @@ document.body.appendChild( svg_to_canvas_button );
 function save_chart() {
 
   // Get the cart's SVG code and dimensions
-  const svg = d3.select( 'div#chart_3-1_books-per-year_excerpt' ).select( 'svg' );
+  // const svg = d3.select( 'div#chart_3-1_books-per-year_excerpt' ).select( 'svg' );
+  const svg = d3.select( 'svg' );
   const chart_height = svg.attr( 'height' )
   const chart_width = svg.attr( 'width' )
   const render_height = 1180;
