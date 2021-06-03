@@ -41,10 +41,13 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ch
       .attr( 'style', scaleStyle );
 
   // Set the parameters for the histogram function.
+  const thresholds = d3.map( xScale.ticks( 20 ), function( d ){ return d+1 } );
+  console.log( thresholds );
+  console.log( xScale.ticks( 20 ) );
   const histogram = d3.histogram()
       .value( function( d ){ return d.book_per_year; } )   // I need to give the vector of value
       .domain( xScale.domain() )  // then the domain of the graphic
-      .thresholds( xScale.ticks( 20 ) ); // then the numbers of bins
+      .thresholds( thresholds ); // then the numbers of bins
 
   const bins = histogram( data );
 

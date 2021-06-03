@@ -10,7 +10,7 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ch
 
   data.forEach( function( d ) {
     d.resp_id = +d['respondent.id'];
-    d.book_per_year = +d['books.per.year'];
+    d.books_per_year = +d['books.per.year'];
   });
 
   const figure_height = 600;
@@ -41,17 +41,20 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ch
       .attr( 'style', scaleStyle );
 
   // Set the parameters for the histogram function.
+  const thresholds = d3.map( xScale.ticks(40), function( d ){ return d+1 } );
   const histogram = d3.histogram()
-      .value( function( d ){ return d.book_per_year; } )   // I need to give the vector of value
+      .value( function( d ){ return d.books_per_year; } )   // I need to give the vector of value
       .domain( xScale.domain() )  // then the domain of the graphic
-      .thresholds( xScale.ticks( 30 ) ); // then the numbers of bins
+      // .thresholds(  40  ); // then the numbers of bins
+      //.thresholds( xScale.ticks(40) ); // or where the breaks are
+      .thresholds( thresholds ); // Tweaking inclusive or exclusive counts into bins
 
   const bins = histogram( data );
 
   const yScale = d3.scaleLinear()
       .range( [plot_height, 0] );
-      // yScale.domain( [ 0, d3.max( bins, function( d ){ return d.length; } ) ] );   // d3.hist has to be called before the Y axis obviously
-      yScale.domain( [ 0, 5000 ] );
+      //yScale.domain( [ 0, d3.max( bins, function( d ){ return d.length; } ) ] );   // d3.hist has to be called before the Y axis obviously
+      yScale.domain( [ 0, 7000 ] );
   svg.append( 'g' )
         .call( d3.axisLeft( yScale )
                .tickFormat( x => numformat( x ) ) )
