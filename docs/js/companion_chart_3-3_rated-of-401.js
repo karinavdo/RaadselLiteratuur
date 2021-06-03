@@ -2,7 +2,7 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ch
 
   const xAxisTitle_en = 'Number of books rated from the 401 titles';
   const yAxisTitle_en = 'Number of respondents';
-  const xAxisTitle_nl = 'Aantal boeken gescored van 401 titels';
+  const xAxisTitle_nl = 'Aantal boeken beoordeeld van 401 titels';
   const yAxisTitle_nl = 'Aantal respondenten';
 
   const axisStyle = 'font-size:11pt; font-family:PT Sans;'
