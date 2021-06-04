@@ -35,8 +35,8 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ch
   const subgroups = data.columns.slice(2)
 
   // List of groups = species here = value of the first column called group -> I show them on the X axis
-  const groups_nl = { 'author_man': 'auteur is man',
-                      'author_woman': 'auteur is vrouw' }
+  const groups_nl = { 'author_man': 'man',
+                      'author_woman': 'vrouw' }
   const groups = d3.map( data, function(d){ return( groups_nl[d.group] ) } )
 
   // Add X axis
@@ -47,12 +47,18 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ch
   svg.append("g")
     .attr( "transform", "translate(0," + plot_height + ")" )
     .call( d3.axisBottom( x ).tickSize( 5 ) )
-    .attr( 'style', scaleStyle )
-    .selectAll("text")
-      .attr( "text-anchor", 'start' )
-      .attr("transform", "rotate(65)")
-      .attr( 'dx', '15px' )
-      .attr( 'dy', '-0px' );
+    .attr( 'style', scaleStyle );
+  svg.append( 'g' ).append( 'text' )
+    .attr( 'x', 63 ).attr( 'y', 300 )
+    .text( 'auteur' )
+    .attr( 'style', scaleStyle );
+
+    //  This was a solution to rotate the labels, but it wasn't what client wanted.
+    // .selectAll("text")
+    //   .attr( "text-anchor", 'start' )
+    //   .attr("transform", "rotate(65)")
+    //   .attr( 'dx', '15px' )
+    //   .attr( 'dy', '-0px' );
 
   // Add Y axis
   var y = d3.scaleLinear()

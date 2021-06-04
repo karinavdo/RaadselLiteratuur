@@ -35,8 +35,8 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ch
   const subgroups = data.columns.slice(2)
 
   // List of groups = species here = value of the first column called group -> I show them on the X axis
-  const groups_nl = { 'author_man': 'auteur is man',
-                      'author_woman': 'auteur is vrouw' }
+  const groups_nl = { 'author_man': 'man',
+                      'author_woman': 'vrouw' }
   const groups = d3.map( data, function(d){ return( groups_nl[ d.group ] ) } )
 
   // Add X axis
@@ -48,11 +48,10 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ch
     .attr("transform", "translate(0," + plot_height + ")")
     .call( d3.axisBottom( x ).tickSize( 5 ) )
     .attr( 'style', scaleStyle )
-    .selectAll("text")
-      .attr( "text-anchor", 'start' )
-      .attr("transform", "rotate(65)")
-      .attr( 'dx', '15px' )
-      .attr( 'dy', '-0px' );
+  svg.append( 'g' ).append( 'text' )
+    .attr( 'x', 63 ).attr( 'y', 300 )
+    .text( 'auteur' )
+    .attr( 'style', scaleStyle );
 
   // Add Y axis
   var y = d3.scaleLinear()
@@ -110,15 +109,15 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ch
 
   // Add one dot in the legend for each name.
   var keys = [ 'men_readers', 'women_readers' ]
-  var keys_nl = { 'men_readers': 'Lezer is man',
-                  'women_readers': 'Lezer is vrouw' }
+  var keys_nl = { 'men_readers': 'Beoordelaar is man',
+                  'women_readers': 'Beoordelaar is vrouw' }
 
   var size = 17
   svg.selectAll( 'legend_key' )
     .data( keys )
     .enter()
     .append( 'rect' )
-      .attr( 'x', 230 )
+      .attr( 'x', 200 )
       .attr( 'y', function(d,i){ return 100 + i*( size+10 ) } ) // 100 is where the first dot appears. 25 is the distance between dots
       .attr( 'width', size )
       .attr( 'height', size )
@@ -129,7 +128,7 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ch
     .data( keys )
     .enter()
     .append( 'text' )
-      .attr( 'x', 235 + size*1.2 )
+      .attr( 'x', 205 + size*1.2 )
       .attr( 'y', function(d,i){ return 105 + i*( size+10 ) + ( size/2 ) } ) // 100 is where the first dot appears. 25 is the distance between dots
       .attr( 'style', axisStyle )
       .text( function(d){ return keys_nl[ d ] } )

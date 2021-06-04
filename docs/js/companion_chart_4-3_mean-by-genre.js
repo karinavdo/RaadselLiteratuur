@@ -49,7 +49,7 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ch
 
   // Add Y axis
   var y = d3.scaleLinear()
-    .domain([0, 120])
+    .domain([0, 160])
     .range([ plot_height, 0 ]);
   svg.append("g")
     .call( d3.axisLeft( y ) )
