@@ -2,8 +2,8 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ch
 
   const xAxisTitle = 'Number of books read annually';
   const yAxisTitle = 'Number of respondents';
-  const xAxisTitle_nl = 'Score';
-  const yAxisTitle_nl = 'Aantal respondenten';
+  const xAxisTitle_nl = 'Gemiddelde score';
+  const yAxisTitle_nl = 'Aantal boeken';
 
   const axisStyle = 'font-size:11pt; font-family:PT Sans;'
   const scaleStyle = 'font-size:11pt; font-family:Helvetica Neue;'
@@ -33,6 +33,7 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ch
 
   // List of subgroups = header of the csv files = soil condition here
   const subgroups = data.columns.slice(2)
+  subgroups.reverse()
 
   // List of groups = species here = value of the first column called group -> I show them on the X axis
   const groups = d3.map(data, function(d){return(d.score)})

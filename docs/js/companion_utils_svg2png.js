@@ -35,6 +35,7 @@ function save_chart( chart_element_id ) {
   canvas_modal.appendChild( close_button );
 
   var canvas = document.createElement('canvas');
+  canvas.setAttribute( 'name', "hello1" );
   canvas.height = render_height;
   canvas.width = render_width;
   canvas_modal.appendChild(canvas);

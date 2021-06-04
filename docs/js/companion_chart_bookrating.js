@@ -1,5 +1,6 @@
-create_bookrating_chart = function( csv_file_name ) { }
-  cvs_file = 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/' + csv_file_name + '.csv'
+create_bookrating_chart = function( csv_file_name, { max_y=400 }={} ) {
+
+  const csv_file = 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/' + csv_file_name + '.csv'
   d3.csv( csv_file ).then( function( data ) {
 
     const xAxisTitle = 'Number of books read annually';
@@ -52,7 +53,7 @@ create_bookrating_chart = function( csv_file_name ) { }
 
     // Add Y axis
     var y = d3.scaleLinear()
-      .domain([0, 400])
+      .domain([0, max_y])
       .range([ plot_height, 0 ]);
     svg.append("g")
       .call( d3.axisLeft( y ) )
