@@ -1,9 +1,9 @@
-d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/chart_N1_sentence-length.csv' ).then( function( data ) {
+d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/chart_11-4_sentence-length.csv' ).then( function( data ) {
 
   const xAxisTitle = 'Number of books read annually';
   const yAxisTitle = 'Number of respondents';
-  const xAxisTitle_nl = 'Mean sentence length';
-  const yAxisTitle_nl = 'Literariness score';
+  const xAxisTitle_nl = 'Gemiddelde zinslengte (aantal woorden)';
+  const yAxisTitle_nl = 'Gemiddelde score voor literaire kwaliteit';
 
   const axisStyle = 'font-size:11pt; font-family:PT Sans;'
   const scaleStyle = 'font-size:11pt; font-family:Helvetica Neue;'
@@ -14,17 +14,17 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ch
   // });
 
   const figure_height = 400;
-  const figure_width = 500;
+  const figure_width = 680;
 
   // Define the dimensions and margins of the graph
   // const margin = { top: 10, right: 30, bottom: 30, left: 40 },
   // Not sure yet if setting larger margins is best for axis labels plotting
-  const plot_margin = { top: 20, right: 20, bottom: 70, left: 80 },
+  const plot_margin = { top: 20, right: 200, bottom: 70, left: 80 },
       plot_width = figure_width - plot_margin.left - plot_margin.right,
       plot_height = figure_height - plot_margin.top - plot_margin.bottom;
 
   // Append the svg object to the appropriate div.
-  const svg = d3.select( 'div#chart_N1_sentence-length' )
+  const svg = d3.select( 'div#chart_11-4_sentence-length' )
     .append( 'svg' )
       .attr( 'width', plot_width + plot_margin.left + plot_margin.right )
       .attr( 'height', plot_height + plot_margin.top + plot_margin.bottom )
@@ -50,15 +50,21 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ch
     .attr( 'style', scaleStyle );
 
   // Add dots
+  const symbol_map = { 'male': d3.symbol().type(d3.symbolSquare).size(30),
+                       'female': d3.symbol().type(d3.symbolCircle).size(30) }
   svg.append('g')
     .selectAll( "dot" )
     .data(data)
     .enter()
-    .append("circle")
-      .attr("cx", function (d) { return x(d.avg_sentence_length); } )
-      .attr("cy", function (d) { return y(d.literariness_read); } )
-      .attr("r", 2.5)
-      .style("fill", bar_colors[2] )
+    .append("path")
+      .attr( "d", function(d){ return symbol_map[ d.gender ]() } )
+      .style( 'fill', 'rgb(255, 255, 255)' )
+      .style( 'stroke', bar_colors[3] )
+      .style( 'stroke-width', '1px' )
+      .attr( "transform", function (d) {
+                              trf = 'translate(' + x(d.avg_sentence_length) +
+                              ',' + y(d.literariness_read) + ')';
+                              return trf } )
 
   linearRegression = ss.linearRegression( data.map( d => [ +d.avg_sentence_length, +d.literariness_read ] ) )
   linearRegressionLine = ss.linearRegressionLine( linearRegression )
@@ -108,15 +114,47 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ch
        .attr( 'style', axisStyle )
        .text( yAxisTitle_nl );
 
+  // Let's try a legend
+
+  // Add one dot in the legend for each name.
+  var keys = [ 'male', 'female' ]
+  var keys_nl = { 'male': 'auteur is man',
+                'female': 'auteur is vrouw' }
+
+  var size = 30
+  svg.selectAll( 'legend_key' )
+  .data( keys )
+  .enter()
+  .append("path")
+    .attr( "d", function(d){ return symbol_map[ d ]() } )
+    .style( 'fill', 'rgb(255, 255, 255)' )
+    .style( 'stroke', bar_colors[3] )
+    .style( 'stroke-width', '1px' )
+    .attr( 'transform', function (d,i) {
+                            trf = 'translate(' + 480 +
+                            ',' + (100 + i*( size-3 )) + ')';
+                            return trf } )
+  // Add one dot in the legend for each name.
+  svg.selectAll( 'legend_key_labels' )
+  .data( keys )
+  .enter()
+  .append( 'text' )
+    .attr( 'x', 460 + size*1.2 )
+    .attr( 'y', function(d,i){ return 90 + i*( size-3 ) + ( size/2 ) } ) // 100 is where the first dot appears. 25 is the distance between dots
+    .attr( 'style', axisStyle )
+    .text( function(d){ return keys_nl[ d ] } )
+    .attr( 'text-anchor', 'left' )
+    .style( 'alignment-baseline', 'middle' )
+
 });
 
 
-d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/chart_N1_sentence-length.csv' ).then( function( data ) {
+d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/chart_11-4_sentence-length.csv' ).then( function( data ) {
 
   const xAxisTitle = 'Number of books read annually';
   const yAxisTitle = 'Number of respondents';
-  const xAxisTitle_nl = 'Mean sentence variance';
-  const yAxisTitle_nl = 'Literariness score';
+  const xAxisTitle_nl = 'Gemiddelde variatie in zinslengte (in aantal woorden)';
+  const yAxisTitle_nl = 'Gemiddelde score voor literaire kwaliteit';
 
   const axisStyle = 'font-size:11pt; font-family:PT Sans;'
   const scaleStyle = 'font-size:11pt; font-family:Helvetica Neue;'
@@ -127,17 +165,17 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ch
   // });
 
   const figure_height = 400;
-  const figure_width = 500;
+  const figure_width = 680;
 
   // Define the dimensions and margins of the graph
   // const margin = { top: 10, right: 30, bottom: 30, left: 40 },
   // Not sure yet if setting larger margins is best for axis labels plotting
-  const plot_margin = { top: 20, right: 20, bottom: 70, left: 80 },
+  const plot_margin = { top: 20, right: 200, bottom: 70, left: 80 },
       plot_width = figure_width - plot_margin.left - plot_margin.right,
       plot_height = figure_height - plot_margin.top - plot_margin.bottom;
 
   // Append the svg object to the appropriate div.
-  const svg = d3.select( 'div#chart_N1_sentence-length-variance' )
+  const svg = d3.select( 'div#chart_11-5_sentence-length-variance' )
     .append( 'svg' )
       .attr( 'width', plot_width + plot_margin.left + plot_margin.right )
       .attr( 'height', plot_height + plot_margin.top + plot_margin.bottom )
@@ -163,15 +201,21 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ch
     .attr( 'style', scaleStyle );
 
   // Add dots
+  const symbol_map = { 'male': d3.symbol().type(d3.symbolSquare).size(30),
+                       'female': d3.symbol().type(d3.symbolCircle).size(30) }
   svg.append('g')
     .selectAll( "dot" )
     .data(data)
     .enter()
-    .append("circle")
-      .attr("cx", function (d) { return x(d.sentence_length_variance); } )
-      .attr("cy", function (d) { return y(d.literariness_read); } )
-      .attr("r", 2.5)
-      .style("fill", bar_colors[2] )
+    .append("path")
+      .attr( "d", function(d){ return symbol_map[ d.gender ]() } )
+      .style( 'fill', 'rgb(255, 255, 255)' )
+      .style( 'stroke', bar_colors[3] )
+      .style( 'stroke-width', '1px' )
+      .attr( "transform", function (d) {
+                              trf = 'translate(' + x(d.sentence_length_variance) +
+                              ',' + y(d.literariness_read) + ')';
+                              return trf } )
 
   linearRegression = ss.linearRegression( data.map( d => [ +d.sentence_length_variance, +d.literariness_read ] ) )
   linearRegressionLine = ss.linearRegressionLine( linearRegression )
@@ -220,5 +264,37 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ch
       .attr( 'transform', 'rotate(-90)' )
       .attr( 'style', axisStyle )
       .text( yAxisTitle_nl );
+
+  // Let's try a legend
+
+  // Add one dot in the legend for each name.
+  var keys = [ 'male', 'female' ]
+  var keys_nl = { 'male': 'auteur is man',
+                'female': 'auteur is vrouw' }
+
+  var size = 30
+  svg.selectAll( 'legend_key' )
+  .data( keys )
+  .enter()
+  .append("path")
+    .attr( "d", function(d){ return symbol_map[ d ]() } )
+    .style( 'fill', 'rgb(255, 255, 255)' )
+    .style( 'stroke', bar_colors[3] )
+    .style( 'stroke-width', '1px' )
+    .attr( 'transform', function (d,i) {
+                            trf = 'translate(' + 480 +
+                            ',' + (100 + i*( size-3 )) + ')';
+                            return trf } )
+  // Add one dot in the legend for each name.
+  svg.selectAll( 'legend_key_labels' )
+  .data( keys )
+  .enter()
+  .append( 'text' )
+    .attr( 'x', 460 + size*1.2 )
+    .attr( 'y', function(d,i){ return 90 + i*( size-3 ) + ( size/2 ) } ) // 100 is where the first dot appears. 25 is the distance between dots
+    .attr( 'style', axisStyle )
+    .text( function(d){ return keys_nl[ d ] } )
+    .attr( 'text-anchor', 'left' )
+    .style( 'alignment-baseline', 'middle' )
 
 });

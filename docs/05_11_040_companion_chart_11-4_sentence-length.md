@@ -2,7 +2,7 @@
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
-title:  "N1 Sentence Length"
+title:  "11.4 & 11.5 Sentence Length NL"
 level:  2
 ---
 <style>
@@ -21,7 +21,7 @@ path.regressionLine {
 <script src="js/companion_utils_colors.js" defer></script>
 <script src="js/companion_utils_svg2png.js" defer></script>
 
-<script src="js/companion_chart_N1_sentence-length.js" defer></script>
+<script src="js/companion_chart_11-4_sentence-length.js" defer></script>
 
-<div class="chart_float" id="chart_N1_sentence-length"></div>
-<div class="chart_float" id="chart_N1_sentence-length-variance"></div>
+<div class="chart_float" id="chart_11-4_sentence-length"></div>
+<div class="chart_float" id="chart_11-5_sentence-length-variance"></div>

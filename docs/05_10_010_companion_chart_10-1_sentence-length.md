@@ -2,7 +2,7 @@
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
-title:  "10.1 Sentence Length 401"
+title:  "10.1 & 10.2 Sentence Length 401"
 level:  2
 ---
 <style>
