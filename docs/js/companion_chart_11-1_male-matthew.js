@@ -2,8 +2,8 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ch
 
   const xAxisTitle = 'Number of books read annually';
   const yAxisTitle = 'Number of respondents';
-  const xAxisTitle_nl = 'Ranking roman';
-  const yAxisTitle_nl = 'Score';
+  const xAxisTitle_nl = 'Plaats in de Top 10 per geslacht';
+  const yAxisTitle_nl = 'Gemiddelde score voor literaire kwaliteit';
 
   const axisStyle = 'font-size:11pt; font-family:PT Sans;'
   const scaleStyle = 'font-size:11pt; font-family:Helvetica Neue;'
@@ -150,8 +150,8 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ch
 
   const xAxisTitle = 'Number of books read annually';
   const yAxisTitle = 'Number of respondents';
-  const xAxisTitle_nl = 'Ranking roman';
-  const yAxisTitle_nl = 'Score';
+  const xAxisTitle_nl = 'Plaats in de Top 10 per geslacht';
+  const yAxisTitle_nl = 'Gemiddelde score voor literaire kwaliteit';
 
   const axisStyle = 'font-size:11pt; font-family:PT Sans;'
   const scaleStyle = 'font-size:11pt; font-family:Helvetica Neue;'

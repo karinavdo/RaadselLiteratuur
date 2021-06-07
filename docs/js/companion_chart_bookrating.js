@@ -118,7 +118,7 @@ create_bookrating_chart = function( csv_file_name, { max_y=400 }={} ) {
     // Let's try a legend
 
     // Add one dot in the legend for each name.
-    var keys = [ 'quality', 'literariness' ]
+    var keys = [ 'literariness', 'quality' ]
     var keys_nl = { 'quality': 'Algemene kwaliteit',
                     'literariness': 'Literaire kwaliteit' }
     var size = 17

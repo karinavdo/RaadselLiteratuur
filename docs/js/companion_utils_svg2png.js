@@ -16,6 +16,7 @@ function save_chart( chart_element_id ) {
   // const svg = d3.select( 'svg' );
   const chart_height = svg.attr( 'height' )
   const chart_width = svg.attr( 'width' )
+  const vb = svg.attr( 'viewBox' )
   const max_render_height = 1180;
   const max_chart_height = 600;
   const render_height = chart_height * ( max_render_height / max_chart_height );
@@ -35,13 +36,14 @@ function save_chart( chart_element_id ) {
   canvas_modal.appendChild( close_button );
 
   var canvas = document.createElement('canvas');
-  canvas.setAttribute( 'name', "hello1" );
   canvas.height = render_height;
   canvas.width = render_width;
   canvas_modal.appendChild(canvas);
   const img = new Image;
-  svg_str = '<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="' +
-            chart_width + '" height="' + chart_height +
+  svg_str = '<svg version="1.1" xmlns="http://www.w3.org/2000/svg' +
+            '" viewBox="' + vb +
+            '" width="' + chart_width +
+            '" height="' + chart_height +
             '" style="background-color: white;">' + svg.html() + '</svg>';
 
   const blob = new Blob([svg_str], { type: 'image/svg+xml;charset=utf-8' })

@@ -39,7 +39,8 @@ html {
 /* Overrides of the above for bigger devices */
 @media (min-width: 48em) {
   .sidebar {
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: scroll;
     white-space: nowrap;
     position: fixed;
     top: 0px;

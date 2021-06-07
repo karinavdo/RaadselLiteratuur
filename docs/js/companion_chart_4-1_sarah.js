@@ -34,7 +34,7 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ch
   // List of subgroups = header of the csv files = soil condition here
   const subgroups = data.columns.slice(2)
   subgroups.reverse()
-  
+
   // List of groups = species here = value of the first column called group -> I show them on the X axis
   const groups = d3.map(data, function(d){return(d.score)})
 
@@ -115,7 +115,7 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ch
   // Let's try a legend
 
   // Add one dot in the legend for each name.
-  var keys = [ 'quality', 'literariness' ]
+  var keys = [ 'literariness', 'quality' ]
   var keys_nl = { 'quality': 'Algemene kwaliteit',
                   'literariness': 'Literaire kwaliteit' }
   var size = 17
