@@ -50,17 +50,17 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ch
     .attr( 'style', scaleStyle );
 
   // Add dots
-  const symbol_map = { 'Fiction': d3.symbol().type(d3.symbolSquare).size(30),
-                       'Suspense': d3.symbol().type(d3.symbolCircle).size(30),
-                       'Romantic': d3.symbol().type(d3.symbolTriangle).size(30),
-                       'Other': d3.symbol().type(d3.symbolDiamond).size(30) }
+  const symbol_map = { 'Fiction': [ d3.symbol().type(d3.symbolSquare).size(30), 8 ],
+                       'Suspense': [ d3.symbol().type(d3.symbolCircle).size(30), 2 ],
+                       'Romantic': [ d3.symbol().type(d3.symbolTriangle).size(30), 3 ],
+                       'Other': [ d3.symbol().type(d3.symbolDiamond).size(30), 4 ] }
   svg.append('g')
     .selectAll( "dot" )
     .data(data)
     .enter()
     .append("path")
-      .attr( "d", function(d){ return symbol_map[ d.genre ]() } )
-      .style( 'fill', 'rgb(255, 255, 255)' )
+      .attr( "d", function(d){ return symbol_map[ d.genre ][0]() } )
+      .style( 'fill', function(d){ return bar_colors[ symbol_map[ d.genre ][1] ] } )  //'rgb(255, 255, 255)' )
       .style( 'stroke', bar_colors[3] )
       .style( 'stroke-width', '1px' )
       .attr( "transform", function (d) {
@@ -130,8 +130,8 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ch
    .data( keys )
    .enter()
    .append("path")
-     .attr( "d", function(d){ return symbol_map[ d ]() } )
-     .style( 'fill', 'rgb(255, 255, 255)' )
+   .attr( "d", function(d){ return symbol_map[ d ][0]() } )
+   .style( 'fill', function(d){ return bar_colors[ symbol_map[ d ][1] ] } )
      .style( 'stroke', bar_colors[3] )
      .style( 'stroke-width', '1px' )
      .attr( 'transform', function (d,i) {
@@ -205,18 +205,17 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ch
     .attr( 'style', scaleStyle );
 
   // Add dots
-  const symbol_map = { 'Fiction': d3.symbol().type(d3.symbolSquare).size(30),
-                       'Suspense': d3.symbol().type(d3.symbolCircle).size(30),
-                       'Romantic': d3.symbol().type(d3.symbolTriangle).size(30),
-                       'Other': d3.symbol().type(d3.symbolDiamond).size(30) }
+  const symbol_map = { 'Fiction': [ d3.symbol().type(d3.symbolSquare).size(30), 8 ],
+                       'Suspense': [ d3.symbol().type(d3.symbolCircle).size(30), 2 ],
+                       'Romantic': [ d3.symbol().type(d3.symbolTriangle).size(30), 3 ],
+                       'Other': [ d3.symbol().type(d3.symbolDiamond).size(30), 4 ] }
   svg.append('g')
     .selectAll( "dot" )
     .data(data)
     .enter()
     .append("path")
-      .attr( "d", function(d){ return symbol_map[ d.genre ]() } )
-      // .style( "fill", bar_colors[2] )
-      .style( 'fill', 'rgb(255, 255, 255)' )
+      .attr( "d", function(d){ return symbol_map[ d.genre ][0]() } )
+      .style( 'fill', function(d){ return bar_colors[ symbol_map[ d.genre ][1] ] } )  //'rgb(255, 255, 255)' )
       .style( 'stroke', bar_colors[3] )
       .style( 'stroke-width', '1px' )
       .attr( "transform", function (d) {
@@ -285,8 +284,8 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ch
    .data( keys )
    .enter()
    .append("path")
-     .attr( "d", function(d){ return symbol_map[ d ]() } )
-     .style( 'fill', 'rgb(255, 255, 255)' )
+     .attr( "d", function(d){ return symbol_map[ d ][0]() } )
+     .style( 'fill', function(d){ return bar_colors[ symbol_map[ d ][1] ] } )
      .style( 'stroke', bar_colors[3] )
      .style( 'stroke-width', '1px' )
      .attr( 'transform', function (d,i) {

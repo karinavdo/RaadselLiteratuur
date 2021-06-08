@@ -50,15 +50,15 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ch
     .attr( 'style', scaleStyle );
 
   // Add dots
-  const symbol_map = { 'male': d3.symbol().type(d3.symbolSquare).size(30),
-                       'female': d3.symbol().type(d3.symbolCircle).size(30) }
+  const symbol_map = { 'male': [ d3.symbol().type(d3.symbolSquare).size(30), 0 ],
+                       'female': [ d3.symbol().type(d3.symbolCircle).size(30), 1]  }
   svg.append('g')
     .selectAll( "dot" )
     .data(data)
     .enter()
     .append("path")
-      .attr( "d", function(d){ return symbol_map[ d.gender ]() } )
-      .style( 'fill', 'rgb(255, 255, 255)' )
+      .attr( "d", function(d){ return symbol_map[ d.gender ][0]() } )
+      .style( 'fill', function(d){ return bar_colors[ symbol_map[ d.gender ][1] ] } )
       .style( 'stroke', bar_colors[3] )
       .style( 'stroke-width', '1px' )
       .attr( "transform", function (d) {
@@ -126,8 +126,8 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ch
   .data( keys )
   .enter()
   .append("path")
-    .attr( "d", function(d){ return symbol_map[ d ]() } )
-    .style( 'fill', 'rgb(255, 255, 255)' )
+    .attr( "d", function(d){ return symbol_map[ d ][0]() } )
+    .style( 'fill', function(d){ return bar_colors[ symbol_map[ d ][1] ] } )
     .style( 'stroke', bar_colors[3] )
     .style( 'stroke-width', '1px' )
     .attr( 'transform', function (d,i) {
@@ -201,15 +201,15 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ch
     .attr( 'style', scaleStyle );
 
   // Add dots
-  const symbol_map = { 'male': d3.symbol().type(d3.symbolSquare).size(30),
-                       'female': d3.symbol().type(d3.symbolCircle).size(30) }
+  const symbol_map = { 'male': [ d3.symbol().type(d3.symbolSquare).size(30), 0 ],
+                       'female': [ d3.symbol().type(d3.symbolCircle).size(30), 1 ] }
   svg.append('g')
     .selectAll( "dot" )
     .data(data)
     .enter()
     .append("path")
-      .attr( "d", function(d){ return symbol_map[ d.gender ]() } )
-      .style( 'fill', 'rgb(255, 255, 255)' )
+      .attr( "d", function(d){ return symbol_map[ d.gender ][0]() } )
+      .style( 'fill', function(d){ return bar_colors[ symbol_map[ d.gender ][1] ] } )
       .style( 'stroke', bar_colors[3] )
       .style( 'stroke-width', '1px' )
       .attr( "transform", function (d) {
@@ -277,8 +277,8 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ch
   .data( keys )
   .enter()
   .append("path")
-    .attr( "d", function(d){ return symbol_map[ d ]() } )
-    .style( 'fill', 'rgb(255, 255, 255)' )
+    .attr( "d", function(d){ return symbol_map[ d ][0]() } )
+    .style( 'fill', function(d){ return bar_colors[ symbol_map[ d ][1] ] } )
     .style( 'stroke', bar_colors[3] )
     .style( 'stroke-width', '1px' )
     .attr( 'transform', function (d,i) {
