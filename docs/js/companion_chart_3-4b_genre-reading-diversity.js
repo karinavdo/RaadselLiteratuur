@@ -11,7 +11,7 @@ function chart( data ) {
   const svg = d3.create("svg");
 
   svg.append("g")
-      .attr("fill-opacity", 0.6)
+      .attr("fill-opacity", 0.4)
     .selectAll("path")
     .data( root.descendants().filter(d => d.depth) )
     .join("path")
@@ -45,8 +45,8 @@ function chart( data ) {
 d3.json( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/chart_3-4b_genre-reading-diversity.json' ).then( function( data ) {
 
   // color = d3.scaleOrdinal( d3.quantize( d3.interpolateGreys, data.children.length + 2 ) ).domain( data.children )
-  color = d3.scaleOrdinal( d3.quantize( d3.interpolateRainbow, data.children.length + 2 ) ).domain( data.children )
-  console.log( color )
+  // color = d3.scaleOrdinal( d3.quantize( d3.interpolateViridis, data.children.length + 2 ) ).domain( data.children )
+  color = d3.scaleOrdinal( d3.quantize( d3.interpolateTurbo, data.children.length + 2 ) ).domain( data.children )
   format = d3.format(",d")
   width = 975
   radius = width / 2
