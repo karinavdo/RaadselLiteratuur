@@ -41,10 +41,19 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ch
       .attr( 'style', scaleStyle );
 
   // Set the parameters for the histogram function.
+  const thresholds = d3.map( xScale.ticks(30), function( d ){ return d+1 } );
   const histogram = d3.histogram()
       .value( function( d ){ return d.books_rated; } )   // I need to give the vector of value
       .domain( xScale.domain() )  // then the domain of the graphic
-      .thresholds( xScale.ticks( 30 ) ); // then the numbers of bins
+      // .thresholds(  40  ); // then the numbers of bins
+      //.thresholds( xScale.ticks(40) ); // or where the breaks are
+      .thresholds( thresholds ); // Tweaking inclusive or exclusive counts into bins
+
+  // // Set the parameters for the histogram function.
+  // const histogram = d3.histogram()
+  //     .value( function( d ){ return d.books_rated; } )   // I need to give the vector of value
+  //     .domain( xScale.domain() )  // then the domain of the graphic
+  //     .thresholds( xScale.ticks( 30 ) ); // then the numbers of bins
 
   const bins = histogram( data );
 

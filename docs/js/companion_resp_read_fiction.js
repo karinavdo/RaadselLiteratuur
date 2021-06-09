@@ -2,7 +2,7 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/re
 
   const xAxisTitle = 'Number of books read annually';
   const yAxisTitle = 'Number of respondents';
-  const xAxisTitle_nl = 'Literaire romans';
+  const xAxisTitle_nl = 'Literaire roman';
   const yAxisTitle_nl = 'Respondenten';
 
   const axisStyle = 'font-size:11pt; font-family:PT Sans;'
@@ -41,10 +41,19 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/re
       .attr( 'style', scaleStyle );
 
   // Set the parameters for the histogram function.
+  const thresholds = d3.map( xScale.ticks(15), function( d ){ return d+1 } );
   const histogram = d3.histogram()
       .value( function( d ){ return d.book_id; } )   // I need to give the vector of value
       .domain( xScale.domain() )  // then the domain of the graphic
-      .thresholds( xScale.ticks( 15 ) ); // then the numbers of bins
+      // .thresholds(  40  ); // then the numbers of bins
+      //.thresholds( xScale.ticks(40) ); // or where the breaks are
+      .thresholds( thresholds ); // Tweaking inclusive or exclusive counts into bins
+
+  // // Set the parameters for the histogram function.
+  // const histogram = d3.histogram()
+  //     .value( function( d ){ return d.book_id; } )   // I need to give the vector of value
+  //     .domain( xScale.domain() )  // then the domain of the graphic
+  //     .thresholds( xScale.ticks( 15 ) ); // then the numbers of bins
 
   const bins = histogram( data );
 
@@ -63,7 +72,7 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/re
       .enter()
       .append( 'rect' )
         .attr( 'x', 1 )
-        .attr( 'transform', function( d ){ return 'translate( ' + xScale( d.x0 ) + ', ' + yScale( d.length ) + ' )'; })
+        .attr( 'transform', function( d ){ return 'translate( ' + xScale( d.x0 - 1 ) + ', ' + yScale( d.length ) + ' )'; })
         .attr( 'width', function( d ){ return xScale( d.x1 ) - xScale( d.x0 ) -1 ; })
         .attr( 'height', function( d ){ return plot_height - yScale( d.length ); })
         .style( 'fill', bar_colors[2] );

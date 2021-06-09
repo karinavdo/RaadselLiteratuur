@@ -119,7 +119,7 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ch
   var keys_nl = { 'literariness_fiction': 'Literaire roman',
                   'literariness_suspense': 'Spanning',
                   'literariness_romantic': 'Romantiek',
-                  'literariness_other': 'Overig' }
+                  'literariness_other': 'Overige' }
 
   var size = 17
   svg.selectAll( 'legend_key' )
