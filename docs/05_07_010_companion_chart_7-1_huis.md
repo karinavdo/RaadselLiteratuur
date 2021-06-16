@@ -17,5 +17,5 @@ level:  2
 
 <div class="chart_float" id="chart_7-1_huis"></div>
 
-#eerste grafiek in dit hoofdstuk
+# eerste grafiek in dit hoofdstuk
 Nicole Krauss is de meest literaire vrouwelijke auteur uit ons corpus volgens de deelnemers aan Het Nationale Lezersonderzoek.
