@@ -8,6 +8,7 @@ De 10 romans met de hoogste en laagste scores voor literaire kwaliteit, clustera
 
 
 ### **Extra grafieken:**
+Net als Grafiek 4.5 in het boek zijn de extra grafieken gemaakt met het Stylo Package for R, ontwikkeld door Maciej Eder, Mike Kestemont, Jan Rybicki, en Steffen Pielström. Zie <https://github.com/computationalstylistics/stylo> voor meer informatie over Stylo.
 
 **Grafiek 4.5.1**
 
