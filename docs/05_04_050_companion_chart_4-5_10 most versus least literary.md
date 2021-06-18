@@ -7,7 +7,7 @@ De 10 romans met de hoogste en laagste scores voor literaire kwaliteit, clustera
 ![Grafiek 4.5](public/4_5_0_CA_100_MFWs_Culled_0__Classic Delta.png)
 
 
-###**Extra grafieken:**
+### **Extra grafieken:**
 
 **Grafiek 4.5.1**
 
