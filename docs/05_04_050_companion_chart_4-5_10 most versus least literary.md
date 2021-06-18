@@ -6,6 +6,7 @@ level: 2
 De 10 romans met de hoogste en laagste scores voor literaire kwaliteit, clusteranalyse (**100** meest frequente woorden), kleurenversie van grafiek 4.5, p. N in *Het raadsel literatuur*. Maat: Classic Delta (de Deltascore staat aangegeven onder de horizontale as)
 ![Grafiek 4.5](public/4_5_0_CA_100_MFWs_Culled_0__Classic Delta.png)
 
+level: 3
 **Extra grafieken:**
 
 **Grafiek 4.5.1**
