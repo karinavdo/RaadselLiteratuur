@@ -49,6 +49,8 @@ Zoals hierboven al bleek, is de uitkomst van clusteranalyses gemaakt op basis va
 **Grafiek 4.5.4**
 
 De 10 romans met de hoogste (H) en laagste (L) scores voor literaire kwaliteit, analyse op hoofdcomponenten (**1000** meest frequente woorden).
+
 Maat: PCA, correlatieversie.
+
 ![Grafiek 4.5.4](public/4_5_4_PCA_1000_MFWs_Culled_0__PCA__corr.png)
-In de visualisatie van deze meting zien we dat de 10 meest literair gevonden boeken (H, in rood) samenscholen aan de linkerkant van de grafiek, dat zij het meest verschillen van de boeken van James en Kinsella, die rechts in de grafiek opduiken, en dat de romans van Fforde, Mansell en Weisberger dichter bij de meest literaire romans staan. De conclusie die ik hieruit trek is dat de meest literair gevonden romans een ander woordfrequentiepatroon hebben dan de minst literaire boeken, maar dat dat eerder met een genreverschil en andere genreconventies te maken zal hebben dan met een verschil in toegekende literaire kwaliteit.
+In de visualisatie van deze meting zien we dat de 10 meest literair gevonden boeken (H, in rood) samenscholen aan de linkerkant van de grafiek, dat zij het meest verschillen van de minst literair gevonden boeken van James en Kinsella (L, in groen), die rechts in de grafiek opduiken, en dat de ook weinig literair gewaardeerde romans van Fforde, Mansell en Weisberger dichter bij de meest literaire romans staan. De conclusie die ik hieruit trek is dat de meest literair gevonden romans een ander woordfrequentiepatroon hebben dan de minst literaire boeken, maar dat dat eerder met een genreverschil en andere genreconventies te maken zal hebben dan met een verschil in toegekende literaire kwaliteit.
