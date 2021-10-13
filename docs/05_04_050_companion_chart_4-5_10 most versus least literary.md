@@ -3,7 +3,9 @@ title: "Grafiek 4.5"
 level: 2
 ---
 
-*Het raadsel literatuur* p. 73.
+Kleurenversie van de grafiek op p. 73 van *Het raadsel literatuur*.
+
+
 De 10 romans met de hoogste (H) en laagste (L) scores voor literaire kwaliteit, clusteranalyse (**100** meest frequente woorden).
 
 Maat: Classic Delta (de Deltascore staat aangegeven onder de horizontale as).
@@ -23,7 +25,7 @@ De 10 romans met de hoogste (H) en laagste (L) scores voor literaire kwaliteit, 
 
 Maat: PCA, correlatieversie.
 
-In deze visualisatie van een principal components analyse kunnen we zien hoe de teksten zich tot elkaar verhouden op de eerste (horizontaal afgebeelde) en tweede (verticaal afgebeelde) component. De eerste component, afgebeeld op de horizontale as, reflecteert het cluster aan gecorreleerde variabelen die samen het grootste deel van de variatie in de data verklaren. De tweede hoofdcomponent, weergegeven op de verticale as, reflecteert de grootste hoeveelheid correlerende variabelen uit de resterende variabelen (die dus niet correleren met de eerste component).
+In deze visualisatie van een principal components analyse kunnen we zien hoe de teksten zich tot elkaar verhouden op de eerste (horizontaal afgebeelde) en tweede (verticaal afgebeelde) component. De eerste component reflecteert het cluster aan gecorreleerde variabelen die samen het grootste deel van de variatie in de data verklaren. De tweede hoofdcomponent reflecteert de grootste hoeveelheid correlerende variabelen uit de resterende variabelen (die dus niet correleren met de eerste component).
 
 Verwijzingen naar meer uitleg over PCA zijn te vinden op p. 305-306 van *Het raadsel literatuur*.
 
@@ -36,12 +38,16 @@ In de grafiek hieronder zijn de woorden die opvallend vaker in de verschillende 
 
 De 10 romans met de hoogste (H) en laagste (L) scores voor literaire kwaliteit, clusteranalyse (**130** meest frequente woorden).
 
+Maat: Classic Delta
+
 Vanaf dit aantal meest frequente woorden (MFW) zijn de 10 meest literair gevonden romans steeds bij elkaar in hetzelfde cluster te vinden. De weinig literair gewaardeerde romans van Weisberger, Fforde en Mansell lijken net iets meer op de 10 meest literaire romans dan op de andere 5 romans, van Kinsella en James. Bij 110 en 120 MFW zien we hetzelfde beeld als in Grafiek 4.5.
 ![Grafiek 4.5.2](public/4_5_2_CA_130_MFWs_Culled_0__Classic Delta.png)
 
 **Grafiek 4.5.3**
 
 De 10 romans met de hoogste (H) en laagste (L) scores voor literaire kwaliteit, bootstrap consensus tree (**100** - **1000** meest frequente woorden, increment van 100, consensus strength 0.5).
+
+Maat: Classic Delta
 
 Zoals hierboven al bleek, is de uitkomst van clusteranalyses gemaakt op basis van verschillende aantallen meest frequente woorden (MFW) niet altijd dezelfde. Het is nuttig om een hele reeks aan verschillende clusteranalyses te doen en daar dan een soort gemiddelde van te berekenen. Dat kan worden gedaan door in Stylo te kiezen voor een bootstrap consensus tree. In de grafiek hieronder is het resultaat gevisualiseerd van het gemiddelde van clusteranalyses gemaakt op basis van de 100 MFW tot en met de 1000 MFW met een increment van 100; dat betekent dat er in totaal tien clusteranalyses zijn gemaakt (100, 200, 300, ...., 900 en 1000 MFW). De gekozen consensus strength is 0,5, wat betekent dat twee romans of clusters aan elkaar geclusterd worden als ze in minimaal de helft van de metingen het meest op elkaar lijken.
 ![Grafiek 4.5.3](public/4_5_3_BCT_100-1000_MFWs_Inc_100_Culled_0__Classic Delta.png)
@@ -53,4 +59,4 @@ De 10 romans met de hoogste (H) en laagste (L) scores voor literaire kwaliteit, 
 Maat: PCA, correlatieversie.
 
 ![Grafiek 4.5.4](public/4_5_4_PCA_1000_MFWs_Culled_0__PCA__corr.png)
-In de visualisatie van deze meting zien we dat de 10 meest literair gevonden boeken (H, in rood) samenscholen aan de linkerkant van de grafiek, dat zij het meest verschillen van de minst literair gevonden boeken van James en Kinsella (L, in groen), die rechts in de grafiek opduiken, en dat de ook weinig literair gewaardeerde romans van Fforde, Mansell en Weisberger dichter bij de meest literaire romans staan. De conclusie die ik hieruit trek is dat de meest literair gevonden romans een ander woordfrequentiepatroon hebben dan de minst literaire boeken, maar dat dat eerder met een genreverschil en andere genreconventies te maken zal hebben dan met een verschil in toegekende literaire kwaliteit.
+In de visualisatie van deze meting zien we dat de 10 meest literair gevonden boeken (H, in rood) samenscholen aan de linkerkant van de grafiek, dat zij het meest verschillen van de minst literair gevonden boeken van James en Kinsella (L, in groen), die rechts in de grafiek opduiken, en dat de ook weinig literair gewaardeerde romans van Fforde, Mansell en Weisberger dichter bij de meest literaire romans staan. De conclusie die uit al deze metingen te trekken is (meer hierover in *Het raadsel literatuur* op p. 73 en verder), is dat de meest literair gevonden romans een ander woordfrequentiepatroon hebben dan de minst literaire boeken, maar dat dat eerder met een genreverschil en andere genreconventies te maken zal hebben dan met een verschil in toegekende literaire kwaliteit.
