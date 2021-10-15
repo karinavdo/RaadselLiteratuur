@@ -44,7 +44,7 @@ Zie *Het raadsel literatuur* p. 72 en p. 164 voor meer informatie over clusteran
 
 Maat: Classic Delta
 
-Meer over deze maat: De ‘Delta’ is een getal dat aanduidt wat de mate van verschil in woordgebruik en woordfrequenties is tussen teksten die deel uitmaken van een groot corpus van teksten. Voor elke tekst in dat corpus wordt vastgesteld welke verschillende woorden erin voorkomen en hoe vaak elk woord voorkomt. Vervolgens wordt gekeken hoe het gebruik van elk woord in die tekst zich verhoudt tot het gemiddelde gebruik van dat woord in de hele tekstverzameling. Voor alle geselecteerde woorden (bijvoorbeeld de 100 meest frequente of de 1000 meest freuente woorden) worden de afwĳkingen van het gebruik ten opzichte van het gemiddelde opgeteld: de ‘Delta’-score. 
+Meer over deze maat: De ‘Delta’ is een getal dat aanduidt wat de mate van verschil in woordgebruik en woordfrequenties is tussen teksten die deel uitmaken van een groot corpus van teksten. Voor elke tekst in dat corpus wordt vastgesteld welke verschillende woorden erin voorkomen en hoe vaak elk woord voorkomt. Vervolgens wordt gekeken hoe het gebruik van elk woord in die tekst zich verhoudt tot het gemiddelde gebruik van dat woord in de hele tekstverzameling. Voor alle geselecteerde woorden (bijvoorbeeld de 100 meest frequente of de 1000 meest freuente woorden) worden de afwĳkingen van het gebruik ten opzichte van het gemiddelde opgeteld: de ‘Delta’-score.
 
 Zie *Het raadsel literatuur* p. 24-25 voor meer informatie over de Delta-score.
 
