@@ -1,5 +1,5 @@
 ---
-title: "Grafiek 4.5"
+title: "Grafiek 4.5  *Top 10 meest literair en minst literair"
 level: 2
 ---
 
@@ -25,7 +25,7 @@ De 10 romans met de hoogste (H) en laagste (L) scores voor literaire kwaliteit, 
 
 Maat: PCA, correlatieversie.
 
-In deze visualisatie van een principal components analyse kunnen we zien hoe de teksten zich tot elkaar verhouden op de eerste (horizontaal afgebeelde) en tweede (verticaal afgebeelde) component. De eerste component reflecteert het cluster aan gecorreleerde variabelen die samen het grootste deel van de variatie in de data verklaren. De tweede hoofdcomponent reflecteert de grootste hoeveelheid correlerende variabelen uit de resterende variabelen (die dus niet correleren met de eerste component).
+Meer over deze maat: NNNN  In deze visualisatie van een principal components analyse kunnen we zien hoe de teksten zich tot elkaar verhouden op de eerste (horizontaal afgebeelde) en tweede (verticaal afgebeelde) component. De eerste component reflecteert het cluster aan gecorreleerde variabelen die samen het grootste deel van de variatie in de data verklaren. De tweede hoofdcomponent reflecteert de grootste hoeveelheid correlerende variabelen uit de resterende variabelen (die dus niet correleren met de eerste component).
 
 Verwijzingen naar meer uitleg over PCA zijn te vinden op p. 305-306 van *Het raadsel literatuur*.
 
@@ -38,7 +38,15 @@ In de grafiek hieronder zijn de woorden die opvallend vaker in de verschillende 
 
 De 10 romans met de hoogste (H) en laagste (L) scores voor literaire kwaliteit, clusteranalyse (**130** meest frequente woorden).
 
+Meer over clusteranalyse: In een clusteranalyse worden op statistische gronden de meest op elkaar lĳkende teksten op basis van woorden en woordfrequenties steeds twee aan twee met elkaar verbonden, waarna de clusters die het meest op elkaar lĳken ook weer twee aan twee aan elkaar worden geknoopt, en zo verder. In de visualisatie van de meting is dat als volgt weergegeven: Hoe verder naar rechts in de grafiek twee boeken of clusters van boeken door een verticale lijn met elkaar verbonden zĳn, hoe meer ze op elkaar lĳken in de frequentie van de geanalyseerde woorden.
+
+Zie *Het raadsel literatuur* p. 72 en p. 164 voor meer informatie over clusteranalyse.
+
 Maat: Classic Delta
+
+Meer over deze maat: De ‘Delta’ is een getal dat aanduidt wat de mate van verschil in woordgebruik en woordfrequenties is tussen teksten die deel uitmaken van een groot corpus van teksten. Voor elke tekst in dat corpus wordt vastgesteld welke verschillende woorden erin voorkomen en hoe vaak elk woord voorkomt. Vervolgens wordt gekeken hoe het gebruik van elk woord in die tekst zich verhoudt tot het gemiddelde gebruik van dat woord in de hele tekstverzameling. Voor alle geselecteerde woorden (bijvoorbeeld de 100 meest frequente of de 1000 meest freuente woorden) worden de afwĳkingen van het gebruik ten opzichte van het gemiddelde opgeteld: de ‘Delta’-score. 
+
+Zie *Het raadsel literatuur* p. 24-25 voor meer informatie over de Delta-score.
 
 Vanaf dit aantal meest frequente woorden (MFW) zijn de 10 meest literair gevonden romans steeds bij elkaar in hetzelfde cluster te vinden. De weinig literair gewaardeerde romans van Weisberger, Fforde en Mansell lijken net iets meer op de 10 meest literaire romans dan op de andere 5 romans, van Kinsella en James. Bij 110 en 120 MFW zien we hetzelfde beeld als in Grafiek 4.5.
 ![Grafiek 4.5.2](public/4_5_2_CA_130_MFWs_Culled_0__Classic Delta.png)
