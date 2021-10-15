@@ -8,6 +8,14 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ch
   const axisStyle = 'font-size:11pt; font-family:PT Sans;'
   const scaleStyle = 'font-size:11pt; font-family:Helvetica Neue;'
 
+  const label_x_padding = 10
+  const label_y_padding = 4
+  const label_stroke = 'rgb(111, 122, 154)'
+  const label_stroke_width = 1
+  const label_fill = 'rgb(219, 228, 255)'
+
+  const bar_highlight = '#6c84ce'
+
   data.forEach( function( d ) {
     d.resp_id = +d['respondent.id'];
     d.book_per_year = +d['books.per.year'];
@@ -53,7 +61,8 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ch
 
   const yScale = d3.scaleLinear()
       .range( [plot_height, 0] );
-      // yScale.domain( [ 0, d3.max( bins, function( d ){ return d.length; } ) ] );   // d3.hist has to be called before the Y axis obviously
+      // yScale.domain( [ 0, d3.max( bins, function( d ){ return d.length; } ) ] );
+      // d3.hist has to be called before the Y axis obviously
       yScale.domain( [ 0, 5000 ] );
   svg.append( 'g' )
         .call( d3.axisLeft( yScale )
@@ -66,12 +75,86 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ch
       .data ( bins )
       .enter()
       .append( 'rect' )
-        .attr( 'x', 1 )
         .attr( 'transform', function( d ){ return 'translate( ' + xScale( d.x0 ) + ', ' + yScale( d.length ) + ' )'; })
         .attr( 'width', function( d ){ return xScale( d.x1 ) - xScale( d.x0 ) -1 ; })
         .attr( 'height', function( d ){ return plot_height - yScale( d.length ); })
-        .style( 'fill', bar_colors[2] ); // Temporarily exchange original color '#77b5bf' for gray for print purpose.
+        .style( 'fill', bar_colors[2] ) // Temporarily exchange original color '#77b5bf' for gray for print purpose.
+        .on( 'click', handle_click );
 
+  function handle_click( event, d ){
+    bar = d3.select( this );
+    // We remove anything to do with highlighting and labeling.
+    // Essentially this is 'toggle off'.
+    svg.selectAll( 'rect' ).style( 'fill', bar_colors[2] );
+    chart_bar_datum_label = d3.select( '#chart_bar_datum_label' )
+    if( chart_bar_datum_label ){
+      chart_bar_datum_label.remove();
+    };
+    // We only then toggle the highlight on if a non highlighted bar
+    // is clicked.
+    if( bar.classed( 'highlighted' ) ){
+      bar.classed( 'highlighted', false );
+    } else {
+      // Remember to put all bars in a non highlighted state.
+      svg.selectAll( 'rect' ).classed( 'highlighted', false );
+      svg.append( 'g' )
+        .attr( 'id', "chart_bar_datum_label" )  // Create an id for text so we can select it later for removing on mouseout
+        .append( 'text' )
+          .attr( 'x', function() { return xScale( d.x0 ); } )
+          .attr( 'y', function() { return yScale( d.length ) - 75; } )
+          .attr( 'style', scaleStyle )
+          .text( d.length );
+      label_g = d3.select( '#chart_bar_datum_label' )
+      bbox = label_g.node().getBBox();
+      // Project left x position of label box on the width
+      // of the plot minus the label box width.
+      // This guarantees that the label box always falls within the div
+      // of the chart horizontally, and thus will be visible.
+      // x * ( ( x_max - label_width ) / x_max )
+      label_box_width = bbox.width + 2*label_x_padding;
+      label_box_height = bbox.height + 2*label_y_padding;
+      label_box_x = bbox.x * ( ( plot_width - label_box_width ) / plot_width ) - 8;
+      label_box_y = bbox.y - label_y_padding;
+      label_text = d3.select( '#chart_bar_datum_label text' );
+      label_text.attr( 'x', label_box_x + label_x_padding );
+      label_g.insert( 'rect', ':first-child' )
+      // .attr( 'x', bbox.x - label_x_padding )
+        .attr( 'x', label_box_x )
+        .attr( 'y', label_box_y )
+        .attr( 'width', label_box_width )
+        .attr( 'height', label_box_height )
+        .attr( 'fill', label_fill )
+        .attr( 'stroke', label_stroke )
+        .attr( 'stroke-width', label_stroke_width );
+      connector_x_start = label_box_x + 0.5*label_box_width;
+      connector_y_start = label_box_y + label_box_height;
+      connector_x_end = xScale( d.x0 ) + ( ( xScale( d.x1 ) - xScale( d.x0 ) + 1 ) / 2 );
+      connector_y_end = yScale( d.length );
+      label_g.append( 'line' )
+        .attr( 'x1', connector_x_start )
+        .attr( 'y1', connector_y_start )
+        .attr( 'x2', connector_x_end )
+        .attr( 'y2', connector_y_end )
+        .attr( 'stroke', label_stroke )
+        .attr( 'stroke-width', 2*label_stroke_width );
+      label_g.append( 'circle' )
+        .attr( 'cx', connector_x_start )
+        .attr( 'cy', connector_y_start )
+        .attr( 'r', 3 )
+        .attr( 'fill', label_fill )
+        .attr( 'stroke', label_stroke )
+        .attr( 'stroke-width', label_stroke_width );
+      label_g.append( 'circle' )
+        .attr( 'cx', connector_x_end )
+        .attr( 'cy', connector_y_end )
+        .attr( 'r', 3 )
+        .attr( 'fill', label_fill )
+        .attr( 'stroke', label_stroke )
+        .attr( 'stroke-width', label_stroke_width );
+      bar.style( 'fill', bar_highlight );
+      bar.classed( 'highlighted', true );
+    }
+}
 
   // Same thing but now for x axis
   // const gutter_height = plot_margin.bottom - d3.select('#xaxis').node().getBBox().height
