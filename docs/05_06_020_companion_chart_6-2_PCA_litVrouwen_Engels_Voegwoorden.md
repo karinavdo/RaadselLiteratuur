@@ -11,10 +11,18 @@ vertaalde (E) literaire romans van vrouwelijke auteurs, analyse op hoofdcomponen
 ![Grafiek 6.1](public/6_2_0_PCA_6_MFWs_Culled_0__PCA.png)
 
 ### **Extra grafiek Voegwoorden in Nederlandse en uit het Engels vertaalde literaire romans van vrouwelijke auteurs**
-Ook deze grafiek is gemaakt met het Stylo Package for R. Zie voor meer informatie over package en de verschillende maten deze website onder Grafiek 4.5.
+Ook deze grafiek is gemaakt met het Stylo Package for R. Zie voor meer informatie over het package en de verschillende maten deze website onder Grafiek 4.5.
 
 **Grafiek 6.2.1 Voegwoorden in Nederlandse en uit het Engels vertaalde literaire romans van vrouwelijke auteurs**
 
 De voegwoorden *en*, *toen*, *dat*, *voordat*, *terwijl* en *hoewel* in de Nederlandse (N) en uit het Engels
 vertaalde (E) literaire romans van vrouwelijke auteurs, analyse op hoofdcomponenten. Clusteranalyse (**1000** meest frequente woorden). Maat: Classic Delta.
 ![Grafiek 6.1.1](public/6_2_1_CA_6_MFWs_Culled_0__Classic Delta.png)
+
+**Conclusie**
+
+In de geselecteerde romans is er een duidelijk verschil in de frequentie van de zes voegwoorden in oorspronkelijk Nederlandse literaire romans van vrouwelijke auteurs en literaire romans vertaald uit het Engels. Het lijkt er dus op, dat vertalers onder invloed van de brontaal (het Engels) in hun gebruik van deze voegwoorden in hun doeltekst (de vertaling in het Nederlands) een ander frequentiepatroon hanteren dan de auteurs die hun romans rechtstreeks in het Nederlands schreven. Dat is waarschijnlijk een onbewust proces, maar lezers kunnen dat, net zo onbewust, toch merken bij het lezen en daardoor weten dat ze met een vertaling te maken hebben. En dat onbewuste gevoel kan weer invloed hebben op de score die ze een boek geven voor literaire kwaliteit. Meer hierover in *Het raadsel literatuur* op p. 118 en verder.
+
+**Hoe zijn de metingen te repliceren?**
+
+In het R Package (zie XXX) is voor alle 401 romans een woordfrequentielijst opgenomen met de 3000 meest gebruikte woorden per tekst. VOORBEELDQUERY HIER!

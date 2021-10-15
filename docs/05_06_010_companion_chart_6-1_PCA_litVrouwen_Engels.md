@@ -10,7 +10,7 @@ Nederlandse (N) en uit het Engels vertaalde (E) literaire romans van vrouwelijke
 ![Grafiek 6.1](public/6_1_0_PCA_1000_MFWs_Culled_0__PCA__corr.png)
 
 ### **Extra grafieken Nederlandse en uit het Engels vertaalde literaire romans van vrouwelijke auteurs**
-Alle gemaakt met het Stylo Package for R. Zie voor meer informatie over package en de verschillende maten deze website onder Grafiek 4.5.
+Alle gemaakt met het Stylo Package for R. Zie voor meer informatie over het package en de verschillende maten deze website onder Grafiek 4.5.
 
 In Grafiek 6.1 is te zien dat de Nederlandse (N) en uit het Engels vertaalde (E) literaire romans van vrouwelijke auteurs in het frequentiegebruik van de 1000 meest gebruikte woorden niet als twee verschillende clusters in de visualisatie verschijnen. Ook een clusteranalyse (Grafiek 6.1.1 hieronder) en een bootstrap consensus tree (Grafiek 6.1.2 hieronder) op basis van 1000 meest frequente woorden presenteren hetzelfde beeld.
 
