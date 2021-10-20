@@ -24,7 +24,7 @@ Grafiek 8.3.1 presenteert een clusteranalyse en Grafiek 8.3.2 een bootstrap cons
 Clusteranalyse (**1000** meest frequente woorden). Maat: Classic Delta.
 ![Grafiek 8.3.1](public/8_3_1_CA_1000_MFWs_Culled_0__Classic Delta.png)
 
-Ook in de visualisatie van deze clusteranalyse is duidelijk te zien dat boeken van dezelfde auteur gewoonlijk het meest op elkaar lijken. Vier van de vijf romans van Mankell clusteren bij elkaar - drie uit de categorie Spanning en een van zijn twee literaire romans. De vijfde, literaire roman staat iets verder weg, maar nog wel in dezelfde hoofdtak. Als we naar de Deltascores kijken (weergegeven op de horizontale as) op de plaats waar de takken zich afsplitsen is ook te zien dat de romans van Mankell iets minder ver van elkaar af staan dan de twee romans van Renate Dorrestein in Grafiek 7.7.
+Ook in de visualisatie van deze clusteranalyse is duidelijk te zien dat boeken van dezelfde auteur gewoonlijk het meest op elkaar lijken. Vier van de vijf romans van Mankell clusteren bij elkaar - drie uit de categorie Spanning en een van zijn twee literaire romans. De vijfde, literaire roman staat iets verder weg, maar nog wel in dezelfde hoofdtak. Als we naar de Deltascores kijken (weergegeven op de horizontale as) op de plaats waar de takken zich afsplitsen is ook te zien dat de romans van Mankell iets minder ver van elkaar af staan dan de twee romans van Renate Dorrestein in Grafiek 7.7 (iets onder de score 2 respectievelijk iets daarboven).
 
 
 **Grafiek 8.3.2 Vertaalde literaire romans van mannelijke auteurs en drie spannende boeken van Mankell**
@@ -36,7 +36,9 @@ Ook als we een hele serie aan clusteranalyses maken, blijft het patroon hetzelfd
 
 **Conclusie**
 
-Dat de roman *De Daisy Sisters* afwijkt van de andere vier romans van Mankell kan te maken hebben met een groot verschil in tijd van ontstaan: de roman werd pas recent vertaald en de vertaling verscheen in 2009, maar de originele Zweedse tekst verscheen al in 1982. Het lijkt er op dat we ook in de vertaling kunnen zien dat Mankells schrijfstijl in de loop der jaren is veranderd.  Meer over de vijf romans van Henning Mankell in *Het raadsel literatuur* op p. 188-195. Speciale aandacht voor Jonas Jonassons *De honderjarige man die uit het raam klom en verdween*, die zich in Grafiek 8.3 tussen de Mankells heeft genesteld, op p. 196-197 van *Het raadsel literatuur*.
+Dat de roman *De Daisy Sisters* afwijkt van de andere vier romans van Mankell kan te maken hebben met een groot verschil in tijd van ontstaan: de roman werd pas recent vertaald (in 2009), maar de originele Zweedse tekst verscheen al in 1982. Het lijkt er op dat we ook in de vertaling kunnen zien dat Mankells eigen schrijfstijl in de loop der jaren is veranderd. Het is trouwens opvallend dat in Grafiek 8.2 *De Daisy Sisters* het dichtste aanschuift bij *Norwegian Wood* van Haruki Murakami, waarvoor iets vergelijkbaars geldt: de oorspronkelijke versie verscheen veel eerder, namelijk in 1987. Zie hiervoor *Het raadsel literatuur* p. 189.
+
+Meer over de vijf romans van Henning Mankell in *Het raadsel literatuur* op p. 188-195. Speciale aandacht voor Jonas Jonassons *De honderjarige man die uit het raam klom en verdween*, die zich in Grafiek 8.3 tussen de Mankells heeft genesteld, op p. 196-197 van *Het raadsel literatuur*.
 
 **Hoe zijn de metingen te repliceren?**
 

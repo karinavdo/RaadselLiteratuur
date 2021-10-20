@@ -15,7 +15,7 @@ Ook deze grafiek is gemaakt met het Stylo Package for R. Zie  Grafiek 4.5 voor m
 
 Grafiek 7.7 hierboven toont de visualisatie van een clusteranalyse van dezelfde romans waarvan Grafiek 7.6 de analyse op hoofdcomponenten laat zien. Ook in de clusteranalyse op basis van de 1000 meest frequente woorden staan de groepen met verschillende scores voor literaire kwaliteit door elkaar heen. En de twee romans van Renate Dorrestein staan ook hier in twee verschillende clusters. In de extra grafiek hieronder (7.7.1) zien we dat ook bij een hele serie aan clusteranalyses dat beeld niet wijzigt.
 
-**Grafiek 7.7.1 VertaaldeNederlandse literaire romans van vrouwelijke auteurs (2)**
+**Grafiek 7.7.1 Nederlandse literaire romans van vrouwelijke auteurs (2)**
 
 Bootstrap consensus tree (**100** - **1000** meest frequente woorden, increment van 100, consensus strength 0.5). Maat: Classic Delta.
 ![Grafiek 7.7.1](public/7_7_1_BCT_100-1000_MFWs_Culled_0__Classic Delta_C_0.5.png)
