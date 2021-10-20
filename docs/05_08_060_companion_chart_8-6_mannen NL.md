@@ -5,8 +5,8 @@ level: 2
 
 Kleurenversie van de grafiek op p. 205 van *Het raadsel literatuur*.
 
-Nederlandse literaire romans van mannelijke auteurs, clusteranalyse (1000 meest frequente woorden).
-Scores voor literaire kwaliteit: H (hoog), L (laag), en M (midden). Maat: Classic Delta.
+Nederlandse literaire romans van mannelijke auteurs, analyse op hoofdcomponenten (1000 meest frequente woorden).
+Scores voor literaire kwaliteit: H (hoog), L (laag), en M (midden). Maat: PCA, correlatieversie.
 ![Grafiek 8.6](public/8_6_0_PCA_1000_MFWs_Culled_0__PCA__corr.png)
 
 ### **Extra grafieken Nederlandse literaire romans van mannelijke auteurs**
