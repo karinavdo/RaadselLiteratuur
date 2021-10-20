@@ -17,12 +17,12 @@ In Grafiek 8.6, waarin de Nederlandse literaire romans met elkaar werden vergele
 
 In de clusteranalyse gevisualiseerd in Grafiek 8.7, gebaseerd op de 1000 meest frequente woorden, lijken de romans van de twee Vlaamse auteurs het meest op elkaar, en daarna die van Kinsella en Dijkshoorn, en clustert Voskuil met nummer 1 op literaire kwaliteit Barnes, en dit cluster lijkt het meest op de hoogliteraire Lanoye en Mortier. Als we echter een hele reeks van clusteranalyses doen, blijven er twee hoofdclusters over, de hoogliteraire Barnes, Lanoye en Mortier en is Voskuil terug te vinden bij de weinig literair gevonden Kinsella en Dijkshoorn. De analyse op hoofdcomponenten geeft wat meer diepte aan dit plaatje, zoals de visualisatie in Grafiek 8.7.2 toont: hier zien we Voskuil toch weer dichter bij Barnes.
 
-**Grafiek 8.7.1 Voskuil, *De buurman*, Mortier, *Godenslaap*, Lanoye, *Sprakeloos*, Barnes, *Alsof het voorbij is*, Kinsella, *Shopaholic en baby*, Mortier, *Sprakeloos*, Dijkshoorn, *Nooit ziek geweest*.**
+**Grafiek 8.7.1 Voskuil, *De buurman*, Mortier, *Godenslaap*, Barnes, *Alsof het voorbij is*, Kinsella, *Shopaholic en baby*, Lanoye, *Sprakeloos*, Dijkshoorn, *Nooit ziek geweest*.**
 
 Bootstrap consensus tree (**100** - **1000** meest frequente woorden, increment van 100, consensus strength 0.5). Maat: Classic Delta.
 ![Grafiek 8.7.1](public/8_7_1_BCT_100-1000_MFWs_Culled_0__Classic Delta_C_0.5.png)
 
-**Grafiek 8.7.2 Voskuil, *De buurman*, Mortier, *Godenslaap*, Lanoye, *Sprakeloos*, Barnes, *Alsof het voorbij is*, Kinsella, *Shopaholic en baby*, Mortier, *Sprakeloos*, Dijkshoorn, *Nooit ziek geweest*.**
+**Grafiek 8.7.2 Voskuil, *De buurman*, Mortier, *Godenslaap*, Barnes, *Alsof het voorbij is*, Kinsella, *Shopaholic en baby*, Lanoye, *Sprakeloos*, Dijkshoorn, *Nooit ziek geweest*.**
 
 Analyse op hoofdcomponenten (**1000** meest frequente woorden). Maat: PCA, correlatieversie.
 ![Grafiek 8.7.2](public/8_7_2_PCA_1000_MFWs_Culled_0__PCA__corr.png)

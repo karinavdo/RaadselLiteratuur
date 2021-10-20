@@ -3,34 +3,32 @@ title: "Grafiek 8.10 Kluun versus Koch"
 level: 2
 ---
 
-Kleurenversie van de grafiek op p. 210 van *Het raadsel literatuur*.
+Kleurenversie van de grafiek op p. 225 van *Het raadsel literatuur*.
 
-Kluun, *Haantjes*, versus Koch, *Zomerhuis met zwembad*, clusteranalyse (1000 meest frequente woorden).
-Aangevuld met Barnes, *Alsof het voorbij is*, Kinsella, *Shopaholic en baby*, Dijkshoorn, *Nooit ziek geweest* en
-Mortier, *Godenslaap*, clusteranalyse (1000 meest frequente woorden). Maat: Classic Delta.
+Kluun, *Haantjes*, versus Koch, *Zomerhuis met zwembad*, aangevuld met Barnes, *Alsof het voorbij is*, Kinsella, *Shopaholic en baby*, Dijkshoorn, *Nooit ziek geweest* en Mortier, *Godenslaap*, clusteranalyse (1000 meest frequente woorden). Maat: Classic Delta.
 ![Grafiek 8.7](public/8_10_0_CA_1000_MFWs_Culled_0__Classic Delta.png)
 
 ### **Extra grafieken Kluun versus Koch**
 
 Ook deze grafieken zijn gemaakt met het Stylo Package for R. Zie  Grafiek 4.5 voor meer informatie over het package en de verschillende maten.
 
-In Grafiek 8.6, waarin de Nederlandse literaire romans met elkaar werden vergeleken, staat J.J. Voskuils *De buurman* eenzaam onderaan. In Grafiek 8.7 wordt nagegaan of *De buurman* (met een score voor literaire kwaliteit in de middencategorie) meer lijkt op een paar hoogliterair gevonden romans of juist op een paar van de romans die juist het minste literaire kwaliteit toegekend kregen. De romans van Kinsella en Dijkshoorn kregen lage scores en die van Mortier, Lanoye en Barnes ontvingen de drie hoogste scores.
+In Grafiek 8.7 werd bekeken of Voskuils *De buurman*  meer lijkt op een de meest literair gevonden romans uit het onderzoekscorpus of juist meer op een paar van de romans die het minst werden gewaardeerd om hun literaire kwaliteit. Hetzelfde doen we in Grafiek 8.10 voor de twee romans van Kluun (*Haantjes*) en Herman Koch (*Zomerhuis met zwembad*) die begin 2011 gelijktijdig verschenen en in de media voortdurend tegen elkaar werden afgezet, ze vergelijkned met dezelfde andere romans: uit de literaire top Barnes, *Alsof het voorbij is* en Mortier, *Godenslaap*, en van onder op de lijst Dijkshoorn, *Nooit ziek geweest* en Kinsella, *Shopaholic en baby*.
 
-In de clusteranalyse gevisualiseerd in Grafiek 8.7, gebaseerd op de 1000 meest frequente woorden, lijken de romans van de twee Vlaamse auteurs het meest op elkaar, en daarna die van Kinsella en Dijkshoorn, en clustert Voskuil met nummer 1 op literaire kwaliteit Barnes, en dit cluster lijkt het meest op de hoogliteraire Lanoye en Mortier. Als we echter een hele reeks van clusteranalyses doen, blijven er twee hoofdclusters over, de hoogliteraire Barnes, Lanoye en Mortier en is Voskuil terug te vinden bij de weinig literair gevonden Kinsella en Dijkshoorn. De analyse op hoofdcomponenten geeft wat meer diepte aan dit plaatje, zoals de visualisatie in Grafiek 8.7.2 toont: hier zien we Voskuil toch weer dichter bij Barnes.
+De clusteranalyse gevisualiseerd in Grafiek 8.10 is weer gebaseerd op de 1000 meest frequente woorden. De romans van Kluun en Kocht zien we hier allebei terug in een cluster met Barnes en Mortier, terwijl de minst literaire boeken van Kinsella en Dijkshoorn samen het andere hoofdcluster vormen. Bij een reeks van clusteranalyses, gevisualiseerd in Grafiek 8.10.1,  zien we hierin geen veranderingen in het beeld. Een analyse op hoofdcomponenten van deze zes romans geeft geen nieuwe inzichten maar bevestigt het beeld, zie Grafiek 8.10.2.
 
-**Grafiek 8.7.1 Kluun, *Haantjes*, versus Koch, *Zomerhuis met zwembad*. Aangevuld met Barnes, *Alsof het voorbij is*, Kinsella, *Shopaholic en baby*, Dijkshoorn, *Nooit ziek geweest* en Mortier, *Godenslaap*.**
+**Grafiek 8.10.1 Kluun, *Haantjes*, versus Koch, *Zomerhuis met zwembad*. Aangevuld met Barnes, *Alsof het voorbij is*, Kinsella, *Shopaholic en baby*, Dijkshoorn, *Nooit ziek geweest* en Mortier, *Godenslaap*.**
 
 Bootstrap consensus tree (**100** - **1000** meest frequente woorden, increment van 100, consensus strength 0.5). Maat: Classic Delta.
 ![Grafiek 8.7.1](public/8_10_1_BCT_100-1000_MFWs_Culled_0__Classic Delta_C_0.5.png)
 
-**Grafiek 8.7.2 Kluun, *Haantjes*, versus Koch, *Zomerhuis met zwembad*. Aangevuld met Barnes, *Alsof het voorbij is*, Kinsella, *Shopaholic en baby*, Dijkshoorn, *Nooit ziek geweest* en Mortier, *Godenslaap*.**
+**Grafiek 8.10.2 Kluun, *Haantjes*, versus Koch, *Zomerhuis met zwembad*. Aangevuld met Barnes, *Alsof het voorbij is*, Kinsella, *Shopaholic en baby*, Dijkshoorn, *Nooit ziek geweest* en Mortier, *Godenslaap*.**
 
 Analyse op hoofdcomponenten (**1000** meest frequente woorden). Maat: PCA, correlatieversie.
 ![Grafiek 8.7.2](public/8_10_2_PCA_1000_MFWs_Culled_0__PCA__corr.png)
 
 **Conclusie**
 
-Ook voor de roman van Voskuil zijn de woordfrequenties niet goed te relateren aan de score voor literaire kwaliteit die het boek kreeg van de lezers. Afhankelijk van het vergelijkingmateriaal komt *De buurman* ofwel terecht bij de meest literaire romans, ofwel bij de minst literair gevonden boeken. We moeten dus verder kijken als we meer willen weten over wat een roman nu literair maakt. Meer hierover in *Het raadsel literatuur* op p. 208-210.
+De duellerende romans van Kluun en Koch sluiten beide eerder aan bij de meest literaire romans uit het corpus dan bij de op literaire kwaliteit weinig gewaardeerde boeken als we naar de woordfrequenties kijken. Dat is opvallend, omdat de romans van Koch en Kluun ook in de categorie met de laagste scores terechtkwamen. Om meer inzicht te krijgen in wat hier meespeelt, moeten we dus verder kijken. Meer hierover in *Het raadsel literatuur* op p. 214-225.
 
 **Hoe zijn de metingen te repliceren?**
 
