@@ -23,7 +23,7 @@ Bootstrap consensus tree (**100** - **1000** meest frequente woorden, increment 
 
 **Conclusie**
 
-De extra metingen bevestigen het beeld dat er in de woordfrequenties van de Nederlandse literaire romans van vrouwelijke auteurs geen duidelijk verschil te vinden is tussen de romans die de hoogste of de laagste scores kregen voor literaire kwaliteit of die tot de middengroep behoorden. Meer hierover in *Het raadsel literatuur* op p. 158-159 en 164-165. De opvallende resultaten voor de twee romans van Renate Dorrestein wordt uitvoerig beschreven op p. 165-173 in *Het raadsel literatuur*.
+De extra metingen bevestigen het beeld dat er in de woordfrequenties van de Nederlandse literaire romans van vrouwelijke auteurs geen duidelijk verschil te vinden is tussen de romans die de hoogste of de laagste scores kregen voor literaire kwaliteit of die tot de middengroep behoorden. Meer hierover in *Het raadsel literatuur* op p. 158-159 en 164-165. Het opvallende resultaat voor de twee romans van Renate Dorrestein wordt uitvoerig beschreven op p. 165-173 in *Het raadsel literatuur*.
 
 **Hoe zijn de metingen te repliceren?**
 

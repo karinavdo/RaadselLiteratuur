@@ -10,7 +10,7 @@ Scores voor literaire kwaliteit: H (hoog), L (laag), en M (midden). Maat: PCA, c
 
 ![Grafiek 7.3](public/7_3_0_PCA_1000_MFWs_Culled_0__PCA.png)
 
-### **Extra grafiek Vertaalde literaire romans van vrouwelijke auteurs**
+### **Extra grafieken Vertaalde literaire romans van vrouwelijke auteurs**
 Ook deze grafiek is gemaakt met het Stylo Package for R. Zie  Grafiek 4.5 voor meer informatie over het package en de verschillende maten.
 
 Grafiek 7.3.1 presenteert een clusteranalyse (Grafiek 6.1.1 hieronder) en Grafiek 7.3.2 een bootstrap consensus tree van dezelfde drie groepen vertaalde literaire romans van vrouwelijke auteurs als in Grafiek 7.3.
