@@ -16,7 +16,7 @@ Ook deze grafiek is gemaakt met het Stylo Package for R. Zie Grafiek 4.5 voor me
 **Grafiek 6.2.1 Voegwoorden in Nederlandse en uit het Engels vertaalde literaire romans van vrouwelijke auteurs**
 
 De voegwoorden *en*, *toen*, *dat*, *voordat*, *terwijl* en *hoewel* in de Nederlandse (N) en uit het Engels
-vertaalde (E) literaire romans van vrouwelijke auteurs, analyse op hoofdcomponenten. Clusteranalyse (**1000** meest frequente woorden). Maat: Classic Delta.
+vertaalde (E) literaire romans van vrouwelijke auteurs, analyse op hoofdcomponenten. Clusteranalyse (6 woorden). Maat: Classic Delta.
 ![Grafiek 6.1.1](public/6_2_1_CA_6_MFWs_Culled_0__Classic Delta.png)
 In Grafiek 6.2.1 is dezelfde ruwe tweedeling te zien als in de visualisatie van de analyse op hoofdcomponenten in Grafiek 6.2. Wat hier opvalt is dat de twee romans van Renate Dorrestein die in Grafiek 6.1 in verschillende clusters terecht kwamen hier wel het meest op elkaar lijken. Het verschil tussen die twee romans zit hem dus niet in een verschillende omgang met deze zes voegwoorden.
 
