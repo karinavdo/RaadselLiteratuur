@@ -13,4 +13,4 @@ Op deze website is aanvullende informatie te vinden. De site is *work-in-progres
 - Een R Package met de data uit Het Nationale Lezersonderzoek, de metadata bij de 401 romans uit het onderzoekscorpus en een aantal taalkundige gegevens van de romans, alles met de nodige documentatie;
 - Overige informatie rond het onderzoek en rond het boek.
 
-![Omslag boek promo 1.1.1](public/1_1_1_Omslag_promo.jpg)
+![1_1_1_Omslag_promo 1.1.1](public/1_1_1_Omslag_promo.png)
