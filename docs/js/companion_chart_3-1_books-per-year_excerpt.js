@@ -5,14 +5,15 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ch
   const xAxisTitle_nl = 'Aantal gelezen boeken per jaar';
   const yAxisTitle_nl = 'Aantal respondenten';
 
-  const axisStyle = 'font-size:11pt; font-family:PT Sans;'
-  const scaleStyle = 'font-size:11pt; font-family:Helvetica Neue;'
+  const axisStyle = 'font-size:11pt; font-family:PT Sans;';
+  const scaleStyle = 'font-size:11pt; font-family:Helvetica Neue;';
 
-  const label_x_padding = 10
-  const label_y_padding = 4
-  const label_stroke = 'rgb(111, 122, 154)'
-  const label_stroke_width = 1
-  const label_fill = 'rgb(219, 228, 255)'
+  const label_y_distance = 75;
+  const label_x_padding = 10;
+  const label_y_padding = 4;
+  const label_stroke = 'rgb(66, 77, 108)';
+  const label_stroke_width = 1;
+  const label_fill = 'rgb(219, 228, 255)';
 
   const bar_highlight = '#6c84ce'
 
@@ -144,12 +145,12 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ch
         svg.append( 'g' )
           .attr( 'id', "chart_bar_datum_label" )  // Create an id for text so we can select it later for removing on mouseout
           .append( 'text' )
-            .attr( 'x', function() { return xScale( d.x0 ); } )
-            .attr( 'y', function() { return yScale( d.length ) - 75; } )
+            .attr( 'x', function() { return xScale( d.x0 ) } )
+            .attr( 'y', function() { return yScale( d.length ) } )
             .attr( 'style', scaleStyle )
             .text( d.length );
         label_g = d3.select( '#chart_bar_datum_label' )
-        bbox = label_g.node().getBBox();
+        const bbox = label_g.node().getBBox();
         // Project left x position of label box on the width
         // of the plot minus the label box width.
         // This guarantees that the label box always falls within the div
@@ -157,12 +158,18 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ch
         // x * ( ( x_max - label_width ) / x_max )
         label_box_width = bbox.width + 2*label_x_padding;
         label_box_height = bbox.height + 2*label_y_padding;
-        label_box_x = bbox.x * ( ( plot_width - label_box_width ) / plot_width ) - 8;
+        const label_box_x = bbox.x * ( ( plot_width - label_box_width ) / plot_width ) - 8;
+        // For y positioning we need something too.
         label_box_y = bbox.y - label_y_padding;
+        if( yScale( d.length ) > 0.5*plot_height ){
+          label_box_y -= label_y_distance
+        } else {
+          label_box_y += label_y_distance
+        }
         label_text = d3.select( '#chart_bar_datum_label text' );
         label_text.attr( 'x', label_box_x + label_x_padding );
+        label_text.attr( 'y', label_box_y + label_box_height - 2*label_y_padding );
         label_g.insert( 'rect', ':first-child' )
-        // .attr( 'x', bbox.x - label_x_padding )
           .attr( 'x', label_box_x )
           .attr( 'y', label_box_y )
           .attr( 'width', label_box_width )
@@ -170,8 +177,12 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ch
           .attr( 'fill', label_fill )
           .attr( 'stroke', label_stroke )
           .attr( 'stroke-width', label_stroke_width );
-        connector_x_start = label_box_x + 0.5*label_box_width;
-        connector_y_start = label_box_y + label_box_height;
+        const connector_x_start = label_box_x + 0.5*label_box_width;
+        // If the box is differently positioned we need to adjust the connector too.
+        var connector_y_start = label_box_y;
+        if( yScale( d.length ) > 0.5*plot_height ){
+          connector_y_start += label_box_height
+        }
         connector_x_end = xScale( d.x0 ) + ( ( xScale( d.x1 ) - xScale( d.x0 ) + 1 ) / 2 );
         connector_y_end = yScale( d.length );
         label_g.append( 'line' )
@@ -179,8 +190,42 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ch
           .attr( 'y1', connector_y_start )
           .attr( 'x2', connector_x_end )
           .attr( 'y2', connector_y_end )
-          .attr( 'stroke', label_stroke )
-          .attr( 'stroke-width', 2*label_stroke_width );
+          // If the label is inset low the connector is probably render over
+          // the bars, we change to a higher contrast color.
+          .attr( 'stroke', function(){
+                              if( yScale( d.length ) > 0.5*plot_height ){
+                                return label_stroke
+                              } else {
+                                return label_fill
+                              }
+                            } )
+          // If the label is inset low the connector is probably render over
+          // the bars, we need it to be a bit wider.
+          .attr( 'stroke-width', function(){
+                              if( yScale( d.length ) > 0.5*plot_height ){
+                                return 3*label_stroke_width
+                              } else {
+                                return 4*label_stroke_width
+                              }
+                            } );
+        // If the label is inset low the connector is probably render over
+        // the bars, so we add an outline for even more contrast.
+        if( !(yScale( d.length ) > 0.5*plot_height) ){
+          label_g.append( 'line' )
+            .attr( 'x1', connector_x_start+2 )
+            .attr( 'y1', connector_y_start )
+            .attr( 'x2', connector_x_end+2 )
+            .attr( 'y2', connector_y_end )
+            .attr( 'stroke', label_stroke )
+            .attr( 'stroke-width', label_stroke_width );
+          label_g.append( 'line' )
+            .attr( 'x1', connector_x_start-2 )
+            .attr( 'y1', connector_y_start )
+            .attr( 'x2', connector_x_end-2 )
+            .attr( 'y2', connector_y_end )
+            .attr( 'stroke', label_stroke )
+            .attr( 'stroke-width', label_stroke_width );
+        }
         label_g.append( 'circle' )
           .attr( 'cx', connector_x_start )
           .attr( 'cy', connector_y_start )
