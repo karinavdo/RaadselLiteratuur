@@ -3,7 +3,7 @@ title: "Alle motivaties bij Eten, bidden, beminnen"
 level: 2
 ---
 
-Op p. 137-138 van *Het raadsel literatuur* staat een selectie van de motivaties die lezers gaven bij hun score voor literaire kwaliteit van *Eten, bidden, beminnen* van Elizabeth Gilbert. Hieronder staan alle 89. De vier motivaties van mannelijke lezers staan gemarkeerd met een asterisk aan het begin.
+Op p. 137-138 van *Het raadsel literatuur* staat een selectie van de motivaties die lezers gaven bij hun score voor literaire kwaliteit van *Eten, bidden, beminnen* van Elizabeth Gilbert. Hieronder staan alle 89 motivaties weergegeven, per score die de respondenten aan de roman gaven. Er zijn vier motivaties van mannelijke lezers; ze staan gemarkeerd met een asterisk aan het begin. De overige zijn alle van vrouwelijke lezers.
 
 **1 (absoluut niet literair)**
 
@@ -55,7 +55,7 @@ Op p. 137-138 van *Het raadsel literatuur* staat een selectie van de motivaties 
 
 **3 (eerder niet literair)**
 
-- (ID_10653)
+- - (ID_10653)
 - Het is vooral een persoonlijk relaas, een (gesubsidieerde) zoektocht naar haarzelf. Niet dat dit niet literair kan zijn trouwens. Maar ik heb altijd wat moeite gehad met de definitie van literair, en het is voor mij meer het gevoel dat ik bij een boek heb dan een duidelijke definitie (ID_2221).
 - Echt een verhaal, niet per se diepere lagen of bijzondere schrijfstijl (ID_6729).
 - Omdat het non-fictie is (of in elk geval die illusie schept). Omdat de taal (ook in een vertaling zou dat moeten doorschemeren) nergens verrassend is. Omdat er geen diepere dimensie is dan wat bij eerste lezing tot je doordringt - er is geen nasmaak waardoor je je later fragmenten uit het boek herinnert (ID_6932).
