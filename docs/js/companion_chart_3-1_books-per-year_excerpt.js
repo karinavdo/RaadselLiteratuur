@@ -12,6 +12,7 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ch
   const label_x_padding = 10;
   const label_y_padding = 4;
   const label_stroke = 'rgb(66, 77, 108)';
+  const connector_stroke = 'rgb(134, 148, 189)';
   const label_stroke_width = 1;
   const label_fill = 'rgb(219, 228, 255)';
 
@@ -177,55 +178,29 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ch
           .attr( 'fill', label_fill )
           .attr( 'stroke', label_stroke )
           .attr( 'stroke-width', label_stroke_width );
-        const connector_x_start = label_box_x + 0.5*label_box_width;
+        const connector_x_start = label_box_x + label_box_width;
         // If the box is differently positioned we need to adjust the connector too.
-        var connector_y_start = label_box_y;
+        if( yScale( d.length ) > 0.5*plot_height ){
+          var connector_y_start = label_box_y - 0.5*label_box_height
+        } else {
+          var connector_y_start = label_box_y + 0.5*label_box_height
+        }
         if( yScale( d.length ) > 0.5*plot_height ){
           connector_y_start += label_box_height
         }
         connector_x_end = xScale( d.x0 ) + ( ( xScale( d.x1 ) - xScale( d.x0 ) + 1 ) / 2 );
         connector_y_end = yScale( d.length );
-        label_g.append( 'line' )
-          .attr( 'x1', connector_x_start )
-          .attr( 'y1', connector_y_start )
-          .attr( 'x2', connector_x_end )
-          .attr( 'y2', connector_y_end )
-          // If the label is inset low the connector is probably render over
-          // the bars, we change to a higher contrast color.
-          .attr( 'stroke', function(){
-                              if( yScale( d.length ) > 0.5*plot_height ){
-                                return label_stroke
-                              } else {
-                                return label_fill
-                              }
-                            } )
-          // If the label is inset low the connector is probably render over
-          // the bars, we need it to be a bit wider.
-          .attr( 'stroke-width', function(){
-                              if( yScale( d.length ) > 0.5*plot_height ){
-                                return 3*label_stroke_width
-                              } else {
-                                return 4*label_stroke_width
-                              }
-                            } );
-        // If the label is inset low the connector is probably render over
-        // the bars, so we add an outline for even more contrast.
-        if( !(yScale( d.length ) > 0.5*plot_height) ){
-          label_g.append( 'line' )
-            .attr( 'x1', connector_x_start+2 )
-            .attr( 'y1', connector_y_start )
-            .attr( 'x2', connector_x_end+2 )
-            .attr( 'y2', connector_y_end )
-            .attr( 'stroke', label_stroke )
-            .attr( 'stroke-width', label_stroke_width );
-          label_g.append( 'line' )
-            .attr( 'x1', connector_x_start-2 )
-            .attr( 'y1', connector_y_start )
-            .attr( 'x2', connector_x_end-2 )
-            .attr( 'y2', connector_y_end )
-            .attr( 'stroke', label_stroke )
-            .attr( 'stroke-width', label_stroke_width );
-        }
+        var connector_path = d3.path();
+        connector_path.moveTo( connector_x_start, connector_y_start );
+        var control_y = connector_y_start - ( ( connector_y_start - connector_y_end ) / 2 );
+        var control_x = connector_x_start + 50;
+        if( control_x > plot_width ) { control_x = plot_width }
+        connector_path.quadraticCurveTo( control_x, control_y, connector_x_end, connector_y_end );
+        label_g.append( 'path' )
+          .attr( 'd', connector_path )
+          .attr( 'stroke-width', 2*label_stroke_width )
+          .attr( 'stroke', connector_stroke )
+          .attr( 'fill', 'none' );
         label_g.append( 'circle' )
           .attr( 'cx', connector_x_start )
           .attr( 'cy', connector_y_start )
