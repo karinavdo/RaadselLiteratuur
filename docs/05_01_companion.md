@@ -8,3 +8,5 @@ title: Companion
 # Chart Companion to the Riddle of Literary Quality Book
 
 Here be charts and graphs
+
+[Naar het nieuws](05_01_020_nieuws.html)
