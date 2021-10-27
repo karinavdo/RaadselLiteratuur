@@ -15,6 +15,6 @@ Op deze website is aanvullende informatie te vinden. De site is *work-in-progres
 
 De website is ontwikkeld door Joris van Zundert en bevat bijdragen van Karina van Dalen-Oskam, Maciej Eder, Saskia Lensink, en Joris van Zundert. *Laatst bijgewerkt op* 25 oktober 2021.
 
-![1_1_1_Omslag_promo 1.1.1](public/1_1_1_Omslag_promo.png)
+<!-- ![1_1_1_Omslag_promo 1.1.1](public/1_1_1_Omslag_promo.png) -->
 
 [NIEUWS](05_01_020_nieuws.html) | BLOG | AGENDA | IN DE MEDIA | DATA EN R PACKAGE | TABELLEN EN GRAFIEKEN |CONTACT EN COLOFON
