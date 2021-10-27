@@ -66,7 +66,7 @@ function HistChart( data ) {
           .attr( 'transform', function( d ){ return 'translate( ' + self.xScale( d.x0 ) + ', ' + yScale( d.length ) + ' )'; })
           .attr( 'width', function( d ){ return self.xScale( d.x1 ) - self.xScale( d.x0 ) -1 ; })
           .attr( 'height', function( d ){ return height - yScale( d.length ); })
-          .style( 'fill', '#77b5bf' );
+          .style( 'fill', '#91c4eb' );
   }
 
   // Expects array [ lower_age, upper_age ]
@@ -86,6 +86,7 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ch
 // Render the mean books oer year chart
 d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/chart_3-1-1_books-per-year_agegroups_mean.csv' ).then( function( data ) {
   data.forEach( function( d ) {
+    d.group_id = d[''];
     d.age_group = d.age_group;
     d.mean = +d.mean;
   });
@@ -118,29 +119,40 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ch
     .enter()
     .append( 'rect' )
     .classed( 'bar', true )
+    .attr( 'group_id', function( d ){ return 'group_id_'+d.group_id } )
     .attr( 'width', function( d ){ return xScale( d.mean ) } )
     .attr( 'height', yScale.bandwidth() )
     .attr( 'y', function( d ){ return yScale( d.age_group ) } )
     .attr( 'fill', function( d ){
-        fill = '#6c84ce';
-        if( d.age_group=='50 - 59' ) { fill = '#77b5bf' };
+        fill = '#91c4eb';
+        if( d.age_group=='50 - 59' ) { fill = '#6c84ce' };
         return fill
       } )
+    .classed( 'highlight', function( d ){
+        highlighted = false;
+        if( d.age_group=='50 - 59' ) { highlighted = true };
+        return highlighted
+      } )
     .on( 'click', function( d,i ){
-        d3.selectAll( '.bar' ).style( 'fill', '#6c84ce' )
-        d3.select( this ).style( 'fill', '#77b5bf');
+        d3.selectAll( '.bar' ).style( 'fill', '#91c4eb' );
+        d3.selectAll( '.bar' ).classed( 'highlight', false );
+        d3.select( this ).style( 'fill', '#6c84ce');
+        d3.select( this ).classed( 'highlight', true );
+        d3.selectAll( 'text' ).attr( 'fill', '#1a1919' );
+        const selected_group = svg.select( '.bar.highlight' ).attr( 'group_id' );
+        d3.selectAll( 'text' ).filter( '[group_id='+selected_group ).attr( 'fill', 'white' );
         // Splits and maps e.g. '10 - 19' to [ 10, 19 ].
         hist_chart.update( i.age_group.split( ' - ' ).map( function(x) { return +x } ) )
       } );
 
   svg.append('g')
-    .attr( 'fill', 'white' )
     .attr( 'text-anchor', 'end' )
     .attr( 'font-family', 'sans-serif' )
     .attr( 'font-size', 12 )
     .selectAll( 'text' )
       .data( data )
       .join( 'text' )
+        .attr( 'group_id', function( d ){ return 'group_id_'+d.group_id } )
         .attr( 'x', function( d ){ return xScale( d.mean ) } )
         .attr( 'y', function( d ){ return yScale( d.age_group ) + yScale.bandwidth() / 2 } )
         .attr( 'dy', '0.35em')
@@ -154,6 +166,12 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ch
               .attr( 'dx', +4 )
               .attr( 'fill', 'black' )
               .attr( 'text-anchor', 'start' )
+            }
+          )
+          .call(
+            function(){
+              const selected_group = svg.select( '.bar.highlight' ).attr( 'group_id' );
+              d3.selectAll( 'text' ).filter( '[group_id='+selected_group ).attr( 'fill', 'white' );
             }
           );
 

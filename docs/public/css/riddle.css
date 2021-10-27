@@ -1,5 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap');
 
+@font-face {
+    font-family: 'Anchor-Jack';
+    src:url('/RaadselLiteratuur/public/webfonts/Anchor-Jack.ttf.woff') format('woff'),
+        url('/RaadselLiteratuur/public/webfonts/Anchor-Jack.ttf.svg#Anchor-Jack') format('svg'),
+        url('/RaadselLiteratuur/public/webfonts/Anchor-Jack.ttf.eot'),
+        url('/RaadselLiteratuur/public/webfonts/Anchor-Jack.ttf.eot?#iefix') format('embedded-opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 .container {
   /* NOTE: Overrides the max-width set by pool.css. */
   /* TODO: This needs checking for responsiveness (smaller screens) */
@@ -42,17 +52,36 @@
   opacity: 100%;
 }
 
+#sidebar {
+  padding: 0;
+}
+
+#sidebar.sidebar.collapsed {
+  padding: 2rem 0.4rem;
+}
+
+.sidebar-about {
+  padding: 1em;
+  background-color: #1a1919;
+}
+
 .sidebar-about h1 {
-  font-family: 'Odibee Sans', serif;
+  font-family: 'Anchor-Jack', serif;
   font-size: 1.75rem;
-  text-decoration: underline;
+  text-decoration: none;
   color: #d7ead8; /* NOTE: affects only the underline due to anchor coloring. */
+}
+
+.sidebar-about h1 a {
+  color: #fff36f;
+  text-decoration: none;
 }
 
 #hamburger_container {
   position: fixed;
   top: 1rem;
   width: 25vw;
+  min-width: 300px;
   height: 40px;
   /* background-color: #444; */
   z-index: 2;
@@ -61,6 +90,7 @@
 
 #hamburger_container.collapsed {
   width: 1rem;
+  min-width: 0px;
 }
 
 #hamburger_icon {

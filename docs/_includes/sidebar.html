@@ -1,17 +1,18 @@
 
-<div class="collapsed" id="hamburger_container">
-  <div id="hamburger_icon" class="openbtn" onclick="toggleSidebar()">
-    <img src="public/menu.svg" alt="menu hamburger button"/>
+<a href="{{ site.baseurl }}/">
+  <div class="collapsed" id="hamburger_container">
+    <div id="hamburger_icon" class="openbtn" onclick="toggleSidebar();event.preventDefault();">
+      <img src="public/menu.svg" alt="menu hamburger button"/>
+    </div>
   </div>
-</div>
+</a>
 
 <div class="sidebar collapsed" id="sidebar">
   <div class="sidebar_cloak" id="sidebar_cloak">
     <div class="sidebar-about">
       <h1>
-        <a href="{{ site.baseurl }}/">
-          {{ site.title }}
-        </a>
+        <a href="{{ site.baseurl }}/"><span id="sidebar_title_line_1">{{ site.title_line_1 }}</span></a><br/>
+        <a href="{{ site.baseurl }}/"><span id="sidebar_title_line_2" style="letter-spacing: 1pt;">{{ site.title_line_2 }}</span></a>
       </h1>
       <!-- p class="lead">{{ site.description }}</p -->
     </div>
