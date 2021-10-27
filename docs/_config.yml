@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: The Riddle of Literary Quality
+title: Het Raadsel Literatuur
 email: joris.van.zundert@huygens.knaw.nl
 description: >- # this means to ignore newlines until "baseurl:"
   Riddle of Literary Quality project site and Companion to the book of the same
