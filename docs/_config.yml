@@ -26,7 +26,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   its literary quality. Project lead Karina van Dalen-Oskam. Huygens Instiute,
   Amsterdam.
 version: 0.0.7
-baseurl: "/riddle_d3" # the subpath of your site, e.g. /blog
+baseurl: "/RaadselLiteratuur" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username:  jekyll
