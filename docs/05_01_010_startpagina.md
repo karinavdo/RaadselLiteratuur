@@ -1,7 +1,5 @@
 ---
-title: "Het raadsel literatuur"
-
-*Is literaire kwaliteit meetbaar?*
+title: "Het raadsel literatuur. *Is literaire kwaliteit meetbaar?*"
 level: 2
 ---
 <br>
