@@ -1,6 +1,6 @@
 ---
-title: "***Het raadsel literatuur.  
-Is literaire kwaliteit meetbaar?***"
+title: "<i>Het raadsel literatuur.  <br>
+Is literaire kwaliteit meetbaar?</i>"
 level: 2
 ---
 
@@ -14,10 +14,10 @@ Op deze website is aanvullende informatie te vinden. De site is *work-in-progres
 - Een R Package met de data uit Het Nationale Lezersonderzoek, de metadata bij de 401 romans uit het onderzoekscorpus en een aantal taalkundige gegevens van de romans, alles met de nodige documentatie;
 - Overige informatie rond het onderzoek en rond het boek.
 
-De website is ontwikkeld door Joris van Zundert en bevat bijdragen van Karina van Dalen-Oskam, Maciej Eder, Saskia Lensink, en Joris van Zundert.
+De site is ontwikkeld door Joris van Zundert en bevat bijdragen van Karina van Dalen-Oskam, Maciej Eder, Saskia Lensink, en Joris van Zundert.
 
 <!-- ![1_1_1_Omslag_promo 1.1.1](public/1_1_1_Omslag_promo.png) -->
 
-[NIEUWS](05_01_020_nieuws.html) | BLOG | AGENDA | IN DE MEDIA | DATA EN R PACKAGE | TABELLEN EN GRAFIEKEN |CONTACT EN COLOFON
+[NIEUWS](05_01_020_nieuws.html) | BLOG | AGENDA | IN DE MEDIA | DATA EN R PACKAGE | TABELLEN EN GRAFIEKEN | COLOFON
 
 *Laatst bijgewerkt op* 25 oktober 2021.
