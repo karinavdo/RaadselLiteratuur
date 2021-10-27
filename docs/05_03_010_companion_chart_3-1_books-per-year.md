@@ -7,7 +7,7 @@ level:  2
 ---
 
 
-Interactieve versie van de grafiek op p. 48 van *Het raadsel literatuur*.
+Interactieve versie van de grafiek op p. 48 van *Het raadsel literatuur*. Uitleg hoe de grafiek te gebruik staat hieronder.
 
 <script src="https://d3js.org/d3.v6.min.js" defer></script>
 <script src="https://d3js.org/d3-scale.v3.min.js" defer></script>
@@ -27,8 +27,7 @@ Interactieve versie van de grafiek op p. 48 van *Het raadsel literatuur*.
 
 <p id="value"></p>
 
-In de linkergrafiek hierboven staat het aantal deelnemers afgezet tegen het aantal boeken dat zij aangaven per jaar ongeveer te lezen in reeksenn van 20. De grafiek is zo te lezen: 6100 deelnemers vulden een aantal van 1 tot 20 boeken in, bijna 3800 deelnemers een getal van 21 tot 40, en zo verder. De rechter grafiek is interactief. Hier kunt u de precieze aantallen achterhalen. Op de regel onder de horizontale as kunt u bepalen op welk deel van de grafiek u wilt inzoomen. Door op de balken in de grafiek te klikken ziet u hoeveel respondenten een getal in het geselecteerde bereik invulden.
+In de linkergrafiek hierboven staat het aantal deelnemers afgezet tegen het aantal boeken dat zij aangaven per jaar ongeveer te lezen in reeksen van 20. De grafiek is zo te lezen: 6100 deelnemers vulden een aantal van 1 tot 20 boeken in, bijna 3800 deelnemers een getal van 21 tot 40, en zo verder. De rechter grafiek is interactief. Hier kunt u de precieze aantallen achterhalen. Op de regel onder de horizontale as kunt u bepalen op welk deel van de grafiek u wilt inzoomen; sleep de rechter markering bijvoorbeeld helemaal naar rechts. Door op de balken in de grafiek te klikken ziet u hoeveel respondenten een getal in het geselecteerde bereik invulden. Zo ziet u dat er een paar deelnemers waren die gemiddeld meer dan 1 boek per dag lazen.
 
 <!-- **Hoe zijn de metingen te repliceren?**
-
-In het R Package (zie XXX) is voor alle 401 romans een woordfrequentielijst opgenomen met de 3000 meest gebruikte woorden per tekst. VOORBEELDQUERY HIER! -->
+VOORBEELDQUERY HIER! -->
