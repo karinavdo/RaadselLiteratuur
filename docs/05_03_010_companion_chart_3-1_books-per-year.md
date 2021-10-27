@@ -2,9 +2,12 @@
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
-title:  "3.1 Books per year"
+title:  "Grafiek 3.1 Aantal boeken dat deelnemers aangaven per jaar te lezen"
 level:  2
 ---
+
+
+Interactieve versie van de grafiek op p. 48 van *Het raadsel literatuur*.
 
 <script src="https://d3js.org/d3.v6.min.js" defer></script>
 <script src="https://d3js.org/d3-scale.v3.min.js" defer></script>
@@ -23,3 +26,9 @@ level:  2
 </div>
 
 <p id="value"></p>
+
+In de linkergrafiek hierboven staat het aantal deelnemers afgezet tegen het aantal boeken dat zij aangaven per jaar ongeveer te lezen in reeksenn van 20. De grafiek is zo te lezen: 6100 deelnemers vulden een aantal van 1 tot 20 boeken in, bijna 3800 deelnemers een getal van 21 tot 40, en zo verder. De rechter grafiek is interactief. Hier kunt u de precieze aantallen achterhalen. Op de regel onder de horizontale as kunt u bepalen op welk deel van de grafiek u wilt inzoomen. Door op de balken in de grafiek te klikken ziet u hoeveel respondenten een getal in het geselecteerde bereik invulden.
+
+<!-- **Hoe zijn de metingen te repliceren?**
+
+In het R Package (zie XXX) is voor alle 401 romans een woordfrequentielijst opgenomen met de 3000 meest gebruikte woorden per tekst. VOORBEELDQUERY HIER! -->
