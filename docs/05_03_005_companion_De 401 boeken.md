@@ -5,9 +5,9 @@ level: 2
 Hoe de boeken voor het onderzoek zijn geselecteerd staat beschreven op p. 42-44 van *Het raadsel literatuur*. In Bijlage 2 van het boek (p. 320-329) zijn ze gepresenteerd van hoogste gemiddelde score voor literaire kwaliteit naar laagste en staat bovendien aangegeven welke gemiddelde score voor algemene kwaliteit de boeken kregen van de deelnemers aan Het Nationale Lezersonderzoek. Op deze webpagina presenteer ik de lijst van boeken in de volgorde zoals die in de enquête aan de deelnemers werd voorgelegd. Het nummer links is de ID van het boek zoals dat ook in de data in het R Package terug te vinden is.
 
 
-1	Tatiana de Rosnay	Haar naam was Sarah
-2	Joost Zwagerman	Duel
-3	Jenna Blum	Het Familieportret
+1	Tatiana de Rosnay	*Haar naam was Sarah*<br>
+2	Joost Zwagerman	*Duel*<br>
+3	Jenna Blum	*Het Familieportret*<br>
 4	Kader Abdolah	De kraai
 5	Stieg Larsson	Mannen die vrouwen haten
 6	Tom Lanoye	Heldere hemel
