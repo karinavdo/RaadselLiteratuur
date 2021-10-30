@@ -7,6 +7,8 @@ Extra grafieken bij p. 245-247 van *Het raadsel literatuur*.
 
 Ook deze grafieken zijn gemaakt met het Stylo Package for R. Zie  Grafiek 4.5 voor meer informatie over het package en de verschillende maten.
 
+In *Het raadsel literatuur* zijn twee grafieken afgedrukt waarin de *Vijftig tinten*-trilogie van E.L. James wordt vergeleken met andere romans om uit te vinden op welk genre de boeken het meeste lijken in woordfrequenties; in Grafiek 9.2 met Romantiek en in Grafiek 9.3 met Spanning van de hand van vrouwelijke auteurs. Hier presenteer ik de vergelijking met de Literaire romans uit het onderzoekscorpus. In de vorige webpagina staan de grafieken waarin de trilogie wordt vergeleken met Spanning geschreven door mannelijke auteurs; in Grafiek 9.3 in *Het raadsel literatuur* zijn alleen de spannende boeken van vrouwen opgenomen omdat de visualisatie niet meer leesbaar zou zijn als de boeken van vrouwen en mannen tegelijk onderzocht zouden worden. Voor de vergelijkingvan de trilogie met Literaire romans splits ik de boeken op dezelfde manier op; eerst kijken we of de *Vijftig tinten*-trilogie aansluit bij de Literaire romans geschreven door vrouwen (analyse op hoofdcomponenten, clusteranalyse, en tot slot een bootstrap consensus tree) en daarna bij de Literaire romans van de hand van mannelijke auteurs. Het zal duidelijk worden dat de trilogie het minst ver af staat van de spannende boeken van vrouwen in het onderzoekscorpus - maar alleen in een analyse op hoofdcomponenten; in de clusteranalyses lijkt er weinig verschil te zijn in de afstanden tot de andere boeken.
+
 
 **Grafiek 9.3.6 Vijftig tinten en Literaire romans geschreven door vrouwen**
 
@@ -41,8 +43,4 @@ Bootstrap consensus tree (**100** - **1000** meest frequente woorden, increment 
 
 **Conclusie**
 
-NOG AANPASSEN
-
-De *Vijftig tinten*-trilogie staat verder af van de spannende boeken uit het onderzoekscorpus die zijn geschreven door mannelijke auteurs dan van die van de hand van vrouwelijke auteurs (zie bijvoorbeeld de Delta score in Grafiek 9.3.4 onder de grafiek ter hoogte van de plaats waar de trilogie samenclustert met een zestal spannende boeken). Wat verder opvalt in deze extra grafieken is dat de Nederlandse en vertaalde spannende boeken goed gemengd voorkomen, terwijl er in de analyses van de spannende boeken van vrouwen een veel groter verschil lijkt te zijn tussen Nederlandseen vertaalde titels. Meer hierover in *Het raadsel literatuur* op p. 245-247.
-
-**Hoe zijn de metingen te repliceren?**
+De *Vijftig tinten*-trilogie staat op enige afstand van het genre van de Literaire roman. Uit alle metingen (Grafiek 9.2, 9.3 en de extra grafieken) blijkt dat de trilogie het minst ver af staat van de spannende boeken van vrouwen in het onderzoekscorpus, maar daar moet bij worden vermeld dat dat alleen duidelijk wordt in een analyse op hoofdcomponenten. In de clusteranalyses lijkt er weinig verschil te zijn in de afstanden tot de andere boeken. Meer hierover in *Het raadsel literatuur* op p. 245-247.
