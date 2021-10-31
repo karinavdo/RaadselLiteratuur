@@ -1,6 +1,6 @@
 ---
-title: "BLOGS"
+title: "Blogs"
 level: 2
 ---
 
-BLOGS bij Karina van Dalen-Oskam,  *Het raadsel literatuur. Is literaire kwaliteit meetbaar?*
+Blogs bij Karina van Dalen-Oskam,  *Het raadsel literatuur. Is literaire kwaliteit meetbaar?*

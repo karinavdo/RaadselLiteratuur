@@ -1,5 +1,5 @@
 ---
-title: "IN DE MEDIA"
+title: "In de media"
 level: 2
 ---
 

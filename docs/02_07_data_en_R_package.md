@@ -1,6 +1,6 @@
 ---
-title: "DATA en R PACKAGE"
+title: "Data en R Package"
 level: 2
 ---
 
-DATA en R PACKAGE bij Karina van Dalen-Oskam,  *Het raadsel literatuur. Is literaire kwaliteit meetbaar?*
+Data en R Package bij Karina van Dalen-Oskam,  *Het raadsel literatuur. Is literaire kwaliteit meetbaar?*

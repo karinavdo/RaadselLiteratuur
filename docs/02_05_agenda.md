@@ -1,6 +1,6 @@
 ---
-title: "AGENDA"
+title: "Agenda"
 level: 2
 ---
 
-AGENDA bij Karina van Dalen-Oskam,  *Het raadsel literatuur. Is literaire kwaliteit meetbaar?*
+Agenda bij Karina van Dalen-Oskam,  *Het raadsel literatuur. Is literaire kwaliteit meetbaar?*
