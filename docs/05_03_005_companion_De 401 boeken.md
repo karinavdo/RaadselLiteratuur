@@ -2,7 +2,7 @@
 title: "De 401 boeken"
 level: 2
 ---
-Hoe de boeken voor het onderzoek zijn geselecteerd staat beschreven op p. 42-44 van *Het raadsel literatuur*. In Bijlage 2 van het boek (p. 320-329) zijn ze gepresenteerd van hoogste gemiddelde score voor literaire kwaliteit naar laagste en staat bovendien aangegeven welke gemiddelde score voor algemene kwaliteit de boeken kregen van de deelnemers aan Het Nationale Lezersonderzoek. Op deze webpagina presenteer ik de lijst van boeken in de volgorde zoals die in de enquête aan de deelnemers werd voorgelegd. Het nummer links is de ID van het boek zoals dat ook in de data in het R Package terug te vinden is.
+Hoe de boeken voor het onderzoek zijn geselecteerd staat beschreven op p. 42-44 van *Het raadsel literatuur*. In Bijlage 2 van het boek (p. 320-329) zijn ze gepresenteerd van hoogste gemiddelde score voor literaire kwaliteit naar laagste en staat bovendien aangegeven welke gemiddelde score voor algemene kwaliteit de boeken kregen van de deelnemers aan Het Nationale Lezersonderzoek. Op deze webpagina vindt u de lijst in de volgorde zoals die in de enquête aan de deelnemers werd voorgelegd. Het nummer links is de ID van het boek. Hiermee kunt u in het R Package nog meer informatie vinden over het boek, de auteur, en de meningen van lezers en niet-lezers. Zie een korte handleiding daarvoor onder de lijst.
 
 
 1	Tatiana de Rosnay,	*Haar naam was Sarah*<br>
@@ -403,6 +403,14 @@ Hoe de boeken voor het onderzoek zijn geselecteerd staat beschreven op p. 42-44 
 396	Tom Clancy,	*In het vizier*<br>
 397	Emma Donoghue,	*Kamer*<br>
 398	Elizabeth Haynes,	*Waarheen je ook vlucht*<br>
-399	Clive Cussler / Jack Du Brul,	*	Dodenschip*<br>
+399	Clive Cussler / Jack Du Brul,	*Dodenschip*<br>
 400	Jo Nesbø,	*De verlosser*<br>
 401	Nicci French,	*Wat te doen als iemand sterft*<br>
+
+**Meer over de boeken in het R Package**
+
+In het *litRiddle* R Package (meer hierover elders op deze website) is meer informatie te vinden over de boeken op de lijst. Stel, u zoekt meer informatie over Emma Donoghue's *Kamer*. Dan geeft u na het laden van het package de volgende opdrachten in R:
+
+data(books)<br>
+books<br>
+books[ books$book.id==397, ]
