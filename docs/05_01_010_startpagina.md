@@ -18,4 +18,4 @@ De site is ontwikkeld door Joris van Zundert. De meeste bijdragen zijn van Karin
 
 [NIEUWS](05_01_020_nieuws.html) | BLOGS | AGENDA | IN DE MEDIA | DATA EN R PACKAGE | GRAFIEKEN | COLOFON
 
-*Laatst bijgewerkt op* 25 oktober 2021.
+*Laatst bijgewerkt op* 31 oktober 2021.
