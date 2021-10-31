@@ -17,6 +17,6 @@ De meeste bijdragen zijn van Karina van Dalen-Oskam, Joris van Zundert, Maciej E
 
 <!-- ![1_1_1_Omslag_promo 1.1.1](public/1_1_1_Omslag_promo.png) -->
 
-[NIEUWS](05_01_020_nieuws.html) | BLOGS | AGENDA | IN DE MEDIA | DATA EN R PACKAGE
+[NIEUWS](02_03_nieuws.html) | [BLOGS](02_04_blogs.html) | [AGENDA](02_05_agenda.html) | [IN DE MEDIA](02_06_in_de_media.html) | [DATA EN R PACKAGE](02_07_data_en_R_package.html)
 
 *Laatst bijgewerkt op* 31 oktober 2021.
