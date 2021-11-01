@@ -19,4 +19,4 @@ De meeste bijdragen zijn van Karina van Dalen-Oskam, Joris van Zundert, Maciej E
 
 [NIEUWS](02_03_nieuws.html) | [BLOGS](02_04_blogs.html) | [AGENDA](02_05_agenda.html) | [IN DE MEDIA](02_06_in_de_media.html) | [DATA EN R PACKAGE](02_07_data_en_R_package.html)
 
-*Laatst bijgewerkt op* 31 oktober 2021.
+*Laatst bijgewerkt op* 1 november 2021.
