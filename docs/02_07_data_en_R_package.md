@@ -4,7 +4,7 @@ level: 2
 ---
 Het boek *Het raadsel literatuur* presenteert een synthese van de onderzoeksresultaten van het project The Riddle of Literary Quality. In dat project zijn heel veel gegevens bijeen gebracht: de meningen over 401 boeken van bijna 14.000 deelnemers aan Het Nationale Lezersonderzoek (2013) en allerlei gegevens over die 401 boeken. Meer over The Riddle of Literary Quality is te vinden op de [projectwebsite](https://literaryquality.huygens.knaw.nl/), waar ook alle [publicaties](https://literaryquality.huygens.knaw.nl/?page_id=588) die eruit voortkwamen zijn verzameld.
 
-Om het uitgevoerde onderzoek herhaalbaar en controleerbaar te maken en ook andere onderzoeksbenaderingen mogelijk te maken, zijn alle verzamelde data voor zover mogelijk bijeengebracht in een R Package. R is een gratis software-omgeving waarin statistische analyses gedaan kunnen worden en de resultaten daarvan in grafieken kunnen worden  gevisualiseerd. R kan worden gedownload van de [R website](https://www.r-project.org/). Als R is geïnstalleerd, kunt u vervolgens het gewenste R Package laden. Hieronder meer over data, package en hoe dat te gebruiken.
+Om het uitgevoerde onderzoek herhaalbaar en controleerbaar te maken en ook andere onderzoeksbenaderingen mogelijk te maken, zijn alle verzamelde data, voor zover ze gedeeld mogen worden, bijeengebracht in een R Package. R is een gratis software-omgeving waarin statistische analyses gedaan kunnen worden en de resultaten daarvan in grafieken kunnen worden  gevisualiseerd. R kan worden gedownload van de [R website](https://www.r-project.org/). Als R is geïnstalleerd, kunt u vervolgens het gewenste R Package laden. Hieronder meer over data, package en hoe dat te gebruiken.
 
 **Het R Package**
 
@@ -16,19 +16,32 @@ Als u het package heeft geïnstalleerd, laadt u het als volgt:
 
 - library(litRiddle)
 
-Documentatie bij het package vindt u hier: NNNNN
+Engelstalige documentatie bij het package vindt u hier: NNNNN. Een Nederlandse toelichting staat hieronder op deze webpagina.
 
 Het package is ontwikkeld door Maciej Eder en Saskia Lensink in samenwerking met Joris van Zundert en Karina van Dalen-Oskam. Fijn als u in publicaties als volgt naar het package verwijst:
 
-- Ref package
+- PM Ref package
 
 **De data**
 
-De verzamelde gegevens zijn ondergebracht in drie verschillende tabellen: de tabel boeken (*books*), respondenten (*respndents*) en meningen (*reviews*). Elke tabel heeft een aantal kolommen met informatie. Die kolommen en veel van de informatie is in het Engels. Hieronder staan ze opgesomd, met een beschrijving van de inhoud in het Nederlands en met verwijzingen naar een uitvoeriger beschrijving in *Het raadsel literatuur*.
+De verzamelde gegevens zijn ondergebracht in drie verschillende tabellen: de tabel boeken (*books*), respondenten (*respondents*) en meningen (*reviews*). Elke tabel heeft een aantal kolommen met informatie. Die kolommen en veel van de informatie is in het Engels. Hieronder staan ze opgesomd, met een beschrijving van de inhoud in het Nederlands en met verwijzingen naar een uitvoeriger beschrijving in *Het raadsel literatuur*.
 
 **Boeken (books)**
 
-1. short.title        A short name containing the author's name and (a part of) the title;
+Roep na het laden van het package de tabel *boeken* aan met deze opdrachten:
+
+- data(books)
+- books
+
+Een overzicht van de kolommen krijgt u met:
+
+- colnames(books)
+
+U kunt alle waarden in een kolom opvragen met bijvoorbeeld:
+
+- levels( as.factor( books[,'short.title'] ) )
+
+1. short.title        Een verkorte titel beginnen met de naam van de auteur gevolgd door de eerste drie woorden (geen lidwoorden) van de titel. Voorbeeld: boek 362: *Verhulst_LaatsteLiefdeVan*;
 2. author             Last name and first name of the author of the book;
 3. title              Full title of the book;
 4. genre              Genre of the book. There are four different genres: a) Fiction; b) Romantic; c) Suspense; d) Other;
