@@ -6,10 +6,8 @@ Het boek *Het raadsel literatuur* presenteert een synthese van de onderzoeksresu
 
 Om het uitgevoerde onderzoek herhaalbaar en controleerbaar te maken en ook andere onderzoeksbenaderingen mogelijk te maken, zijn alle verzamelde data, voor zover ze gedeeld mogen worden, bijeengebracht in een R Package. R is een gratis software-omgeving waarin statistische analyses gedaan kunnen worden en de resultaten daarvan in grafieken kunnen worden  gevisualiseerd. R kan worden gedownload van de [R website](https://www.r-project.org/). Als R is geïnstalleerd, kunt u vervolgens het gewenste R Package laden. Hieronder meer over data, package en hoe dat te gebruiken.
 
----
-title: "Het R Package"
-level: 3
----
+**Het R Package**
+
 De nieuwste versie van het *litRiddle* R Package komt binnenkort beschikbaar op CRAN (The Comprehensive R Archive Network). In R installeert u het package met de volgende opdracht:
 
 - install(litRiddle)<br>
@@ -43,10 +41,10 @@ U kunt alle waarden in een kolom opvragen met bijvoorbeeld:
 
 - levels( as.factor( books[,'short.title'] ) )
 
-1. short.title        Een verkorte titel beginnen met de naam van de auteur gevolgd door de eerste drie woorden (geen lidwoorden) van de titel. Voorbeeld: boek 362: *Verhulst_LaatsteLiefdeVan*;
-2. author             Last name and first name of the author of the book;
-3. title              Full title of the book;
-4. genre              Genre of the book. There are four different genres: a) Fiction; b) Romantic; c) Suspense; d) Other;
+1. **short.title**  Een verkorte titel, beginnend met de naam van de auteur en gevolgd door de eerste drie woorden (geen lidwoorden) van de titel. Voorbeeld: boek 362: *Verhulst_LaatsteLiefdeVan*;
+2. **author**  Achternaam en voornaam van de auteur van het boek;
+3. **title**  Volledige titel van het boek;
+4. **genre**  Genre van het boek (zie *Het raadsel literatuur* p. 52). Er zijn vier hoofdcategorieën onderscheiden: Literaire roman (*Fiction*), Romantiek (*Romantic*), Spanning (*Suspense*) en Overige (*Other*);
 5. book.id            Unique number to identify each book;
 6. riddle.code        More complete list of genres of the books. Contains 13 categories --- to see which, type 'levels(books$riddle.code' in the terminal;
 7. translated         'yes' if the book has been translated, 'no' if not;
