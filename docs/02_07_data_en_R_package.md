@@ -45,17 +45,17 @@ U kunt alle waarden in een kolom opvragen met bijvoorbeeld:
 2. **author**  Achternaam en voornaam van de auteur van het boek;
 3. **title**  Volledige titel van het boek;
 4. **genre**  Genre van het boek (zie *Het raadsel literatuur* p. 52). Er zijn vier hoofdcategorieën onderscheiden: Literaire roman (*Fiction*), Romantiek (*Romantic*), Spanning (*Suspense*) en Overige (*Other*);
-5. book.id            Unique number to identify each book;
-6. riddle.code        More complete list of genres of the books. Contains 13 categories --- to see which, type 'levels(books$riddle.code' in the terminal;
-7. translated         'yes' if the book has been translated, 'no' if not;
-8. gender.author      The gender of the author; female, male, unknown/multiple
-9. origin.author      The country of origin of the author. Note that short country codes have been used instead of the full country names;
-10. original.language The original language of the book. Note that short language codes have been used, instead of the full language names;
-11. inclusion.criterion   In what category a book has been placed, either a) bestseller; b) boekenweekgeschenk; c) library; or d) literair juweeltje;
-12. publication.date  Publication date of the book, using a YYYY-MM-DD format;
-13. first.print       Year in which the first print appeared;
-14. publisher         Publishers of the books;
-15. english.title     Title of the book in English;
+5. **book.id**  Uniek nummer ter identificatie van elk boek;
+6. **riddle.code**  Uitvoeriger lijst van 13 genres, opgesteld door het onderzoeksteam ten behoeve van het vaststellen van de definitieve hoofdcategorieën;
+7. **translated**  Geeft aan of het boek is vertaald of oorspronkelijk Nederlands is. Vertaald: *yes*, niet vertaald: *no*;
+8. **gender.author**  Het (biologisch) geslacht van de auteur. Vrouw: *female*, man: *male*, onbekend of een gemegd duo: *unknown/multiple*;
+9. **origin.author**  Het land van herkomst van de auteur, aangegeven met de standaard lettercodes;
+10. **original.language** De taal waarin het boek is geschreven door de auteur, afgekort in hoofdletters;
+11. **inclusion.criterion**  Uit welke categorie het het boek is geselecteerd voor opname in het onderzoekscorpus (zie *Het raadsel literatuur* p. 43-44): op grond van verkoopcijfers (* bestseller*), als boekenweekgeschenk (*boekenweekgeschenk*), op grond van uitleencijfers (*library*) en als apart uitgegeven langer verhaal (*literair juweeltje*);
+12. **publication.date**  Publicatiedatum van het boek, JJJJ-MM-DD;
+13. **first.print**  Jaar waarin de eerste druk in het Nederlands verscheen;
+14. **publisher** Uitgeverij van het boek;
+15. **english.title**  Titel van het boek in het Engels (met vertalingen van het onderzoeksteam als er geen Engelse vertaling van het boek beschikbaar was in 2013);
 16. word_count
 17. type_count
 18. sentence_length_mean
@@ -66,8 +66,21 @@ U kunt alle waarden in een kolom opvragen met bijvoorbeeld:
 
 **Respondenten (respondents)**
 
-1. respondent.id      Unique number for each respondent of the survey;
-2. gender.resp        Gender of the respondent; female, male, NA
+Roep na het laden van het package de tabel *respondenten* aan met deze opdrachten:
+
+- data(respondents)
+- respondents
+
+Een overzicht van de kolommen krijgt u met:
+
+- colnames(respondents)
+
+U kunt alle waarden in een kolom opvragen met bijvoorbeeld:
+
+- levels( as.factor( respondents[,'books.per.year'] ) )
+
+1. **respondent.id**  Uniek nummer ter identificatie van elke (volledig anonieme) respondent;
+2. **gender.resp**  Gender van de respondent zoals aangegeven door de respondent: vrouw (*female*), man (*male*), geen opgave (*NA*), (zie *Het raadsel literatuur* p. 318);
 3. age.resp           Age of the respondent;
 4. zipcode            Zipcode of the respondent;
 5. education          Education level, containing 8 levels (see which levels by typing 'levels(respondents$education)' in the terminal);
@@ -97,11 +110,24 @@ U kunt alle waarden in een kolom opvragen met bijvoorbeeld:
 
 **Meningen (reviews)**
 
-1. respondent.id          Unique number for each respondent of the survey;
-2. book.id                Unique number to identify each book;
-3. quality.read           Rating on the quality of a book that a respondent has read. Scale from 1 - 7, with 1 meaning 'very bad' and 7 meaning 'very good';
-4. literariness.read      Rating on how literary a respondent found a book that s/he has read. Scale from 1 - 7, with 1 meaning 'not literary at all' and 7 meaning 'very literary';
-5. quality.notread        Rating on the quality of a book that a respondent has not read. Scale from 1 - 7, with 1 meaning 'very bad' and 7 meaning 'very good';
-6. literariness.notread   Rating on how literary a respondent found a book that s/he has not read. Scale from 1 - 7, with 1 meaning 'not literary at all' and 7 meaning 'very literary';
-7. motivations            Written explanations of why a respondent gave a a certain rating to a certain book.
-8. book.read     1 or 0.  1 indicates that the respondent read the book, 0 indicates the respondent did not read the book but had an opinion about the literary quality of the book.
+Roep na het laden van het package de tabel *meningen* aan met deze opdrachten:
+
+- data(reviews)
+- reviews
+
+Een overzicht van de kolommen krijgt u met:
+
+- colnames(reviews)
+
+U kunt alle waarden in een kolom opvragen met bijvoorbeeld:
+
+- levels( as.factor( reviews[,'book.id'] ) )
+
+1. **respondent.id**  Uniek nummer ter identificatie van elke deelnemer aan Het Nationale Lezersonderzoek;
+2. **book.id**  Uniek nummer ter identificatie van elk boek;
+3. **quality.read**  Lezersoordeel over de algemene kwaliteit van een gelezen boek (zie *Het raadsel literatuur* p. 316). Schaal: van 1 (*zeer slecht*) tot en met 7 (*zeer goed*) en 8 (*weet niet*);
+4. **literariness.read**  Lezersoordeel over de literaire kwaliteit van een gelezen boek (zie *Het raadsel literatuur* p. 316). Schaal: van 1 (*absoluut niet literair*) tot en met 7 (*in hoge mate literair*) en 8 (*weet niet*);
+5. **quality.notread**  Lezersoordeel over de algemene kwaliteit van een niet gelezen boek (zie *Het raadsel literatuur* p. 317). Schaal: van 1 (*zeer slecht*) tot en met 7 (*zeer goed*) en 8 (*weet niet*);
+6. **literariness.notread**  Lezersoordeel over de literaire kwaliteit van een niet gelezen boek (zie *Het raadsel literatuur* p. 317). Schaal: van 1 (*absoluut niet literair*) tot en met 7 (*in hoge mate literair*) en 8 (*weet niet*);
+7. **motivations**  Onderbouwing van de lezer van de gegeven score voor literaire kwaliteit aan een gelezen boek (zie *Het raadsel literatuur* p. 317);
+8. **book.read**  Geeft weer of een lezer heeft aangegeven een boek te hebben gelezen (waarde *1*) of een mening te hebben over een niet gelezen boek (waarde *0*).
