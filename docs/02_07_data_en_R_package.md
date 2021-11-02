@@ -6,8 +6,10 @@ Het boek *Het raadsel literatuur* presenteert een synthese van de onderzoeksresu
 
 Om het uitgevoerde onderzoek herhaalbaar en controleerbaar te maken en ook andere onderzoeksbenaderingen mogelijk te maken, zijn alle verzamelde data, voor zover ze gedeeld mogen worden, bijeengebracht in een R Package. R is een gratis software-omgeving waarin statistische analyses gedaan kunnen worden en de resultaten daarvan in grafieken kunnen worden  gevisualiseerd. R kan worden gedownload van de [R website](https://www.r-project.org/). Als R is geïnstalleerd, kunt u vervolgens het gewenste R Package laden. Hieronder meer over data, package en hoe dat te gebruiken.
 
-**Het R Package**
-
+---
+title: "Het R Package"
+level: 3
+---
 De nieuwste versie van het *litRiddle* R Package komt binnenkort beschikbaar op CRAN (The Comprehensive R Archive Network). In R installeert u het package met de volgende opdracht:
 
 - install(litRiddle)<br>
