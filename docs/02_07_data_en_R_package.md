@@ -80,11 +80,11 @@ U kunt alle waarden in een kolom opvragen met bijvoorbeeld:
 
 1. **respondent.id**  Uniek nummer ter identificatie van elke (volledig anonieme) respondent;
 2. **gender.resp**  Gender van de respondent zoals aangegeven door de respondent: vrouw (*female*), man (*male*), geen opgave (*NA*), (zie *Het raadsel literatuur* p. 318);
-3. age.resp           Age of the respondent;
-4. zipcode            Zipcode of the respondent;
-5. education          Education level, containing 8 levels (see which levels by typing 'levels(respondents$education)' in the terminal);
-6. books.per.year     Number of books read per year by each respondent;
-7. typically.reads    Typical genre of books that a respondent reads, with three levels a) Fiction; b) Non-fiction; c) both;
+3. **age.resp**  Leeftijd van de respondent;
+4. **zipcode**  Cijfers van de postcode van de respondent (zie *Het raadsel literatuur* p. 47);
+5. **education**  Hoogst gevolgde opleiding (zie *Het raadsel literatuur* p. 318);
+6. **books.per.year**  Aantal boeken dat de respondent aangaf ongeveer per jaar te lezen;
+7. **typically.reads**  Soort boeken die de respondent aangaf te lezen: uitsluitend fictie(*Fiction*), uitsluitend non-fictie (*Non-fiction*), of beide (*both*);
 8. how.literary       Answer to the question 'How literary a reader do you consider yourself to be?', where respondents could fill in a number from 1 - 7, with 1 meaning 'not literary at all' and 7 meaning 'very literary';
 9. s.4a1              Answer to the question: 'I like reading novels that I can relate to my own life'. Scale from 1 - 5, with 1 meaning 'completely disagree', and 5 meaning 'completely agree';
 10. s.4a2             Answer to the question: 'The story of a novel is what matters most to me'. Scale from 1 - 5;
