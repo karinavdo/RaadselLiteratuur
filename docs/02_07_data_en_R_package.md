@@ -131,6 +131,7 @@ U kunt alle waarden in een kolom opvragen met bijvoorbeeld:
 5. **quality.notread**  Lezersoordeel over de algemene kwaliteit van een niet gelezen boek (zie *Het raadsel literatuur* p. 317). Schaal: van 1 (zeer slecht) tot en met 7 (zeer goed) en 8 (weet niet);
 6. **literariness.notread**  Lezersoordeel over de literaire kwaliteit van een niet gelezen boek (zie *Het raadsel literatuur* p. 317). Schaal: van 1 (absoluut niet literair) tot en met 7 (in hoge mate literair) en 8 (weet niet);
 7. **motivations**  Onderbouwing van de lezer van de gegeven score voor literaire kwaliteit aan een gelezen boek (vrij veld). Zie *Het raadsel literatuur* p. 317;
+8. PM lemmatized motivations
 8. **book.read**  Geeft weer of een lezer heeft aangegeven een boek te hebben gelezen (waarde *1*) of een mening te hebben over een niet gelezen boek (waarde *0*).
 
 
@@ -138,4 +139,4 @@ U kunt alle waarden in een kolom opvragen met bijvoorbeeld:
 
 **Gebruik van het R Package**
 
-Hierboven staan al heel wat aanwijzingen hoe de data in het R Package te benaderen, maar het wordt natuurlijk pas echt leuk als je de informatie uit de verschillende tabellen met elkaar kunt combineren en in grafieken kunt afbeelden. In de komende weken zal op deze website bij de verschillende garfieken worden toegevoegd hoe de weergegeven informatie uit het package gehaald kan worden.
+Hierboven staan al heel wat aanwijzingen hoe de data in het R Package zijn te benaderen, maar het wordt natuurlijk pas echt leuk als je de informatie uit de verschillende tabellen met elkaar kunt combineren en in grafieken kunt afbeelden. In de komende weken zal op deze website bij de verschillende grafieken worden toegevoegd hoe de weergegeven informatie uit het package gehaald kan worden.
