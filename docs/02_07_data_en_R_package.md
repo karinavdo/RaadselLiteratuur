@@ -107,7 +107,7 @@ U kunt alle waarden in een kolom opvragen met bijvoorbeeld:
 27. **week.nr**  Week waarin de respondent de enquête invulde;
 28. **day**  Dag van de week waarin de respondent de enquête invulde.
 
-**NB In *Het raadsel literatuur* p. 315 en 318 staat de schaal van de antwoorden op de stellingen s.4a1 tot en met s.4a8 en s.12b1 tot en met s.12b8 verkeerd weergegeven als Schaal van 1 (helemaal mee eens) tot en met 5 (helemaal mee oneens). In de dataset zijn de gegeven antwoorden omgescoord naar 1 (helemaal mee oneens) tot en met 5 (helemaal mee eens).**
+**NB In *Het raadsel literatuur* p. 315 en 318 staat de schaal van de antwoorden op de stellingen s.4a1 tot en met s.4a8 en s.12b1 tot en met s.12b8 verkeerd weergegeven als 1 (helemaal mee eens) tot en met 5 (helemaal mee oneens). In de dataset zijn de gegeven antwoorden omgescoord naar 1 (helemaal mee oneens) tot en met 5 (helemaal mee eens).**
 
 **Meningen (reviews)**
 
@@ -132,3 +132,10 @@ U kunt alle waarden in een kolom opvragen met bijvoorbeeld:
 6. **literariness.notread**  Lezersoordeel over de literaire kwaliteit van een niet gelezen boek (zie *Het raadsel literatuur* p. 317). Schaal: van 1 (absoluut niet literair) tot en met 7 (in hoge mate literair) en 8 (weet niet);
 7. **motivations**  Onderbouwing van de lezer van de gegeven score voor literaire kwaliteit aan een gelezen boek (vrij veld). Zie *Het raadsel literatuur* p. 317;
 8. **book.read**  Geeft weer of een lezer heeft aangegeven een boek te hebben gelezen (waarde *1*) of een mening te hebben over een niet gelezen boek (waarde *0*).
+
+
+**PM woordfrequenties aparte tabel?**
+
+**Gebruik van het R Package**
+
+Hierboven staan al heel wat aanwijzingen hoe de data in het R Package te benaderen, maar het wordt natuurlijk pas echt leuk als je de informatie uit de verschillende tabellen met elkaar kunt combineren en in grafieken kunt afbeelden. In de komende weken zal op deze website bij de verschillende garfieken worden toegevoegd hoe de weergegeven informatie uit het package gehaald kan worden.
