@@ -1,6 +1,6 @@
 ---
 title: "Grafiek 8.6 Nederlandse literaire romans van mannelijke auteurs"
-level: 2
+
 ---
 
 Kleurenversie van de grafiek op p. 205 van *Het raadsel literatuur*.

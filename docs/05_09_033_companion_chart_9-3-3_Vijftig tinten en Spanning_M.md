@@ -1,6 +1,6 @@
 ---
 title: "Extra grafieken Vijftig tinten en Spanning geschreven door mannen"
-level: 2
+
 ---
 
 Extra grafieken bij p. 245 van *Het raadsel literatuur*.

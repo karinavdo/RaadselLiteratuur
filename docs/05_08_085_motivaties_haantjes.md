@@ -1,6 +1,6 @@
 ---
 title: "Alle motivaties bij Haantjes"
-level: 2
+
 ---
 
 Op p. 222-223 van *Het raadsel literatuur* staat een selectie van de motivaties die lezers gaven bij hun score voor literaire kwaliteit van *Haantjes* van Kluun. Hieronder staan alle motivaties weergegeven, per score die de respondenten aan de roman gaven. 

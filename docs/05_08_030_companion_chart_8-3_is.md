@@ -1,6 +1,6 @@
 ---
 title: "Grafiek 8.3 Vertaalde literaire romans van mannelijke auteurs en drie spannende boeken van Mankell"
-level: 2
+
 ---
 
 Kleurenversie van de grafiek op p. 195 van *Het raadsel literatuur*.

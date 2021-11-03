@@ -3,7 +3,7 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 title:  "3.2 &amp; 3.3: Titles read out of 401"
-level:  2
+
 ---
 
 <script src="https://d3js.org/d3.v6.min.js" defer></script>

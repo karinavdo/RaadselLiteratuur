@@ -3,7 +3,7 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 title:  "Grafiek 3.1 Aantal boeken dat deelnemers aangaven per jaar te lezen"
-level:  2
+
 ---
 
 
@@ -15,15 +15,17 @@ Interactieve versie van de grafiek op p. 48 van *Het raadsel literatuur*. Uitleg
 <script src="js/companion_utils_locale-nl.js" defer></script>
 <script src="js/companion_utils_colors.js" defer></script>
 <script src="js/companion_utils_svg2png.js" defer></script>
+<script src="js/companion_abstraction_histogram.js" defer></script>
 
 <script src="js/companion_chart_3-1_books-per-year.js" defer></script>
 <script src="js/companion_chart_3-1_books-per-year_excerpt.js" defer></script>
 
 <div class="chart_float" id="chart_3-1_books-per-year"></div>
-<div class="chart_float">
-  <div id="chart_3-1_books-per-year_excerpt"></div>
-  <div id="slider"></div>
+<div class="chart_float" id="chart_3-1_books-per-year_excerpt">
+  <div class="plot"></div>
+  <div class="slider"></div>
 </div>
+
 
 <p id="value"></p>
 

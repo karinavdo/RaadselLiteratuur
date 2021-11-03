@@ -1,6 +1,6 @@
 ---
 title: "Extra grafieken Vijftig tinten en Literaire romans"
-level: 2
+
 ---
 
 Extra grafieken bij p. 245-247 van *Het raadsel literatuur*.

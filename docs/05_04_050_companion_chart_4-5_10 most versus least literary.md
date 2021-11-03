@@ -1,6 +1,6 @@
 ---
 title: "Grafiek 4.5  Top 10 meest literair en minst literair"
-level: 2
+
 ---
 
 Kleurenversie van de grafiek op p. 73 van *Het raadsel literatuur*.

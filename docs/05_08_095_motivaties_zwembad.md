@@ -1,6 +1,6 @@
 ---
 title: "Alle motivaties bij Zomerhuis met zwembad"
-level: 2
+
 ---
 
 Op p. 222-223 van *Het raadsel literatuur* staat een selectie van de motivaties die lezers gaven bij hun score voor literaire kwaliteit van *Zomerhuis met zwembad* van Herman Koch. Hieronder staan alle motivaties weergegeven, per score die de respondenten aan de roman gaven.

@@ -3,7 +3,6 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 title:  "11.4 & 11.5 Sentence Length NL"
-level:  2
 ---
 <style>
 path.regressionLine {

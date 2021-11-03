@@ -1,6 +1,6 @@
 ---
 title: "Grafiek 9.3 Vijftig tinten en Spanning geschreven door vrouwen"
-level: 2
+
 ---
 
 Kleurenversie van de grafiek op p. 246 van *Het raadsel literatuur*.

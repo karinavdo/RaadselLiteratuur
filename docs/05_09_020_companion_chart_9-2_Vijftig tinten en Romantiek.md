@@ -1,6 +1,6 @@
 ---
 title: "Grafiek 9.2 Vijftig tinten en Romantiek"
-level: 2
+
 ---
 
 Kleurenversie van de grafiek op p. 245 van *Het raadsel literatuur*.

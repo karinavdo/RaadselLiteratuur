@@ -1,6 +1,6 @@
 ---
 title: "Grafiek 7.6 Nederlandse literaire romans van vrouwelijke auteurs (1)"
-level: 2
+
 ---
 
 Kleurenversie van de grafiek op p. 159 van *Het raadsel literatuur*.

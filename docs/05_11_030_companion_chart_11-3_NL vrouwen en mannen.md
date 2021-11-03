@@ -1,6 +1,6 @@
 ---
 title: "Grafiek 11.3 Nederlandse literaire romans van mannelijke en vrouwelijke auteurs (2)"
-level: 2
+
 ---
 
 Kleurenversie van de grafiek op p. 288 van *Het raadsel literatuur*.

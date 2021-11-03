@@ -1,6 +1,6 @@
 ---
 title: "Alle motivaties bij Eten, bidden, beminnen"
-level: 2
+
 ---
 
 Op p. 137-138 van *Het raadsel literatuur* staat een selectie van de motivaties die lezers gaven bij hun score voor literaire kwaliteit van *Eten, bidden, beminnen* van Elizabeth Gilbert. Hieronder staan alle 89 motivaties weergegeven, per score die de respondenten aan de roman gaven. Er zijn vier motivaties van mannelijke lezers; ze staan gemarkeerd met een asterisk aan het begin. De overige zijn alle van vrouwelijke lezers.

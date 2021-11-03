@@ -1,6 +1,6 @@
 ---
 title: "Grafiek 7.3 Vertaalde literaire romans van vrouwelijke auteurs"
-level: 2
+
 ---
 
 Kleurenversie van de grafiek op p. 141 van *Het raadsel literatuur*.

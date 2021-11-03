@@ -3,7 +3,7 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 title:  "3.1.1 Books per year by age group"
-level:  2
+
 ---
 
 <script src="https://d3js.org/d3.v6.min.js" defer></script>

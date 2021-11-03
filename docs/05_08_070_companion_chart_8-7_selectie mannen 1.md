@@ -1,6 +1,6 @@
 ---
 title: "Grafiek 8.7 Voskuil, Mortier, Lanoye, Barnes, Kinsella"
-level: 2
+
 ---
 
 Kleurenversie van de grafiek op p. 210 van *Het raadsel literatuur*.

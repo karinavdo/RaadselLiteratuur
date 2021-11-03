@@ -1,6 +1,6 @@
 ---
 title: "Grafiek 8.11 Grunberg en de Shopaholic-test"
-level: 2
+
 ---
 
 Kleurenversie van de grafiek op p. 233 van *Het raadsel literatuur*.

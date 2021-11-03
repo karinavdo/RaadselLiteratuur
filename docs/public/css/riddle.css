@@ -25,7 +25,7 @@
   width:10%;
   position:relative;
   top:-370px;
-  z-index:-1;"
+  z-index:-1;
 }
 
 #riddle_title_chart {
@@ -33,7 +33,7 @@
   position:relative;
   top:-150px;
   left: 350px;
-  z-index:-1;"
+  z-index:-1;
 }
 
 .level2 {
@@ -54,6 +54,10 @@
 
 #sidebar {
   padding: 0;
+}
+
+.sidebar-nav-item {
+  border-top: 1px dotted #123e60;
 }
 
 #sidebar.sidebar.collapsed {

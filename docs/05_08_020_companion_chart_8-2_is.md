@@ -1,6 +1,6 @@
 ---
 title: "Grafiek 8.2 Vertaalde literaire romans van mannelijke auteurs"
-level: 2
+
 ---
 
 Kleurenversie van de grafiek op p. 190 van *Het raadsel literatuur*.

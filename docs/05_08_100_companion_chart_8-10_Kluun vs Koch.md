@@ -1,6 +1,6 @@
 ---
 title: "Grafiek 8.10 Kluun versus Koch"
-level: 2
+
 ---
 
 Kleurenversie van de grafiek op p. 225 van *Het raadsel literatuur*.

@@ -1,6 +1,6 @@
 ---
 title: "Grafiek 6.2  Voegwoorden in Nederlandse en uit het Engels vertaalde literaire romans van vrouwelijke auteurs"
-level: 2
+
 ---
 
 Kleurenversie van de grafiek op p. 118 van *Het raadsel literatuur*.

@@ -1,6 +1,5 @@
 ---
 title: "Nieuws"
-level: 2
 ---
 
 *11 November 2021*<br>
