@@ -5,7 +5,7 @@
 title:  "Extra grafiek Aantal gelezen boeken per jaar per leeftijdsgroep"
 
 ---
-Interactieve grafiek ter verdieping van Grafiek 3.1 op p. 48 van *Het raadsel literatuur*. Uitleg hoe de grafiek te gebruiken staat hieronder.
+Interactieve grafiek ter verdieping van Grafiek 3.1 op p. 48 van *Het raadsel literatuur*. 
 
 
 <script src="https://d3js.org/d3.v6.min.js" defer></script>
@@ -14,3 +14,8 @@ Interactieve grafiek ter verdieping van Grafiek 3.1 op p. 48 van *Het raadsel li
 
 <div class="chart_float" id="chart_3-1-1_books-per-year_agegroups_mean"></div>
 <div class="chart_float" id="chart_3-1-1_books-per-year_agegroups_hist"></div>
+
+
+
+<!-- **Hoe zijn de metingen te repliceren?**
+VOORBEELDQUERY HIER! -->

@@ -5,7 +5,7 @@
 title:  "Grafiek 3.2 Aantal gelezen boeken en aantal beoordeelde boeken"
 
 ---
-Interactieve versie van de grafiek op p. 52 van *Het raadsel literatuur*. Uitleg hoe de grafiek te gebruiken staat hieronder.
+Interactieve versie van de grafiek op p. 52 van *Het raadsel literatuur*. 
 
 <script src="https://d3js.org/d3.v6.min.js" defer></script>
 <script src="https://d3js.org/d3-scale.v3.min.js" defer></script>
@@ -20,3 +20,7 @@ Interactieve versie van de grafiek op p. 52 van *Het raadsel literatuur*. Uitleg
 <div class="chart_float" id="chart_3-3_rated-of-401"></div>
 
 Grafiek 3.2: Aantal gelezen van de 401 boeken (links) en aantal beoordeelde boeken (rechts).
+
+
+<!-- **Hoe zijn de metingen te repliceren?**
+VOORBEELDQUERY HIER! -->
