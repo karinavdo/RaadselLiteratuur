@@ -2,7 +2,7 @@
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
-title:  "Grafiek 11.4 Gemiddelde zinslengte voor de Nederlandse literaire romans en Grafiek 11.5: Zinslengtevariatie"
+title:  "Grafiek 11.4 Gemiddelde zinslengte voor de Nederlandse literaire romans en Grafiek 11.5 Zinslengtevariatie"
 ---
 Interactieve kleurenversie van de grafieken op p. 289 en 290 van *Het raadsel literatuur*.
 
