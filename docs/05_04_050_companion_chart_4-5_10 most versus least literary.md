@@ -59,4 +59,5 @@ De conclusie die uit al deze metingen te trekken is (meer hierover in *Het raads
 
 **Hoe zijn de metingen te repliceren?**
 
-In het R Package (zie XXX) is voor alle 401 romans een woordfrequentielijst opgenomen met de 3000 meest gebruikte woorden per tekst. VOORBEELDQUERY HIER!
+<!-- **Hoe zijn de metingen te repliceren?**
+VOORBEELDQUERY HIER! -->

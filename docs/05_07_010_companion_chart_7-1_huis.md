@@ -2,9 +2,10 @@
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
-title:  "7.1 Het grote huis"
+title:  "Grafiek 7.1 Lezersoordelen over Nicole Krauss, Het grote huis"
 
 ---
+Interactieve kleurenversie van de grafiek op p. 127 van *Het raadsel literatuur*.
 
 <script src="https://d3js.org/d3.v6.min.js" defer></script>
 <script src="https://d3js.org/d3-scale.v3.min.js" defer></script>
@@ -17,5 +18,5 @@ title:  "7.1 Het grote huis"
 
 <div class="chart_float" id="chart_7-1_huis"></div>
 
-# eerste grafiek in dit hoofdstuk
-Nicole Krauss is de meest literaire vrouwelijke auteur uit ons corpus volgens de deelnemers aan Het Nationale Lezersonderzoek.
+<!-- **Hoe zijn de metingen te repliceren?**
+VOORBEELDQUERY HIER! -->

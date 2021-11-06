@@ -35,6 +35,5 @@ In Grafiek 6.1.2 zijn er aan de bovenkant heel wat Nederlandse en uit het Engels
 
 In de frequenties van de 1000 meest gebruikte woorden is geen duidelijk verschil te vinden tussen de geselecteerde oorspronkelijk in het Nederlands geschreven literaire romans en uit het Engels vertaalde literaire romans van vrouwelijke auteurs. Meer hierover in *Het raadsel literatuur* op p. 117 en verder.
 
-**Hoe zijn de metingen te repliceren?**
-
-In het R Package (zie XXX) is voor alle 401 romans een woordfrequentielijst opgenomen met de 3000 meest gebruikte woorden per tekst. VOORBEELDQUERY HIER!
+<!-- **Hoe zijn de metingen te repliceren?**
+VOORBEELDQUERY HIER! -->
