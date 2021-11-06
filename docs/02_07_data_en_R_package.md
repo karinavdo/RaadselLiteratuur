@@ -3,7 +3,9 @@ title: "Data en R Package"
 ---
 Het boek *Het raadsel literatuur* presenteert een synthese van de onderzoeksresultaten van het project The Riddle of Literary Quality. In dat project zijn heel veel gegevens bijeen gebracht: de meningen over 401 boeken van bijna 14.000 deelnemers aan Het Nationale Lezersonderzoek (2013) en allerlei gegevens over die 401 boeken. Meer over The Riddle of Literary Quality is te vinden op de [projectwebsite](https://literaryquality.huygens.knaw.nl/), waar ook alle [publicaties](https://literaryquality.huygens.knaw.nl/?page_id=588) die eruit voortkwamen zijn verzameld.
 
-Om het uitgevoerde onderzoek herhaalbaar en controleerbaar te maken en ook andere onderzoeksbenaderingen mogelijk te maken, zijn alle verzamelde data, voor zover ze gedeeld mogen worden, bijeengebracht in een R Package. R is een gratis software-omgeving waarin statistische analyses gedaan kunnen worden en de resultaten daarvan in grafieken kunnen worden  gevisualiseerd. R kan worden gedownload van de [R website](https://www.r-project.org/). Als R is geïnstalleerd, kunt u vervolgens het gewenste R Package laden. Hieronder meer over data, package en hoe dat te gebruiken.
+Om het uitgevoerde onderzoek herhaalbaar en controleerbaar te maken en ook andere onderzoeksbenaderingen mogelijk te maken, zijn de data waarvan Karina van Dalen-Oskam gebruik heeft gemaakt voor het boek *Het raadsel literatuur*, voor zover ze gedeeld mogen worden, bijeengebracht in een R Package. Een uitzondering hierop zijn de onderzoeksgegevens die ten grondslag liggen aan het werk van Andreas van Cranenburgh, zoals beschreven in Hoofdstuk 10. De talige diepte in (p. 261 en verder). Die vindt u op [de website van Andreas van Cranenburgh](https://andreasvc.github.io/).
+
+R is een gratis software-omgeving waarin statistische analyses gedaan kunnen worden en de resultaten daarvan in grafieken kunnen worden  gevisualiseerd. R kan worden gedownload van de [R website](https://www.r-project.org/). Als R is geïnstalleerd, kunt u vervolgens het gewenste R Package laden. Hieronder meer over data, package en hoe dat te gebruiken.
 
 **Het R Package**
 
@@ -15,11 +17,11 @@ Als u het package heeft geïnstalleerd, laadt u het als volgt:
 
 - library(litRiddle)
 
-Engelstalige documentatie bij het package vindt u hier: NNNNN. Een Nederlandse toelichting staat hieronder op deze webpagina.
+Hieronder volgt meer informatie over het package. Voor uitgebreidere informatie (in het Engels) geeft u in het package de volgende opdracht:
 
-Het package is ontwikkeld door Maciej Eder en Saskia Lensink in samenwerking met Joris van Zundert en Karina van Dalen-Oskam. Fijn als u in publicaties als volgt naar het package verwijst:
+- vignette("litRiddle")
 
-- PM Ref package
+Het package is ontwikkeld door Maciej Eder en Saskia Lensink in samenwerking met Joris van Zundert en Karina van Dalen-Oskam.
 
 **De data**
 
@@ -55,13 +57,19 @@ U kunt alle waarden in een kolom opvragen met bijvoorbeeld:
 13. **first.print**  Jaar waarin de eerste druk in het Nederlands verscheen;
 14. **publisher** Uitgeverij van het boek;
 15. **english.title**  Titel van het boek in het Engels (met vertalingen van het onderzoeksteam als er geen Engelse vertaling van het boek beschikbaar was in 2013);
-16. word_count
-17. type_count
-18. sentence_length_mean
-19. sentence_length_variance
-20. paragraph_count
-21. sentence_count
-22. paragraph_length_mean
+16. **word.count**  Totaal aantal woorden in het boek (tokens);
+17. **type.count**  Aantal unieke woorden in het boek (typen);
+18. **sentence.length.mean**  Gemiddelde zinslengte (in woorden);
+19. **sentence.length.variance**  Standaarddeviatie van de zinslengte;
+20. **paragraph.count**  Totaal aantal alinea's in het boek;
+21. **sentence.count**  Totaal aantal zinnen in het boek;
+22. **paragraph.length.mean**  Gemiddelde alinealengte (in woorden);
+23. **raw.TTR**  Type-token-ratio, de verhouding tussen aantal woordvoorkomens en aantal unieke woorden ter indicatie van de variatie in de woordenschat. De lengte van het boek heeft invloed op de TTR en maakt het lastg om de TTR van boeken van verschillende lengte met elkaar te vergelijken;
+24. **sampled.TTR**  Deze versie van TTR ondervindt minder invloed van verschil in boeklengte en heeft dus de voorkeur voor vergelijking van de omvang van de woordenschat in boeken van verschillende omvang.
+
+**Woordfrequentietabel**
+
+Een apart tabel bevat de woordfrequenties van alle 401 boeken.
 
 **Respondenten (respondents)**
 
@@ -135,8 +143,8 @@ U kunt alle waarden in een kolom opvragen met bijvoorbeeld:
 8. **book.read**  Geeft weer of een lezer heeft aangegeven een boek te hebben gelezen (waarde *1*) of een mening te hebben over een niet gelezen boek (waarde *0*).
 
 
-**PM woordfrequenties aparte tabel?**
-
 **Gebruik van het R Package**
 
-Hierboven staan al heel wat aanwijzingen hoe de data in het R Package zijn te benaderen, maar het wordt natuurlijk pas echt leuk als je de informatie uit de verschillende tabellen met elkaar kunt combineren en in grafieken kunt afbeelden. In de komende weken zal op deze website bij de verschillende grafieken worden toegevoegd hoe de weergegeven informatie uit het package gehaald kan worden.
+Hierboven staan al heel wat aanwijzingen hoe de data in het R Package zijn te benaderen, maar het wordt natuurlijk pas echt leuk als je de informatie uit de verschillende tabellen met elkaar kunt combineren en in grafieken kunt afbeelden. In de komende weken zal op deze website bij de verschillende grafieken worden toegevoegd hoe de weergegeven informatie uit het package gehaald kan worden. Meer hierover is ook te vinden in het package zelf, met de opdracht:
+
+- vignette("litRiddle")

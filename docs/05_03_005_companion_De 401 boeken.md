@@ -409,7 +409,7 @@ Hoe de boeken voor het onderzoek zijn geselecteerd staat beschreven op p. 42-44 
 
 **Meer over de boeken in het R Package**
 
-In het *litRiddle* R Package (meer hierover elders op deze website) is meer informatie te vinden over de boeken op de lijst. Stel, u zoekt informatie over Emma Donoghue's *Kamer*. Dan geeft u na het laden van het package de volgende opdrachten in R:
+In het *litRiddle* [R package](02_07_data_en_R_package.html) is meer informatie te vinden over de boeken op de lijst. Stel, u zoekt informatie over Emma Donoghue's *Kamer*. Dan geeft u na het laden van het package de volgende opdrachten in R:
 
 - data(books)<br>
 - books<br>
