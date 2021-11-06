@@ -40,6 +40,5 @@ Dat de roman *De Daisy Sisters* afwijkt van de andere vier romans van Mankell ka
 
 Meer over de vijf romans van Henning Mankell in *Het raadsel literatuur* op p. 188-195. Speciale aandacht voor Jonas Jonassons *De honderjarige man die uit het raam klom en verdween*, die zich in Grafiek 8.3 tussen de Mankells heeft genesteld, op p. 196-197 van *Het raadsel literatuur*.
 
-**Hoe zijn de metingen te repliceren?**
-
-In het R Package (zie XXX) is voor alle 401 romans een woordfrequentielijst opgenomen met de 3000 meest gebruikte woorden per tekst. VOORBEELDQUERY HIER!
+<!-- **Hoe zijn de metingen te repliceren?**
+VOORBEELDQUERY HIER! -->

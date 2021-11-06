@@ -3,7 +3,7 @@ title: "Alle motivaties bij Haantjes"
 
 ---
 
-Op p. 222-223 van *Het raadsel literatuur* staat een selectie van de motivaties die lezers gaven bij hun score voor literaire kwaliteit van *Haantjes* van Kluun. Hieronder staan alle motivaties weergegeven, per score die de respondenten aan de roman gaven. 
+Op p. 222-223 van *Het raadsel literatuur* staat een selectie van de motivaties die lezers gaven bij hun score voor literaire kwaliteit van *Haantjes* van Kluun. Hieronder staan alle motivaties weergegeven, per score die de respondenten aan de roman gaven.
 
 **1 (absoluut niet literair)**
 
@@ -47,3 +47,6 @@ Op p. 222-223 van *Het raadsel literatuur* staat een selectie van de motivaties 
 
 - pff te lang geleden (ID_13424).
 - a (ID_6415).
+
+<!-- **Hoe zijn de metingen te repliceren?**
+VOORBEELDQUERY HIER! -->

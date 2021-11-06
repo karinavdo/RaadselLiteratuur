@@ -32,6 +32,5 @@ Analyse op hoofdcomponenten (**1000** meest frequente woorden). Maat: PCA, corre
 
 Ook voor de roman van Voskuil zijn de woordfrequenties niet goed te relateren aan de score voor literaire kwaliteit die het boek kreeg van de lezers. Afhankelijk van het vergelijkingmateriaal komt *De buurman* ofwel terecht bij de meest literaire romans, ofwel bij de minst literair gevonden boeken. We moeten dus verder kijken als we meer willen weten over wat een roman nu literair maakt. Meer hierover in *Het raadsel literatuur* op p. 208-210.
 
-**Hoe zijn de metingen te repliceren?**
-
-In het R Package (zie XXX) is voor alle 401 romans een woordfrequentielijst opgenomen met de 3000 meest gebruikte woorden per tekst. VOORBEELDQUERY HIER!
+<!-- **Hoe zijn de metingen te repliceren?**
+VOORBEELDQUERY HIER! -->

@@ -28,6 +28,5 @@ Analyse op hoofdcomponenten (**100** meest frequente woorden). Maat: PCA, correl
 
 De extra metingen bevestigen het beeld dat er in de woordfrequenties van de top 10 Nederlandse literaire romans van vrouwelijke en mannelijke auteurs geen duidelijk scheidslijn te vinden is tussen de romans van vrouwen en die van mannen. Zie *Het raadsel literatuur*, p. 288 en verder.
 
-**Hoe zijn de metingen te repliceren?**
-
-In het R Package (zie XXX) is voor alle 401 romans een woordfrequentielijst opgenomen met de 3000 meest gebruikte woorden per tekst. VOORBEELDQUERY HIER!
+<!-- **Hoe zijn de metingen te repliceren?**
+VOORBEELDQUERY HIER! -->

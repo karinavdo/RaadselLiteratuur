@@ -30,6 +30,5 @@ Bootstrap consensus tree (**100** - **1000** meest frequente woorden, increment 
 
 De extra metingen nuanceren het beeld dat de *Vijftig tinten*-trilogie wat woordfrequenties niet overlapt met de boeken uit de categorie Romantiek in het onderzoekscorpus: de afstand tot een subgroepje is vergelijkbaar met de afstand tussen de twee romans van Renate Dorrestein die in verschillende clusters voorkwamen in Grafiek 7.7. Meer in *Het raadsel literatuur* op p. 244-245.
 
-**Hoe zijn de metingen te repliceren?**
-
-In het R Package (zie XXX) is voor alle 401 romans een woordfrequentielijst opgenomen met de 3000 meest gebruikte woorden per tekst. VOORBEELDQUERY HIER!
+<!-- **Hoe zijn de metingen te repliceren?**
+VOORBEELDQUERY HIER! -->

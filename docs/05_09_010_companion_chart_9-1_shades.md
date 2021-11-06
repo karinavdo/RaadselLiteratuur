@@ -2,9 +2,10 @@
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
-title:  "9.1 Shades of Grey"
+title:  "Grafiek 9.1 Lezersoordelen over de literaire kwaliteit van E.L. James, Vijftig tinten-trilogie"
 
 ---
+Interactieve kleurenversie van de grafiek op p. 236 van *Het raadsel literatuur*.
 
 <script src="https://d3js.org/d3.v6.min.js" defer></script>
 <script src="https://d3js.org/d3-scale.v3.min.js" defer></script>
@@ -15,3 +16,6 @@ title:  "9.1 Shades of Grey"
 <script src="js/companion_chart_9-1_shades.js" defer></script>
 
 <div class="chart_float" id="chart_9-1_shades"></div>
+
+<!-- **Hoe zijn de metingen te repliceren?**
+VOORBEELDQUERY HIER! -->

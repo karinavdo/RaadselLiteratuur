@@ -36,6 +36,5 @@ Ook als we een hele serie aan clusteranalyses maken, blijft het patroon hetzelfd
 
 Voor de vertaalde literaire romans van mannelijke auteurs zien we in de frequenties van de 1000 meest gebruikte woorden geen duidelijk verschil tussen de romans die de hoogste of de laagste scores kregen voor literaire kwaliteit of die tot de middengroep behoorden. Meer hierover in *Het raadsel literatuur* op p. 188 en verder. De romans van Mankell vragen om aparte aandacht, die ze krijgen in Grafiek 8.3.
 
-**Hoe zijn de metingen te repliceren?**
-
-In het R Package (zie XXX) is voor alle 401 romans een woordfrequentielijst opgenomen met de 3000 meest gebruikte woorden per tekst. VOORBEELDQUERY HIER!
+<!-- **Hoe zijn de metingen te repliceren?**
+VOORBEELDQUERY HIER! -->

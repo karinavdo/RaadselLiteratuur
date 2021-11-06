@@ -27,3 +27,6 @@ Bootstrap consensus tree (**100** - **1000** meest frequente woorden, increment 
 **Conclusie**
 
 De *Vijftig tinten*-trilogie staat verder af van de spannende boeken uit het onderzoekscorpus die zijn geschreven door mannelijke auteurs dan van die van de hand van vrouwelijke auteurs (zie bijvoorbeeld de Delta score in Grafiek 9.3.4 onder de grafiek ter hoogte van de plaats waar de trilogie samenclustert met een zestal spannende boeken). Wat verder opvalt in deze extra grafieken is dat de Nederlandse en vertaalde spannende boeken goed gemengd voorkomen, terwijl er in de analyses van de spannende boeken van vrouwen in Grafiek 9.3 een veel groter verschil lijkt te zijn tussen Nederlandseen vertaalde titels. Meer hierover in *Het raadsel literatuur* op p. 245-247.
+
+<!-- **Hoe zijn de metingen te repliceren?**
+VOORBEELDQUERY HIER! -->

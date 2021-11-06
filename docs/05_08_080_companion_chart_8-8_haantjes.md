@@ -2,9 +2,10 @@
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
-title:  "8.8 Haantjes"
+title:  "Grafiek 8.8 Lezersoordelen over Kluun, Haantjes"
 
 ---
+Interactieve kleurenversie van de grafiek op p. 221 van *Het raadsel literatuur*.
 
 <script src="https://d3js.org/d3.v6.min.js" defer></script>
 <script src="https://d3js.org/d3-scale.v3.min.js" defer></script>
@@ -16,3 +17,6 @@ title:  "8.8 Haantjes"
 <script src="js/companion_chart_8-8_haantjes.js" defer></script>
 
 <div class="chart_float" id="chart_8-8_haantjes"></div>
+
+<!-- **Hoe zijn de metingen te repliceren?**
+VOORBEELDQUERY HIER! -->

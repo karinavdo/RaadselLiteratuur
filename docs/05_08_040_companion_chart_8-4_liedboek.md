@@ -2,9 +2,10 @@
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
-title:  "8.4 Gestameld liedboek"
+title:  "Grafiek 8.4 Lezersoordelen over Erwin Mortier, Gestameld liedboek"
 
 ---
+Interactieve kleurenversie van de grafiek op p. 200 van *Het raadsel literatuur*.
 
 <script src="https://d3js.org/d3.v6.min.js" defer></script>
 <script src="https://d3js.org/d3-scale.v3.min.js" defer></script>
@@ -16,3 +17,7 @@ title:  "8.4 Gestameld liedboek"
 <script src="js/companion_chart_8-4_liedboek.js" defer></script>
 
 <div class="chart_float" id="chart_8-4_liedboek"></div>
+
+
+<!-- **Hoe zijn de metingen te repliceren?**
+VOORBEELDQUERY HIER! -->

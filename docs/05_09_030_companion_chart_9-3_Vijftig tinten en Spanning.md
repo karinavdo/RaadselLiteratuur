@@ -29,4 +29,5 @@ Bootstrap consensus tree (**100** - **1000** meest frequente woorden, increment 
 
 De extra metingen nuanceren het beeld dat de *Vijftig tinten*-trilogie wat woordfrequenties betreft deels overlapt met de spannende boeken van vrouwelijke auteurs. Net als bij Grafiek 9.2 is de afstand tot een subgroepje vergelijkbaar met de afstand tussen de twee romans van Renate Dorrestein die in verschillende clusters voorkwamen in Grafiek 7.7. Meer in *Het raadsel literatuur* op p. 245-247. Wat fascinerend blijft is dat de trilogie aanzienlijk dichter aanschuift bij Nederlandse dan bij vertaalde romans. We weten niet wie de vertalers van de trilogie zijn - komen sommige van hen (dat het een team was is wel bekend) wellicht ook zelf voor als auteur in de geanalyseerde spannende romans?
 
-**Hoe zijn de metingen te repliceren?**
+<!-- **Hoe zijn de metingen te repliceren?**
+VOORBEELDQUERY HIER! -->

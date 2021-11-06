@@ -61,8 +61,10 @@ Op p. 222-223 van *Het raadsel literatuur* staat een selectie van de motivaties 
 - Nee (ID_10645).
 - Mooi geschreven, blijft boeien (ID_979).
 
-
 **8 Weet niet**
 
 - Ik heb het boek weggelegd omdat de eerste paar bladzijdes mij niet aanspraken (ID_5382).
 - Omdat de titel bij nader inzien niet klopt..... (ID_9626).
+
+<!-- **Hoe zijn de metingen te repliceren?**
+VOORBEELDQUERY HIER! -->

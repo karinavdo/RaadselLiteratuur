@@ -44,3 +44,6 @@ Bootstrap consensus tree (**100** - **1000** meest frequente woorden, increment 
 **Conclusie**
 
 De *Vijftig tinten*-trilogie staat op enige afstand van het genre van de Literaire roman. Uit alle metingen (Grafiek 9.2, 9.3 en de extra grafieken) blijkt dat de trilogie het minst ver af staat van de spannende boeken van vrouwen in het onderzoekscorpus, maar daar moet bij worden vermeld dat dat alleen duidelijk wordt in een analyse op hoofdcomponenten. In de clusteranalyses lijkt er weinig verschil te zijn in de afstanden tot de andere boeken. Meer hierover in *Het raadsel literatuur* op p. 245-247.
+
+<!-- **Hoe zijn de metingen te repliceren?**
+VOORBEELDQUERY HIER! -->

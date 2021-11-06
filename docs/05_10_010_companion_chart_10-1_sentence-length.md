@@ -2,9 +2,11 @@
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
-title:  "10.1 & 10.2 Sentence Length 401"
+title:  "Grafiek 10.1 Gemiddelde zinslengte voor alle 401 boeken en Grafiek 10.2 Zinslengtevariatie"
 
 ---
+Interactieve kleurenversie van de grafieken op p. 274 en 275 van *Het raadsel literatuur*.
+
 <style>
 path.regressionLine {
     stroke: #d85040;
@@ -25,3 +27,6 @@ path.regressionLine {
 
 <div class="chart_float" id="chart_10-1_sentence-length"></div>
 <div class="chart_float" id="chart_10-2_sentence-length-variance"></div>
+
+<!-- **Hoe zijn de metingen te repliceren?**
+VOORBEELDQUERY HIER! -->
