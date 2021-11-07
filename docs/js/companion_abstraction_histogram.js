@@ -229,7 +229,7 @@ class Histogram{
 
 
 
-  // // Kick off first rendering.
+  // Put in a slider
   render_slider() {
     // Put in the slider if there is a div defined to hold it.
     var slider_div = d3.select( 'div#' + this.elem_id ).select( '.slider' );
