@@ -118,3 +118,7 @@
 .chart_float {
   float: left;
 }
+
+div.page p br {
+  margin-bottom: 0.6em;
+}

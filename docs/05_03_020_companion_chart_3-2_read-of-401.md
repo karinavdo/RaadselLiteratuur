@@ -9,15 +9,25 @@ Interactieve versie van de grafiek op p. 52 van *Het raadsel literatuur*.
 
 <script src="https://d3js.org/d3.v6.min.js" defer></script>
 <script src="https://d3js.org/d3-scale.v3.min.js" defer></script>
+<script src="https://unpkg.com/d3-simple-slider"></script>
 <script src="js/companion_utils_locale-nl.js" defer></script>
 <script src="js/companion_utils_colors.js" defer></script>
 <script src="js/companion_utils_svg2png.js" defer></script>
 
+<script src="js/companion_abstraction_histogram.js" defer></script>
+
 <script src="js/companion_chart_3-2_read-of-401.js" defer></script>
 <script src="js/companion_chart_3-3_rated-of-401.js" defer></script>
 
-<div class="chart_float" id="chart_3-2_read-of-401"></div>
-<div class="chart_float" id="chart_3-3_rated-of-401"></div>
+<div class="chart_float" id="chart_3-2_read-of-401">
+  <div class="plot"></div>
+  <div class="slider"></div>
+</div>
+
+<div class="chart_float" id="chart_3-3_rated-of-401">
+  <div class="plot"></div>
+  <div class="slider"></div>
+</div>
 
 Grafiek 3.2: Aantal gelezen van de 401 boeken (links) en aantal beoordeelde boeken (rechts).
 

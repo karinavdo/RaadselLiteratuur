@@ -11,6 +11,7 @@ if( GRAY_SCHEME ){
 COMPANION = {
   HISTOGRAM: {
     DEFAULTS: {
+      bins_hint: 20,
       x_axis_title_en: 'X-axis Title',
       y_axis_title_en: 'X-axis Title',
       x_axis_title_nl: 'Titel x-as',

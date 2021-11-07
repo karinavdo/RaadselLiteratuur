@@ -20,7 +20,10 @@ Interactieve versie van de grafiek op p. 48 van *Het raadsel literatuur*.
 <script src="js/companion_chart_3-1_books-per-year.js" defer></script>
 <script src="js/companion_chart_3-1_books-per-year_excerpt.js" defer></script>
 
-<div class="chart_float" id="chart_3-1_books-per-year"></div>
+<div class="chart_float" id="chart_3-1_books-per-year">
+  <div class="plot"></div>
+</div>
+
 <div class="chart_float" id="chart_3-1_books-per-year_excerpt">
   <div class="plot"></div>
   <div class="slider"></div>
