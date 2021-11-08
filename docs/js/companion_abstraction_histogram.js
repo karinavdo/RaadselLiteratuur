@@ -14,6 +14,8 @@ class Histogram{
     this.settings.plot_width = this.settings.figure_width - this.settings.plot_margin.left - this.settings.plot_margin.right;
     this.settings.plot_height = this.settings.figure_height - this.settings.plot_margin.top - this.settings.plot_margin.bottom;
 
+    this.data_point_labeler = new DataPointLabeler( this );
+
     this.render_histogram();
     this.render_slider();
   }
@@ -104,7 +106,8 @@ class Histogram{
         .attr( 'width', function( d ){ return _this.x_scale( d.x1 ) - _this.x_scale( d.x0 ) -1 ; })
         .attr( 'height', function( d ){ return _this.settings.plot_height - _this.y_scale( d.length ); })
         .style( 'fill', bar_colors[2] )
-        .on( 'click', function( evt, d ){ _this.toggle_data_point_label( d, this ) } );
+        .on( 'click', function( evt, d ){ _this.data_point_labeler.toggle_data_point_label( d, this ) } );
+        // .on( 'click', function( evt, d ){ _this.toggle_data_point_label( d, this ) } );
 
     // Render x axis label.
     // TODO:
@@ -147,95 +150,6 @@ class Histogram{
       n = max_Y
     }
     return n
-  }
-
-  toggle_data_point_label( d, rect ){
-    var bar = d3.select( rect );
-    var svg = this.svg;
-    // We remove anything to do with highlighting and labeling.
-    // Essentially this is 'toggle off'.
-    svg.selectAll( 'rect' ).style( 'fill', bar_colors[2] );
-    var chart_bar_datum_label = svg.select( '.chart_bar_datum_label' )
-    if( chart_bar_datum_label ){
-      chart_bar_datum_label.remove();
-    };
-    // We only then toggle the highlight on if a non highlighted bar
-    // is clicked.
-    if( bar.classed( 'highlighted' ) ){
-      bar.classed( 'highlighted', false );
-    } else {
-      // Remember to put all bars in a non highlighted state.
-      svg.selectAll( 'rect' ).classed( 'highlighted', false );
-      svg.append( 'g' )
-        // Create an id for text so we can select it later for removing
-        // on mouseout.
-        .classed( 'chart_bar_datum_label', true )
-        .append( 'text' )
-          .attr( 'x', this.x_scale( d.x0 ) )
-          .attr( 'y', this.y_scale( d.length ) )
-          .attr( 'style', this.settings.scale_style )
-          .text( d.length );
-      // Now we need some calculations to determine location
-      // of label and the connector to the data point.
-      var label_g = svg.select( '.chart_bar_datum_label' )
-      var bbox = label_g.node().getBBox();
-      // Project left x position of label box on the width
-      // of the plot minus the label box width.
-      // This guarantees that the label box always falls within the div
-      // of the chart horizontally, and thus will be visible.
-      var label_box_width = bbox.width + 2*this.settings.label_x_padding;
-      var label_box_height = bbox.height + 2*this.settings.label_y_padding;
-      var label_box_x = bbox.x * ( ( this.settings.plot_width - label_box_width ) / this.settings.plot_width ) - 8;
-      // For y positioning we need something too.
-      var label_box_y = bbox.y - this.settings.label_y_padding + this.settings.label_y_distance;
-      if( this.y_scale( d.length ) > 0.5*this.settings.plot_height ){
-        label_box_y = bbox.y - this.settings.label_y_padding - this.settings.label_y_distance;
-      }
-      var connector_y_start = label_box_y + 0.5*label_box_height;
-      var connector_x_start = label_box_x + label_box_width;
-      var connector_x_end = this.x_scale( d.x0 ) + ( ( this.x_scale( d.x1 ) - this.x_scale( d.x0 ) + 1 ) / 2 );
-      var connector_y_end = this.y_scale( d.length );
-
-      //Now we draw label and connector.
-      var label_text = svg.select( '.chart_bar_datum_label text' );
-      label_text.attr( 'x', label_box_x + this.settings.label_x_padding );
-      label_text.attr( 'y', label_box_y + label_box_height - 2*this.settings.label_y_padding );
-      label_g.insert( 'rect', ':first-child' )
-        .attr( 'x', label_box_x )
-        .attr( 'y', label_box_y )
-        .attr( 'width', label_box_width )
-        .attr( 'height', label_box_height )
-        .attr( 'fill', this.settings.label_fill )
-        .attr( 'stroke', this.settings.label_stroke )
-        .attr( 'stroke-width', this.settings.label_stroke_width );
-      var connector_path = d3.path();
-      connector_path.moveTo( connector_x_start, connector_y_start );
-      var control_y = connector_y_start - ( ( connector_y_start - connector_y_end ) / 2 );
-      var control_x = connector_x_start + 50;
-      if( control_x > this.settings.plot_width ) { control_x = this.settings.plot_width }
-      connector_path.quadraticCurveTo( control_x, control_y, connector_x_end, connector_y_end );
-      label_g.append( 'path' )
-        .attr( 'd', connector_path )
-        .attr( 'stroke-width', 2*this.settings.label_stroke_width )
-        .attr( 'stroke', this.settings.connector_stroke )
-        .attr( 'fill', 'none' );
-      this.draw_connector_endpoint( label_g, connector_x_start, connector_y_start );
-      this.draw_connector_endpoint( label_g, connector_x_end, connector_y_end );
-      // And finally hightlight the clicked bar.
-      bar.style( 'fill', this.settings.bar_highlight );
-      bar.classed( 'highlighted', true );
-    }
-  }
-
-  // Helper function for the `toggle_data_point_label` function.
-  draw_connector_endpoint( g, cx, cy ){
-    g.append( 'circle' )
-      .attr( 'cx', cx )
-      .attr( 'cy', cy )
-      .attr( 'r', 3 )
-      .attr( 'fill', this.settings.label_fill )
-      .attr( 'stroke', this.settings.label_stroke )
-      .attr( 'stroke-width', this.settings.label_stroke_width );
   }
 
 
