@@ -18,10 +18,6 @@ class Barchart{
     // List of subgroups, i.e. the headers of the columns
     // "quality" and "literariness" in the csv data.
     this.subgroups = this.data.columns.slice(2);
-    this.subgroups.reverse();
-    this.keys = [ 'literariness', 'quality' ];
-    this.keys_nl = { 'quality': 'Algemene kwaliteit',
-                    'literariness': 'Literaire kwaliteit' }
 
     this.color = d3.scaleOrdinal().range( bar_colors )
 
@@ -59,11 +55,15 @@ class Barchart{
     this.x_subgroup = d3.scaleBand()
       .domain( this.subgroups )
       .range( [0, this.x_scale.bandwidth() ] )
-      .padding( [0.09] )
+      .padding( [0.09] );
+
+    this.pos_max = 1.2 * d3.max( d3.merge( this.data.map( function(d){
+      return Object.values(d).slice(2);
+    } ) ).map( function(d){ return parseInt(d) } ) )
 
     // Add Y axis
     this.y_scale = d3.scaleLinear()
-      .domain( [0, 400] )
+      .domain( [0, this.pos_max ] ).nice()
       .range( [this.settings.plot_height, 0]);
     this.svg.append( 'g' )
       .call( d3.axisLeft( this.y_scale ) )
@@ -122,27 +122,39 @@ class Barchart{
 
 
   render_legend(){
+    var keys = this.data.columns.slice(2);
+    if( typeof this.settings.series_labels != 'undefined' ){
+      keys = Object.keys( this.settings.series_labels );
+    }
     var _this = this;
     this.key_size = 17;
+    this.legend_left = this.settings.figure_width - this.settings.plot_margin.right - 50; // 50 is aribitrary.
     this.svg.selectAll( 'legend_key' )
-      .data( this.keys )
+      .data( keys )
       .enter()
       .append( 'rect' )
-        .attr( 'x', 430 )
+        // .attr( 'x', 430 ) //680
+        .attr( 'x', this.legend_left )
         // 100 is where the first dot appears. 25 is the distance between dots
         .attr( 'y', function(d,i){ return 100 + i*( _this.key_size+10 ) } )
         .attr( 'width', this.key_size )
         .attr( 'height', this.key_size )
         .style( 'fill', function(d){ return _this.color( d ) } )
     this.svg.selectAll( 'legend_key_labels' )
-      .data( this.keys )
+      .data( keys )
       .enter()
       .append( 'text' )
-        .attr( 'x', 435 + this.key_size*1.2 )
+        .attr( 'x', this.legend_left + this.key_size*1.5 )
         // 100 is where the first dot appears. 25 is the distance between dots
         .attr( 'y', function(d,i){ return 105 + i*( _this.key_size+10 ) + ( _this.key_size/2 ) } )
         .attr( 'style', this.settings.axis_style )
-        .text( function(d){ return _this.keys_nl[ d ] } )
+        .text( function(d){
+          if( typeof _this.settings.series_labels != 'undefined'){
+            return _this.settings.series_labels[ d ]
+          } else {
+            return d;
+          }
+        } )
         .attr( 'text-anchor', 'left' )
         .style( 'alignment-baseline', 'middle' )
   }
