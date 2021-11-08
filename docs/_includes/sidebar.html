@@ -52,10 +52,23 @@
       <a class="sidebar-nav-item" href="{{ site.github.repo }}/archive/v{{ site.version }}.zip">Download</a>
       <a class="sidebar-nav-item" href="{{ site.github.repo }}">GitHub project</a>
 -->
-      <span class="sidebar-nav-item">Currently v{{ site.version }}</span>
+      <br/><br/><br/>
+      <small class="small_print">
+        <span class="sidebar-nav-item" style="padding-top: 1rem;">
+          Site version v{{ site.version }} ({{ site.time | date: '%Y' }})
+        <br/>
+        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Download source at GitHub</a>
+        <br/><br/>
+        <span>
+          <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+            <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+            This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License.
+          </a>
+        </span>
+      </small>
+      <br/><br/>
     </nav>
 
-    <p>&copy; {{ site.time | date: '%Y' }}. All rights reserved.</p>
   </div>
 </div>
 

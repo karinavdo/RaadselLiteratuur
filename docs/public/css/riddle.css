@@ -130,3 +130,8 @@ p img {
   padding: 1.5rem;
   border: 1px solid #3b81b7;
 }
+
+.small_print a {
+  color: rgba(255,255,255,.5);
+  text-decoration: none;
+}
