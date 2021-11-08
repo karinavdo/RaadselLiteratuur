@@ -60,13 +60,7 @@ class DataPointLabeler{
       var label_box_width = bbox.width + 2*this.owner.settings.label_x_padding;
       var label_box_height = bbox.height + 2*this.owner.settings.label_y_padding;
       var label_box_x = bbox.x * ( ( this.owner.settings.plot_width - label_box_width ) / this.owner.settings.plot_width ) - 8;
-      // For y positioning we need something too.
-      var label_box_y = bbox.y - this.owner.settings.label_y_padding + this.owner.settings.label_y_distance;
-      if( this.owner.y_scale( d.length ) > 0.5*this.owner.settings.plot_height ){
-        label_box_y = bbox.y - this.owner.settings.label_y_padding - this.owner.settings.label_y_distance;
-      }
-      var connector_x_start = label_box_x + label_box_width;
-      var connector_y_start = label_box_y + 0.5*label_box_height;
+      // Compute ending position of connector
       var connector_x_end = 0;
       var connector_y_end = 0;
       var half_bar_width = bar.attr( 'width' )/2;
@@ -79,6 +73,13 @@ class DataPointLabeler{
         var connector_x_end = this.owner.x_scale( d.score ) + this.owner.x_subgroup( d.key ) + half_bar_width;
         connector_y_end = this.owner.y_scale( d.value );
       }
+      // Ensure y is chosen so label always falls within the plot area.
+      var label_box_y = bbox.y - this.owner.settings.label_y_padding + this.owner.settings.label_y_distance;
+      if( connector_y_end > 0.5*this.owner.settings.plot_height ){
+        label_box_y = bbox.y - this.owner.settings.label_y_padding - this.owner.settings.label_y_distance;
+      }
+      var connector_x_start = label_box_x + label_box_width;
+      var connector_y_start = label_box_y + 0.5*label_box_height;
 
       //Now we reposition the label and draw the connector.
       label_text = svg.select( '.chart_bar_datum_label text' );

@@ -5,7 +5,6 @@
 title:  "Grafiek 4.1 Lezersoordelen over Tatiana de Rosnay, Haar naam was Sarah"
 
 ---
-
 Interactieve kleurenversie van de grafiek op p. 59 van *Het raadsel literatuur*.
 
 <script src="https://d3js.org/d3.v6.min.js" defer></script>
