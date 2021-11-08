@@ -8,6 +8,8 @@ if( GRAY_SCHEME ){
   bar_colors = BAR_GRAYS
 }
 
+CSV_BASE_URL = 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/';
+
 COMPANION = {
   HISTOGRAM: {
     DEFAULTS: {
@@ -33,9 +35,5 @@ COMPANION = {
     }
   }
 }
-
-var opts = COMPANION.HISTOGRAM.DEFAULTS;
-opts.plot_width = opts.figure_width - opts.plot_margin.left - opts.plot_margin.right;
-opts.plot_height = opts.figure_height - opts.plot_margin.top - opts.plot_margin.bottom;
 
 // Body text black: #1a1919

@@ -1,12 +1,12 @@
 // Load data.
-var url_csv = 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/chart_3-2_read-of-401.csv';
-// Transform data.
+var url_csv = CSV_BASE_URL + 'chart_3-2_read-of-401.csv';
 d3.csv( url_csv ).then( function( data ) {
+  // Transform data.
   data.forEach( function( d ) {
     d.Y = +d['respondent_id'];
     d.X = +d['books.read'];
   });
-  // Call the histogram rendering function
+  // Set necessary options.
   var options = {
     x_axis_title_nl: 'Aantal boeken gelezen van de 401 titels',
     y_axis_title_nl: 'Aantal respondenten',
@@ -15,5 +15,6 @@ d3.csv( url_csv ).then( function( data ) {
     x_max: 250,
     y_max: 6000
   }
+  // Careate the histogram.
   new Histogram( data, 'chart_3-2_read-of-401', options );
 });
