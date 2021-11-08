@@ -1,7 +1,7 @@
 // Load data.
 var url_csv = CSV_BASE_URL + 'chart_4-1_sarah.csv';
 d3.csv( url_csv ).then( function( data ) {
-  // Deternine order of the columns was required, so…
+  // Different order of the columns was required, so…
   data.columns = [ '', 'score', 'literariness', 'quality' ]
   // Set some options.
   var options = {

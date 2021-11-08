@@ -15,9 +15,11 @@ class Barchart{
     // Create series and sub series. Likely candidates for extraction/abstraction.
     // List of groups, in this case the scores in the score column in the data.
     this.groups = d3.map( this.data, function( d ){ return( d.score ) } );
+
     // List of subgroups, i.e. the headers of the columns
     // "quality" and "literariness" in the csv data.
     this.subgroups = this.data.columns.slice(2);
+
 
     this.color = d3.scaleOrdinal().range( bar_colors )
 
@@ -57,13 +59,15 @@ class Barchart{
       .range( [0, this.x_scale.bandwidth() ] )
       .padding( [0.09] );
 
-    this.pos_max = 1.2 * d3.max( d3.merge( this.data.map( function(d){
-      return Object.values(d).slice(2);
-    } ) ).map( function(d){ return parseInt(d) } ) )
+    if( typeof this.settings.y_max == 'undefined' ){
+      this.settings.y_max = 1.2 * d3.max( d3.merge( this.data.map( function(d){
+        return Object.values(d).slice(2);
+      } ) ).map( function(d){ return parseInt(d) } ) )
+    }
 
     // Add Y axis
     this.y_scale = d3.scaleLinear()
-      .domain( [0, this.pos_max ] ).nice()
+      .domain( [0, this.settings.y_max ] ).nice()
       .range( [this.settings.plot_height, 0]);
     this.svg.append( 'g' )
       .call( d3.axisLeft( this.y_scale ) )
