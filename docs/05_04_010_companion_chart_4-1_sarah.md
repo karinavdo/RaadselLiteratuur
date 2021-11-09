@@ -22,5 +22,8 @@ Interactieve kleurenversie van de grafiek op p. 59 van *Het raadsel literatuur*.
   <div class="plot"></div>
 </div>
 
+
+Een klik op een balk in de grafiek maakt zichtbaar hoeveel deelnemers aan Het Nationale Lezersonderzoek een bepaalde score aan de roman toekenden.
+
 <!-- **Hoe zijn de metingen te repliceren?**
 VOORBEELDQUERY HIER! -->
