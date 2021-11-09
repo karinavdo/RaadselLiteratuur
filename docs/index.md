@@ -2,10 +2,11 @@
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
-title: "<i>Het raadsel literatuur</i>"
+title: "<i>Het raadsel literatuur</i><br><i>Is literaire kwaliteit meetbaar?</i><br>"
 home: "true"
 ---
-#<i>Is literaire kwaliteit meetbaar?</i><br>
+
+
 <br>
 Op deze website is aanvullende informatie te vinden bij het boek *Het raadsel literatuur. Is literaire kwaliteit meetbaar?* van Karina van Dalen-Oskam. Het boek verschijnt op 9 november 2021 bij Amsterdam University Press. De site is *work-in-progress* en wordt regelmatig aangevuld en bijgewerkt. De website bevat onder meer:
 
