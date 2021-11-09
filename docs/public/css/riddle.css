@@ -135,3 +135,9 @@ p img {
   color: rgba(255,255,255,.5);
   text-decoration: none;
 }
+
+/* TODO: avoid this hack */
+#chart_3-4b_genre-reading-diversity {
+  width: 100%;
+  text-align: center;
+}

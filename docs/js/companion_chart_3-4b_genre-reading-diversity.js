@@ -7,7 +7,7 @@ function autoBox() {
 
 function chart( data ) {
   const root = partition(data);
-  console.log( root )
+
   const svg = d3.create("svg");
 
   svg.append("g")
@@ -15,31 +15,41 @@ function chart( data ) {
     .selectAll("path")
     .data( root.descendants().filter(d => d.depth) )
     .join("path")
-      .attr( "fill", d => { console.log( d.data.name ); return color( d.data.name ) } )
+      .attr( "fill", d => { return color( d.data.name ) } )
       // .attr("fill", d => { while (d.depth > 1) d = d.parent; return color(d.data.name); })
       .attr("d", arc )
     .append("title")
-      .text(d => `${d.ancestors().map(d => d.data.name).reverse().join("/")}\n${format(d.value)}`);
+      // .text(d => `${d.ancestors().map(d => d.data.name).reverse().join("/")}\n${format(d.value)}`);
+      .text(d => `${d.data.name}\n${numformat(d.value)}`);
 
   svg.append("g")
       .attr("pointer-events", "none")
       .attr("text-anchor", "middle")
-      .attr("font-size", 16)
-      .attr("font-family", "sans-serif")
     .selectAll("text")
     .data(root.descendants().filter(d => d.depth && (d.y0 + d.y1) / 2 * (d.x1 - d.x0) > 10))
     .join("text")
-      .attr( 'style', 'font-size:11pt; font-family:PT Sans;' )
+      .attr( 'style', 'font-size:12pt; font-family:PT Sans;' )
       .attr("transform", function(d) {
         const x = (d.x0 + d.x1) / 2 * 180 / Math.PI;
         const y = (d.y0 + d.y1) / 2;
         return `rotate(${x - 90}) translate(${y},0) rotate(${x < 180 ? 0 : 180})`;
       })
-      .attr("dy", "0.35em")
-      .text(d => d.data.name);
+      .attr("dy", "-0.25em")
+      .text(d => `${d.data.name}`)
+    .select( "g" )
+    .data(root.descendants().filter(d => d.depth && (d.y0 + d.y1) / 2 * (d.x1 - d.x0) > 10))
+    .join("text")
+      .attr( 'style', 'font-size:12pt; font-family:PT Sans;' )
+      .attr("transform", function(d) {
+        const x = (d.x0 + d.x1) / 2 * 180 / Math.PI;
+        const y = (d.y0 + d.y1) / 2;
+        return `rotate(${x - 90}) translate(${y},0) rotate(${x < 180 ? 0 : 180})`;
+      })
+      .attr("dy", "1.0em")
+      .text(d => `${numformat(d.value)}`);
 
       // return svg.attr( "viewBox", autoBox ).node();
-  return svg.attr( "viewBox", autoBox ).attr( 'width', '550' ).attr( 'height', '550' ).node();
+  return svg.attr( "viewBox", autoBox ).attr( 'width', '650' ).attr( 'height', '650' ).node();
 }
 
 d3.json( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/chart_3-4b_genre-reading-diversity.json' ).then( function( data ) {
@@ -50,6 +60,21 @@ d3.json( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/c
   format = d3.format(",d")
   width = 975
   radius = width / 2
+
+  // I don't like doing this, but there seems no way to transform
+  // or influence the result of `d3.hierarchy( data ).sum()` or `.count()`.
+  // In this case we want the burst just to use the values in the JSON
+  // hierarchy as is. But here seems no way to create a flare
+  // hierarchy without `.sum()` or `.count()`, neither of which results
+  // in the original values. So I deduct the leaf values from the
+  // parent nodes here…
+  data.children.forEach( function( category ){
+    second_category_sum = 0;
+    category.children.forEach( function( second_category ){
+      second_category_sum += second_category.value;
+    });
+    category.value -= second_category_sum
+  })
 
   partition = function( data ){
     layout = d3.partition().size( [2 * Math.PI, radius] )
