@@ -2,10 +2,11 @@
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
-title:  "Extra grafiek Aantal gelezen boeken per jaar per leeftijdsgroep"
+# kleur is een html kleurnaam of een code #dfdfdf (heel wit). Color picker: https://htmlcolorcodes.com/.
+title:  "<span style=\"color: red;\">Extra grafiek</span> Aantal gelezen boeken per jaar per leeftijdsgroep"
 
 ---
-Interactieve grafiek ter verdieping van Grafiek 3.1 op p. 48 van *Het raadsel literatuur*. 
+Interactieve grafiek ter verdieping van Grafiek 3.1 op p. 48 van *Het raadsel literatuur*.
 
 
 <script src="https://d3js.org/d3.v6.min.js" defer></script>

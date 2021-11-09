@@ -2,7 +2,7 @@
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
-title:  "Grafiek 4.1 Lezersoordelen over Tatiana de Rosnay, Haar naam was Sarah"
+title:  "Grafiek 4.1 Lezersoordelen over Tatiana de Rosnay, <i>Haar naam was Sarah</i>"
 
 ---
 Interactieve kleurenversie van de grafiek op p. 59 van *Het raadsel literatuur*.
