@@ -96,6 +96,7 @@ document.getElementById( 'sidebar_cloak' ).addEventListener( 'transitionstart', 
   }
 });
 
+
 // This function collapses or uncollapses the sidebar.
 const toggleSidebar = function() {
   const sideBar = document.getElementById( 'sidebar' );
@@ -108,4 +109,21 @@ const toggleSidebar = function() {
     hamburger_container.classList.add( 'collapsed' )
   }
 }
+
+document.getElementById( 'sidebar' ).addEventListener( 'mouseleave', function( e ){
+  const sideBar = document.getElementById( 'sidebar' );
+  if( !sideBar.classList.contains( 'collapsed' ) ){
+    var cancel = false;
+    var hamburger_bbox = document.getElementById( 'hamburger_container' ).getBoundingClientRect();
+    if( ( e.clientX >= hamburger_bbox.left ) && ( e.clientX <= hamburger_bbox.right )  ){
+      if( ( e.clientY >= hamburger_bbox.top ) && ( e.clientY <= hamburger_bbox.bottom )  ){
+        cancel = true;
+      }
+    }
+    if( !cancel ){
+      toggleSidebar();
+    };
+  }
+});
+
 </script>
