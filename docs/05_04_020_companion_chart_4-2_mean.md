@@ -22,5 +22,7 @@ Interactieve kleurenversie van de grafiek op p. 64 van *Het raadsel literatuur*.
   <div class="plot"></div>
 </div>
 
+Een klik op een balk in de grafiek maakt zichtbaar hoeveel van de 401 boeken die gemiddelde score kregen.
+
 <!-- **Hoe zijn de metingen te repliceren?**
 VOORBEELDQUERY HIER! -->
