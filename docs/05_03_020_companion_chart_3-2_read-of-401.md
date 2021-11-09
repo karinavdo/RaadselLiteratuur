@@ -30,8 +30,7 @@ Interactieve versie van de grafiek op p. 52 van *Het raadsel literatuur*.
   <div class="slider"></div>
 </div>
 
-Grafiek 3.2: Aantal gelezen van de 401 boeken (links) en aantal beoordeelde boeken (rechts).
-
-
+Grafiek 3.2: Aantal gelezen van de 401 boeken (links) en aantal beoordeelde boeken (rechts).<br>
+Beide grafieken zijn interactief. Op de regel onder de horizontale as kunt u bepalen op welk deel van de grafiek u wilt inzoomen. Door op de balken in de grafiek te klikken ziet u hoeveel respondenten een getal in het geselecteerde bereik invulden.
 <!-- **Hoe zijn de metingen te repliceren?**
 VOORBEELDQUERY HIER! -->

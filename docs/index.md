@@ -2,7 +2,7 @@
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
-title: "Het raadsel literatuur. Is literaire kwaliteit meetbaar?"
+title: "<i>Het raadsel literatuur. Is literaire kwaliteit meetbaar?</i>"
 home: "true"
 ---
 <br>
@@ -18,7 +18,7 @@ Op deze website is aanvullende informatie te vinden bij het boek *Het raadsel li
 De site is ontwikkeld door Joris van Zundert.<br>
 De meeste bijdragen zijn van Karina van Dalen-Oskam, Joris van Zundert, Maciej Eder, en Saskia Lensink.
 
-<!-- ![1_1_1_Omslag_promo 1.1.1](public/1_1_1_Omslag_promo.png) -->
+[1_1_1_Omslag_promo 1.1.1](public/1_1_1_Omslag_promo.png)
 
 [NIEUWS](02_03_nieuws.html) | [BLOGS](02_04_blogs.html) | [AGENDA](02_05_agenda.html) | [IN DE MEDIA](02_06_in_de_media.html) | [DATA EN R PACKAGE](02_07_data_en_R_package.html)
 
