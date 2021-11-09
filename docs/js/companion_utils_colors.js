@@ -1,4 +1,4 @@
-BAR_COLORS = [ '#f9c8dd', '#b2bddb', '#91c4eb', '#6c84ce', '#d85040', '#c4be84', '#f2c484', '#eacb92' ];
+BAR_COLORS = [ '#cc455b', '#d7ce22', '#7399c3', '#494949', '#d85040', '#c4be84', '#f2c484', '#eacb92' ];
 BAR_GRAYS = [ '#888', '#ddd', '#bbb', '#575757', '#eee', '#b9b9b9', '#ccc', '#e5e5e5', '#fff' ];
 
 GRAY_SCHEME = false;
