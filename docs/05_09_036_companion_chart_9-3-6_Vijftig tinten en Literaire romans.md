@@ -1,5 +1,5 @@
 ---
-title: "Extra grafieken <i>Vijftig tinten</i> en Literaire romans"
+title: "<b>Extra grafieken</b> <i>Vijftig tinten</i> en Literaire romans"
 
 ---
 

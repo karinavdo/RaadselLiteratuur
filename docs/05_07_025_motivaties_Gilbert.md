@@ -1,5 +1,5 @@
 ---
-title: "Alle motivaties bij Elizabeth Gilbert, <i>Eten, bidden, beminnen</i>"
+title: "<b>Alle motivaties</b> bij Elizabeth Gilbert, <i>Eten, bidden, beminnen</i>"
 
 ---
 

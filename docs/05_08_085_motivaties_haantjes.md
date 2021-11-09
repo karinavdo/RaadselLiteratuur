@@ -1,5 +1,5 @@
 ---
-title: "Alle motivaties bij Kluun, <i>Haantjes</i>"
+title: "<b>Alle motivaties</b> bij Kluun, <i>Haantjes</i>"
 
 ---
 
