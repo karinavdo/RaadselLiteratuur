@@ -1,5 +1,5 @@
 ---
-title: "Alle motivaties bij Zomerhuis met zwembad"
+title: "Alle motivaties bij Herman Koch, <i>Zomerhuis met zwembad</i>"
 
 ---
 

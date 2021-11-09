@@ -2,7 +2,7 @@
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
-title:  "Grafiek 8.5 Lezersoordelen over Mart Smeets, De afrekening"
+title:  "Grafiek 8.5 Lezersoordelen over Mart Smeets, <i>De afrekening</i>"
 
 ---
 Interactieve kleurenversie van de grafiek op p. 202 van *Het raadsel literatuur*.

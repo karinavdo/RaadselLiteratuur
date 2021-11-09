@@ -2,7 +2,7 @@
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
-title:  "Grafiek 9.1 Lezersoordelen over de literaire kwaliteit van E.L. James, Vijftig tinten-trilogie"
+title:  "Grafiek 9.1 Lezersoordelen over de literaire kwaliteit van E.L. James, <i>Vijftig tinten</i>-trilogie"
 
 ---
 Interactieve kleurenversie van de grafiek op p. 236 van *Het raadsel literatuur*.

@@ -2,7 +2,7 @@
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
-title:  "Grafiek 8.1 Lezersoordelen over Julian Barnes, Alsof het voorbij is"
+title:  "Grafiek 8.1 Lezersoordelen over Julian Barnes, <i>Alsof het voorbij is</i>"
 
 ---
 Interactieve kleurenversie van de grafiek op p. 176 van *Het raadsel literatuur*.

@@ -2,7 +2,7 @@
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
-title:  "Grafiek 8.4 Lezersoordelen over Erwin Mortier, Gestameld liedboek"
+title:  "Grafiek 8.4 Lezersoordelen over Erwin Mortier, <i>Gestameld liedboek</i>"
 
 ---
 Interactieve kleurenversie van de grafiek op p. 200 van *Het raadsel literatuur*.

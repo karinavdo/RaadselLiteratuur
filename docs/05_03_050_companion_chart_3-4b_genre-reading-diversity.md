@@ -2,7 +2,7 @@
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
-title:  ""<span style=\"color: \#C70039;\">Extra grafiek</span> Aantal boeken gelezen per categorie"
+title:  ""<span style=\"color:#C70039;\">Extra grafiek</span> Aantal boeken gelezen per categorie"
 
 ---
 Interactieve grafiek ter verdieping van Grafiek 3.3 op p. 53 van *Het raadsel literatuur*.

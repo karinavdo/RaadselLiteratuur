@@ -1,5 +1,5 @@
 ---
-title: "Extra grafieken Vijftig tinten en Spanning geschreven door mannen"
+title: "Extra grafieken <i>Vijftig tinten</i> en Spanning geschreven door mannen"
 
 ---
 

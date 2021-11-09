@@ -1,5 +1,5 @@
 ---
-title: "Grafiek 9.3 Vijftig tinten en Spanning geschreven door vrouwen"
+title: "Grafiek 9.3 <i>Vijftig tinten</i> en Spanning geschreven door vrouwen"
 
 ---
 

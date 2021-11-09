@@ -2,7 +2,7 @@
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
-title:  "Grafiek 8.9 Lezersoordelen over Herman Koch, Zomerhuis met zwembad"
+title:  "Grafiek 8.9 Lezersoordelen over Herman Koch, <i>Zomerhuis met zwembad</i>"
 
 ---
 Interactieve kleurenversie van de grafiek op p. 221 van *Het raadsel literatuur*.

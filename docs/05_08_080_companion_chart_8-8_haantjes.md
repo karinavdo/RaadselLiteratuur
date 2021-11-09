@@ -2,7 +2,7 @@
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
-title:  "Grafiek 8.8 Lezersoordelen over Kluun, Haantjes"
+title:  "Grafiek 8.8 Lezersoordelen over Kluun, <i>Haantjes</i>"
 
 ---
 Interactieve kleurenversie van de grafiek op p. 221 van *Het raadsel literatuur*.

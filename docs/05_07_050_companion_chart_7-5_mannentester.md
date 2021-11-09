@@ -2,7 +2,7 @@
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
-title:  "Grafiek 7.5 Lezersoordelen over Heleen van Royen, De mannentester"
+title:  "Grafiek 7.5 Lezersoordelen over Heleen van Royen, <i>De mannentester</i>"
 
 ---
 Interactieve kleurenversie van de grafiek op p. 152 van *Het raadsel literatuur*.

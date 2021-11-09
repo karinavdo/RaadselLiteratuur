@@ -1,5 +1,5 @@
 ---
-title: "Grafiek 9.2 Vijftig tinten en Romantiek"
+title: "Grafiek 9.2 <i>Vijftig tinten</i> en Romantiek"
 
 ---
 

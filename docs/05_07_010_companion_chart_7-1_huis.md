@@ -2,7 +2,7 @@
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
-title:  "Grafiek 7.1 Lezersoordelen over Nicole Krauss, Het grote huis"
+title:  "Grafiek 7.1 Lezersoordelen over Nicole Krauss, <i>Het grote huis</i>"
 
 ---
 Interactieve kleurenversie van de grafiek op p. 127 van *Het raadsel literatuur*.
