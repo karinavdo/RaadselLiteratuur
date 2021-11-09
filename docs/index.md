@@ -14,7 +14,6 @@ Via de linker navigatiebalk zijn kleurenversies van de grafieken in het boek te 
 
 Deze website is *work-in-progress* en wordt regelmatig aangevuld en bijgewerkt.
 
-De site is ontwikkeld door Joris van Zundert. De meeste bijdragen zijn van Karina van Dalen-Oskam, Joris van Zundert, Maciej Eder, en Saskia Lensink.<br>
-Reacties? Mail [Karina van Dalen-Oskam](https://www.huygens.knaw.nl/medewerkers/karina-van-dalen-oskam/).
+De site is ontwikkeld door Joris van Zundert. De meeste bijdragen zijn van Karina van Dalen-Oskam, Joris van Zundert, Maciej Eder, en Saskia Lensink. Reacties? Mail [Karina van Dalen-Oskam](https://www.huygens.knaw.nl/medewerkers/karina-van-dalen-oskam/).
 
 *Laatst bijgewerkt op* 9 november 2021.

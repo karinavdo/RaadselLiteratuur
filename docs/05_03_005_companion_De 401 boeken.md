@@ -2,7 +2,7 @@
 title: "De 401 boeken"
 
 ---
-Hoe de boeken voor het onderzoek zijn geselecteerd staat beschreven op p. 42-44 van *Het raadsel literatuur*. In Bijlage 2 van het boek (p. 320-329) zijn ze gepresenteerd van hoogste gemiddelde score voor literaire kwaliteit naar laagste en staat bovendien aangegeven welke gemiddelde score voor algemene kwaliteit de boeken kregen van de deelnemers aan Het Nationale Lezersonderzoek. Op deze webpagina vindt u de lijst in de volgorde zoals die in de enquête aan de deelnemers werd voorgelegd. Het nummer links is de ID van het boek. Hiermee kunt u in het R Package nog meer informatie vinden over het boek, de auteur, en de meningen van lezers en niet-lezers. Zie een korte handleiding daarvoor onder de lijst op deze webpagina.
+Hoe de boeken voor het onderzoek zijn geselecteerd staat beschreven op p. 42-44 van *Het raadsel literatuur*. In Bijlage 2 van het boek (p. 320-329) zijn ze gepresenteerd van hoogste gemiddelde score voor literaire kwaliteit naar laagste en staat bovendien aangegeven welke gemiddelde score voor algemene kwaliteit de boeken kregen van de deelnemers aan Het Nationale Lezersonderzoek. Op deze webpagina vindt u de lijst in de volgorde zoals die in de enquête aan de deelnemers werd voorgelegd. Het nummer links is de ID van het boek. Hiermee kunt u in het R package nog meer informatie vinden over het boek, de auteur, en de meningen van lezers en niet-lezers. Zie een korte handleiding daarvoor onderaan deze webpagina.
 
 
 1	Tatiana de Rosnay,	*Haar naam was Sarah*<br>
@@ -407,7 +407,7 @@ Hoe de boeken voor het onderzoek zijn geselecteerd staat beschreven op p. 42-44 
 400	Jo Nesbø,	*De verlosser*<br>
 401	Nicci French,	*Wat te doen als iemand sterft*<br>
 
-**Meer over de boeken in het R Package**
+**Meer over de boeken in het R package**
 
 In het *litRiddle* [R package](02_07_data_en_R_package.html) is meer informatie te vinden over de boeken op de lijst. Stel, u zoekt informatie over Emma Donoghue's *Kamer*. Dan geeft u na het laden van het package de volgende opdrachten in R:
 
