@@ -22,5 +22,7 @@ Interactieve kleurenversie van de grafiek op p. 70 van *Het raadsel literatuur*.
   <div class="plot"></div>
 </div>
 
+Een klik op een balk in de grafiek maakt zichtbaar hoeveel van de boeken uit de geselecteerde categorie die gemiddelde score kregen.
+
 <!-- **Hoe zijn de metingen te repliceren?**
 VOORBEELDQUERY HIER! -->
