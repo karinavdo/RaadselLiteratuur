@@ -55,7 +55,7 @@ class Histogram{
     this.svg.append( 'g' )
       .attr( 'transform', 'translate( 0, ' + this.settings.plot_height + ' )' )
       .call( d3.axisBottom( this.x_scale )
-        .ticks( 5 ) )  // Limit ticks so they do not crowd the x axis
+        .ticks( this.settings.num_x_ticks ) )  // Limit ticks so they do not crowd the x axis
       .attr( 'style', this.settings.scale_style );
 
     // Set the parameters for the histogram function.
@@ -87,7 +87,7 @@ class Histogram{
     // The 1.1 factor just adds a little 'breathing space'
     // between the maximum and the top of the chart.
 
-    this.y_scale.domain( [ this.settings.y_min, ( 1.1 * this.y_max ) ] );
+    this.y_scale.domain( [ this.settings.y_min, ( 1.1 * this.y_max ) ] ).nice();
     this.svg.append( 'g' )
       .call( d3.axisLeft( this.y_scale )
         .ticks( this.y_ticks() )
@@ -143,7 +143,7 @@ class Histogram{
   // Several helper functions for the Histogram class.
   // Helper function to detemine num of y ticks
   y_ticks(){
-    var n = 7;
+    var n = this.settings.num_y_ticks;
     var max_Y = d3.max( this.bins, function( d ){ return d.length; } );
     if( max_Y < 5 ){
       n = max_Y
@@ -157,6 +157,11 @@ class Histogram{
     // Put in the slider if there is a div defined to hold it.
     var slider_div = d3.select( 'div#' + this.elem_id ).select( '.slider' );
     if( !slider_div.empty() ){
+      // There may be an old slider in place. If so, remove it.
+      var slider_div_svg = d3.select( 'div#' + this.elem_id ).select( '.slider svg' );
+      if( !slider_div_svg.empty() ){
+        slider_div_svg.remove();
+      };
       // Create a slider so user can set high and low value of x-axis.
       // The function sliderBottom() returns a function btw.
       var slider = d3.sliderBottom()
@@ -164,9 +169,9 @@ class Histogram{
         // Next line determines whether the set x.max or some X data value
         // is the biggest number to put on the slider.
         .max( d3.max( [ this.settings.x_max, d3.max( this.data, function( d ){ return d.X } ) ] ) )
-        .ticks( 7 )
-        .step( 50 )
-        .width( 300 )
+        .ticks( this.settings.slider_ticks )
+        .step( this.settings.slider_step )
+        .width( this.settings.figure_width - 100 )
         .displayValue( false )
         .default( [ this.settings.x_min, this.settings.x_max ] )
         .fill( bar_colors[2] )

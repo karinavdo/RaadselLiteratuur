@@ -136,12 +136,22 @@ p img {
   text-decoration: none;
 }
 
-/* TODO: avoid this hack */
-#chart_3-4b_genre-reading-diversity, #chart_3-4b_genre-reading-diversity-rel {
+/* TODO: avoid these hacks */
+#chart_3-4b_genre-reading-diversity, #chart_3-4b_genre-reading-diversity-rel, #resp_read_genre_enlarged {
   width: 100%;
   text-align: center;
 }
 #chart_3-4b_genre-reading-diversity-rel {
   margin-top: 2rem;
   padding-bottom: 6rem;
+}
+
+.chart_thumb {
+  border: 1px solid #efefee;;
+}
+
+.chart_thumb:hover {
+  border: 1px solid #73a8d0;
+  background-color: #f2f3f4;
+  border-radius: 5px;
 }

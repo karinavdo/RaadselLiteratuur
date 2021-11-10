@@ -18,6 +18,8 @@ COMPANION = {
       y_axis_title_en: 'X-axis Title',
       x_axis_title_nl: 'Titel x-as',
       y_axis_title_nl: 'Titel y-as',
+      num_x_ticks: 5,
+      num_y_ticks: 7,
       axis_style: 'font-size:11pt; font-family:PT Sans;',
       scale_style: 'font-size:11pt; font-family:Helvetica Neue;',
       label_y_distance: 75,
@@ -31,7 +33,9 @@ COMPANION = {
       figure_height: 600,
       figure_width: 400,
       plot_margin: { top: 20, right: 20, bottom: 70, left: 80 },
-      bar_highlight: '#6c84ce'
+      bar_highlight: '#6c84ce',
+      slider_step: 50,
+      slider_ticks: 7
     }
   }
 }
