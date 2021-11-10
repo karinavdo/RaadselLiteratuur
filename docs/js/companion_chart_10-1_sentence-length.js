@@ -67,6 +67,9 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ch
                               trf = 'translate(' + x(d.avg_sentence_length) +
                               ',' + y(d.literariness_read) + ')';
                               return trf } )
+      .append( 'title' )
+        .text( function(d){ return d.author.split( ', ' ).reverse().join( ' ' ) + ', \'' + d.title + '\'.' } );
+
 
   linearRegression = ss.linearRegression( data.map( d => [ +d.avg_sentence_length, +d.literariness_read ] ) )
   linearRegressionLine = ss.linearRegressionLine( linearRegression )
@@ -222,6 +225,9 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ch
                               trf = 'translate(' + x(d.sentence_length_variance) +
                               ',' + y(d.literariness_read) + ')';
                               return trf } )
+      .append( 'title' )
+        .text( function(d){ return d.author.split( ', ' ).reverse().join( ' ' ) + ', \'' + d.title + '\'.' } );
+
 
   linearRegression = ss.linearRegression( data.map( d => [ +d.sentence_length_variance, +d.literariness_read ] ) )
   linearRegressionLine = ss.linearRegressionLine( linearRegression )

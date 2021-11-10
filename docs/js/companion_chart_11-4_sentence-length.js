@@ -65,6 +65,8 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ch
                               trf = 'translate(' + x(d.avg_sentence_length) +
                               ',' + y(d.literariness_read) + ')';
                               return trf } )
+      .append( 'title' )
+        .text( function(d){ return d.author.split( ', ' ).reverse().join( ' ' ) + ', \'' + d.title + '\'.' } );
 
   linearRegression = ss.linearRegression( data.map( d => [ +d.avg_sentence_length, +d.literariness_read ] ) )
   linearRegressionLine = ss.linearRegressionLine( linearRegression )
@@ -151,6 +153,10 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ch
 
 d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/chart_11-4_sentence-length.csv' ).then( function( data ) {
 
+  function author_nice( author ){
+    return author.split( ', ' ).reverse().join( ' ' );
+  }
+
   const xAxisTitle = 'Number of books read annually';
   const yAxisTitle = 'Number of respondents';
   const xAxisTitle_nl = 'Gemiddelde variatie in zinslengte (in aantal woorden)';
@@ -216,6 +222,8 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ch
                               trf = 'translate(' + x(d.sentence_length_variance) +
                               ',' + y(d.literariness_read) + ')';
                               return trf } )
+      .append( 'title' )
+        .text( function(d){ return d.author.split( ', ' ).reverse().join( ' ' ) + ', \'' + d.title + '\'.' } );
 
   linearRegression = ss.linearRegression( data.map( d => [ +d.sentence_length_variance, +d.literariness_read ] ) )
   linearRegressionLine = ss.linearRegressionLine( linearRegression )
