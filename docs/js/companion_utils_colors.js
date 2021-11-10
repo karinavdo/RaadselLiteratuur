@@ -21,7 +21,7 @@ COMPANION = {
       num_x_ticks: 5,
       num_y_ticks: 7,
       axis_style: 'font-size:11pt; font-family:PT Sans;',
-      scale_style: 'font-size:11pt; font-family:Helvetica Neue;',
+      scale_style: 'font-size:11pt; font-family:PT Sans;',
       label_y_distance: 75,
       label_x_padding: 10,
       label_y_padding: 4,
