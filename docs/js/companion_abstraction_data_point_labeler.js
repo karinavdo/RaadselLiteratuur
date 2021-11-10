@@ -71,6 +71,8 @@ class DataPointLabeler{
       } else {
         // It's the Barchart, thus…
         var connector_x_end = this.owner.x_scale( d.score ) + this.owner.x_subgroup( d.key ) + half_bar_width;
+        console.log( this.owner.x_scale( d.score ) );
+        console.log( this.owner.x_scale( 'man' ) );
         connector_y_end = this.owner.y_scale( d.value );
       }
       // Ensure y is chosen so label always falls within the plot area.

@@ -6,6 +6,7 @@ create_bookrating_chart = function( csv_file_name, { max_y=400 }={} ) {
     data.columns = [ '', 'score', 'literariness', 'quality' ]
     // Set some options.
     var options = {
+      group_column: 'score',
       x_axis_title_nl: 'Score',
       y_axis_title_nl: 'Aantal respondenten',
       figure_height: 400,

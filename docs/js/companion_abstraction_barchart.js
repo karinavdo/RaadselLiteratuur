@@ -14,18 +14,23 @@ class Barchart{
 
     // Create series and sub series. Likely candidates for extraction/abstraction.
     // List of groups, in this case the scores in the score column in the data.
-    this.groups = d3.map( this.data, function( d ){ return( d.score ) } );
+    var group_column = this.settings.group_column;
+    this.groups = d3.map( this.data, function( d ){ return( d[ group_column ] ) } );
 
     // List of subgroups, i.e. the headers of the columns
     // "quality" and "literariness" in the csv data.
     this.subgroups = this.data.columns.slice(2);
-
 
     this.color = d3.scaleOrdinal().range( bar_colors )
 
     this.data_point_labeler = new DataPointLabeler( this );
 
     this.render_barchart();
+
+    if( typeof this.options.legend_x_adjust == 'undefined' ){
+      this.options.legend_x_adjust = -50
+    }
+
     this.render_legend();
   }
 
@@ -44,8 +49,12 @@ class Barchart{
           .attr( 'transform', 'translate( ' + this.settings.plot_margin.left + ', ' + this.settings.plot_margin.top + ' )' );
 
     // Add X axis.
+    var group_labels = this.groups;
+    if( typeof this.settings.group_labels != 'undefined' ){
+      group_labels = group_labels.map( group => this.settings.group_labels[ group ] );
+    }
     this.x_scale = d3.scaleBand()
-      .domain( this.groups )
+      .domain( group_labels )
       .range( [0, this.settings.plot_width] )
       .padding( [0.2] )
     this.svg.append( "g" )
@@ -70,28 +79,41 @@ class Barchart{
       .domain( [0, this.settings.y_max ] ).nice()
       .range( [this.settings.plot_height, 0]);
     this.svg.append( 'g' )
-      .call( d3.axisLeft( this.y_scale ) )
+      .call( d3.axisLeft( this.y_scale )
+        .ticks( this.settings.num_y_ticks ) )
       .attr( 'id', 'yaxis' )
       .attr( 'style', this.settings.scale_style );
 
+    // This helper funciton translate group names in the raw
+    // data to group labels if such translations are set
+    // in the settings.
+    function data_group_name_to_group_label( data_group_name, group_labels ){
+      var group_label = data_group_name;
+      if( typeof group_labels != 'undefined' ){
+        group_label = group_labels[ data_group_name ]
+      }
+      return group_label
+    }
+
     // Show the bars
     var _this = this;
+    var group_label =
     this.svg.append( 'g' )
       .selectAll( 'g' )
       // Enter in data = loop group per group
       .data( this.data )
       .enter()
       .append( 'g' )
-        .attr( 'transform', function(d) { return 'translate(' + _this.x_scale( d.score ) + ',0)'; } )
+        .attr( 'transform', function(d) { return 'translate(' + _this.x_scale( data_group_name_to_group_label( d[_this.settings.group_column], _this.settings.group_labels ) ) + ',0)'; } )
       .selectAll( 'rect' )
-      .data( function( d ){ return _this.subgroups.map( function( key ) { return { score: d.score, key: key, value: d[key] } } ) } )
+      .data( function( d ){ return _this.subgroups.map( function( key ) { return { score: data_group_name_to_group_label( d[_this.settings.group_column], _this.settings.group_labels ), key: key, value: d[key] } } ) } )
       .enter().append( 'rect' )
         .attr( 'x', function( d ){ return _this.x_subgroup( d.key ) } )
         .attr( 'y', function( d ){ return _this.y_scale( d.value ) } )
         .attr( 'width', this.x_subgroup.bandwidth() )
         .attr( 'height', function( d ){ return _this.settings.plot_height - _this.y_scale( d.value ) } )
         .attr( 'fill', function( d ){ return _this.color( d.key ) } )
-        .on( 'click', function( evt, d ){ _this.data_point_labeler.toggle_data_point_label( d, this ) } );
+        .on( 'click', function( evt, d ){ console.log( d), _this.data_point_labeler.toggle_data_point_label( d, this ) } );
 
     // Render x axis label.
     // TODO:
@@ -132,7 +154,7 @@ class Barchart{
     }
     var _this = this;
     this.key_size = 17;
-    this.legend_left = this.settings.figure_width - this.settings.plot_margin.right - 50; // 50 is aribitrary.
+    this.legend_left = this.settings.figure_width - this.settings.plot_margin.right + this.options.legend_x_adjust;
     this.svg.selectAll( 'legend_key' )
       .data( keys )
       .enter()

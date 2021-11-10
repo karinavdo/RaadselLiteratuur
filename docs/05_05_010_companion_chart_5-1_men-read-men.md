@@ -14,7 +14,7 @@ Interactieve kleurenversie van de grafiek op p. 91 van *Het raadsel literatuur*.
 <script src="js/companion_utils_colors.js" defer></script>
 <script src="js/companion_utils_svg2png.js" defer></script>
 <script src="js/companion_abstraction_data_point_labeler.js" defer></script>
-<script src="js/companion_abstraction_barchart_x.js" defer></script>
+<script src="js/companion_abstraction_barchart.js" defer></script>
 
 <script src="js/companion_chart_5-1_men-read-men.js" defer></script>
 

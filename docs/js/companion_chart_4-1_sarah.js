@@ -5,6 +5,7 @@ d3.csv( url_csv ).then( function( data ) {
   data.columns = [ '', 'score', 'literariness', 'quality' ]
   // Set some options.
   var options = {
+    group_column: 'score',
     x_axis_title_nl: 'Score',
     y_axis_title_nl: 'Aantal respondenten',
     figure_height: 400,
