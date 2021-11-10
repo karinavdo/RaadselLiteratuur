@@ -28,7 +28,6 @@ class Histogram{
 
     // Remove a possible already rendered svg.
     if( !this.svg.select( 'svg' ).empty() ){
-      console.log( 'empty' );
       this.svg.select( 'svg' ).remove();
     };
 

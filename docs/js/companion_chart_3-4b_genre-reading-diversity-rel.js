@@ -81,8 +81,6 @@ d3.json( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/c
       second_category_sum += second_category.value;
     });
     category.value -= second_category_sum;
-    console.log( category.value );
-    console.log( second_category_sum );
   })
 
   partition = function( reldata ){
