@@ -137,7 +137,11 @@ p img {
 }
 
 /* TODO: avoid this hack */
-#chart_3-4b_genre-reading-diversity {
+#chart_3-4b_genre-reading-diversity, #chart_3-4b_genre-reading-diversity-rel {
   width: 100%;
   text-align: center;
+}
+#chart_3-4b_genre-reading-diversity-rel {
+  margin-top: 2rem;
+  padding-bottom: 6rem;
 }

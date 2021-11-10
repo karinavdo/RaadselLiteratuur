@@ -1,3 +1,5 @@
+function rel_burst(){
+
 function autoBox() {
   document.body.appendChild(this);
   var {x, y, width, height} = this.getBBox();
@@ -5,8 +7,8 @@ function autoBox() {
   return [x, y, width, height];
 }
 
-function chart( data ) {
-  var root = partition(data);
+function chart( reldata ) {
+  var root = partition(reldata);
 
   var svg = d3.create("svg");
 
@@ -20,12 +22,12 @@ function chart( data ) {
       .attr("d", arc )
     .append("title")
       // .text(d => `${d.ancestors().map(d => d.data.name).reverse().join("/")}\n${format(d.value)}`);
-      .text(d => `${d.data.name}\n${numformat(d.value)}`);
+      .text( d => `${d.data.name}\n${locale.format( ',.2f' )(d.value)}` );
 
   svg.append("g")
       .attr("pointer-events", "none")
       .attr("text-anchor", "middle")
-    .selectAll("text")
+    .selectAll("#chart_3-4b_genre-reading-diversity-rel svg g text")
     .data(root.descendants().filter(d => d.depth && (d.y0 + d.y1) / 2 * (d.x1 - d.x0) > 10))
     .join("text")
       .attr( 'style', 'font-size:12pt; font-family:PT Sans;' )
@@ -36,7 +38,7 @@ function chart( data ) {
       })
       .attr("dy", "-0.25em")
       .text(d => `${d.data.name}`)
-    .select( "g" )
+    .select( "#chart_3-4b_genre-reading-diversity-rel g" )
     .data(root.descendants().filter(d => d.depth && (d.y0 + d.y1) / 2 * (d.x1 - d.x0) > 10))
     .join("text")
       .attr( 'style', 'font-size:12pt; font-family:PT Sans;' )
@@ -46,17 +48,19 @@ function chart( data ) {
         return `rotate(${x - 90}) translate(${y},0) rotate(${x < 180 ? 0 : 180})`;
       })
       .attr("dy", "1.0em")
-      .text(d => `${numformat(d.value)}`);
-
+      // .text(d => `${numformat(d.data.value)}`);
+      .text( function(d) {
+        return locale.format( ',.2f' )(d.value);
+      })
       // return svg.attr( "viewBox", autoBox ).node();
   return svg.attr( "viewBox", autoBox ).attr( 'width', '650' ).attr( 'height', '650' ).node();
 }
 
-d3.json( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/chart_3-4b_genre-reading-diversity.json' ).then( function( data ) {
+d3.json( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/chart_3-4b_genre-reading-diversity.json' ).then( function( reldata ) {
 
   // color = d3.scaleOrdinal( d3.quantize( d3.interpolateGreys, data.children.length + 2 ) ).domain( data.children )
   // color = d3.scaleOrdinal( d3.quantize( d3.interpolateViridis, data.children.length + 2 ) ).domain( data.children )
-  color = d3.scaleOrdinal( d3.quantize( d3.interpolateTurbo, data.children.length + 2 ) ).domain( data.children )
+  color = d3.scaleOrdinal( d3.quantize( d3.interpolateTurbo, reldata.children.length + 2 ) ).domain( reldata.children )
   format = d3.format(",d")
   width = 975
   radius = width / 2
@@ -68,17 +72,22 @@ d3.json( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/c
   // hierarchy without `.sum()` or `.count()`, neither of which results
   // in the original values. So I deduct the leaf values from the
   // parent nodes here…
-  data.children.forEach( function( category ){
-    second_category_sum = 0;
+  reldata.children.forEach( function( category ){
+    var primary_cat = category.value;
+    category.value = 1;
+    var second_category_sum = 0;
     category.children.forEach( function( second_category ){
+      second_category.value = second_category.value/primary_cat
       second_category_sum += second_category.value;
     });
-    category.value -= second_category_sum
+    category.value -= second_category_sum;
+    console.log( category.value );
+    console.log( second_category_sum );
   })
 
-  partition = function( data ){
+  partition = function( reldata ){
     layout = d3.partition().size( [2 * Math.PI, radius] )
-    return layout( d3.hierarchy( data )
+    return layout( d3.hierarchy( reldata )
                      .sum(d => d.value)
                      .sort((a, b) => b.value - a.value) )
   }
@@ -91,7 +100,12 @@ d3.json( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/c
     .innerRadius(d => d.y0)
     .outerRadius(d => d.y1 - 1)
 
-  var svg_container = d3.select( '#chart_3-4b_genre-reading-diversity' );
-  svg_container.node().appendChild( chart( data ) )
+  var svg_container = d3.select( '#chart_3-4b_genre-reading-diversity-rel' );
+  svg_container.node().appendChild( chart( reldata ) )
 
 } );
+
+
+};
+
+rel_burst();
