@@ -23,6 +23,7 @@ Interactieve versie van de grafiek op p. 53 van *Het raadsel literatuur*.
 <script src="js/companion_resp_read_romantic.js" defer></script>
 <script src="js/companion_resp_read_other.js" defer></script>
 
+Door te klikken op een van de vier kleine grafieken ziet u in de grotere grafiek daaronder meer informatie over de geselecteerde categorie. Een klik op een specifieke balk maakt de onderliggende aantallen zichtbaar. Het bereik van de horizontale as van de grote grafiek is aan te passen door de twee tabmarkeringen te verslepen.
 
 <div class="chart_float chart_thumb" id="resp_read_fiction">
   <div class="plot"></div>
@@ -41,9 +42,6 @@ Interactieve versie van de grafiek op p. 53 van *Het raadsel literatuur*.
   <div class="plot"></div>
   <div class="slider"></div>
 </div>
-
-Door te klikken op een van de vier kleine grafieken ziet u in de grotere grafiek daaronder meer informatie over de geselecteerde categorie. Een klik op een specifieke balk maakt de onderliggende aantallen zichtbaar. Het bereik van de horizontale as van de grote grafiek is aan te passen door de twee tabmarkeringen te verslepen.
-
 
 <!-- **Hoe zijn de metingen te repliceren?**
 VOORBEELDQUERY HIER! -->
