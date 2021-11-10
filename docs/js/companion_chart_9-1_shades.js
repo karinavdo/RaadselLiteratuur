@@ -6,7 +6,7 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ch
   const yAxisTitle_nl = 'Aantal respondenten';
 
   const axisStyle = 'font-size:11pt; font-family:PT Sans;'
-  const scaleStyle = 'font-size:11pt; font-family:Helvetica Neue;'
+  const scaleStyle = 'font-size:11pt; font-family:PT Sans;'
 
   // data.forEach( function( d ) {
   //   d.resp_id = +d['respondent.id'];
