@@ -18,13 +18,22 @@ Interactieve grafiek ter verdieping van Grafiek 3.3 op p. 53 van *Het raadsel li
 
 <div class="chart_float" id="chart_3-4b_genre-reading-diversity"></div>
 
-Wat we in deze 'sunburst' zien zou de leesvoorkeur van de respondenten genoemd kunnen worden. In de binnenste cirkel zien we de respondenten verdeeld naar hun primaire voorkeur. Dat wil zeggen, ze worden in gedeeld in de categorie literatuur die ze het meeste (volgens eigen opgaaf) lezen. In de ring daar omheen zijn de boeken geteld die zij lazen in de andere categorieën.
+In deze grafiek proberen we te achterhalen hoe de deelnemers aan Het Nationale Lezersonderzoek hun aandacht hebben verdeeld over de vier verschillende genres uit het onderzoekscorpus. De samenstelling van het corpus is als volgt:
 
-We zien dus dat de groep lezers die het meeste kiest voor fictie verreweg de de meeste romans las. Ongeveer één op de vier keer maken zij een uitstap in het genre spanning, en in veel mindere mate lezen zij romantische of andere literatuur.
+- 147 boeken uit de categorie Literaire roman
+- 186 uit de categorie Spanning
+- 41 uit Romantiek
+- en 27 beschreven als Overige (meer hierover op p. 51-54 van *Het raadsel literatuur*.)
 
-Lezers die primair kiezen voor spannende literatuur, maken vaker een uitstapje naar literaire fictie. Bijna één op de drie boeken is in hun geval niet spanning, maar literaire fictie.
+De deelnemers gaven aan welke van de in totaal 401 boeken zij hadden gelezen. In de binnenste cirkel van de grafiek zijn de respondenten verdeeld naar hun primaire voorkeur: ze worden ingedeeld in de categorie waarvan ze de meeste titels aangaven te hebben gelezen. Dus alle lezers die vooral Spanning lazen, hebben samen 88,126 keer een boek uit die categorie aangevinkt als gelezen en alle lezers die vaker een Literaire roman lazen, komen samen uit op 151.244 gelezen romans uit die categorie. Hierbij moeten we het aantal boeken uit die categorie in gedachten houden: er zitten meer boeken uit de categorie Spanning in het corpus dan uit die van de Literaire roman. In de buitenste ring staat dan per hoofdcategorie het aantal boeken dat de betreffende deelnemers lazen in de andere categorieën. Dat de groepen Romantiek en Overige niet zo zichtbaar zijn, weerspiegelt de lage aantallen daarvan in het onderzoekscorpus.
 
-De lezers die primair kiezen voor romantische of overige literatuur lezen samen een marginaal aantal boeken vergeleken bij de andere lezers. Hier moet wel bij aangetekend worden dat we hier mogelijk een sterke zelf-selectie van het respondenten-publiek in terug zien. Het kan ook zijn dat we hier dan vooral zien dat lezers die primair romantische literatuur lezen niet goed vertegenwoordigd zijn in de survey, We kunnen deze grafiek ook in een relatieve variant gieten, zodat we wat beter zien hoe de verdeling over categorieën is voor deze lezers (zie onder).
+Voor lezers die vooral boeken uit de groepen Spanning en Literaire roman uit het corpus lezen, geeft de grafiek een aardig inzicht. We zien dat de groep lezers die het meeste kiest voor de Literaire roman verreweg de meeste romans las. Ongeveer één op de vier keer maken zij een uitstap in het genre Spanning, en in veel mindere mate lezen zij boeken uit het genre Romantiek of uit de verzamelgroep Overige.
+
+Lezers die primair kiezen voor Spanning maken vaker een uitstapje naar een Literaire roman. Bijna één op de drie boeken is in hun geval niet Spanning, maar een Literaire roman.
+
+De lezers die primair kiezen voor Romantiek of een boek uit de categorie Overige lezen samen een marginaal aantal boeken vergeleken bij de andere lezers. Hier speelt ongetwijfeld mee dat lezers die primair Romantiek lezen niet goed vertegenwoordigd zijn in de survey.
+
+Hieronder presenteren we deze grafiek in een relatieve variant, zodat beter is te zien hoe de verdeling over categorieën is voor deze lezers. Zo kunnen we het kwadrant rechtsboven, met de Literaire roman, als volgt lezen: voor lezers die vooral boeken uit de categorie Literaire roman lezen geld dat zij naast de 100 literaire romans die zij lezen ook 29 spannende boeken, 8 uit de categorie Overige en 2 uit de categorie Romantiek lezen.
 
 <div class="chart_float" id="chart_3-4b_genre-reading-diversity-rel"></div>
 
