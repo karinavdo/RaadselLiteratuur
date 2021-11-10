@@ -23,10 +23,8 @@ Interactieve versie van de grafiek op p. 53 van *Het raadsel literatuur*.
 <div class="chart_float" id="resp_read_suspense"></div>
 <div class="chart_float" id="resp_read_romantic"></div>
 <div class="chart_float" id="resp_read_other"></div>
-</div>
 
 
-Door te klikken op een van de vier kleine grafieken ziet u in de grotere grafiek daaronder meer informatie over de geselecteerde categorie. Een klik op een specifieke balk maakt de onderliggende aantallen zichtbaar. Het bereik van de horizontale as van de grote grafiek is aan te passen door de twee tabmarkeringen te verslepen.
 
 
 <!-- **Hoe zijn de metingen te repliceren?**
