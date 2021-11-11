@@ -7,6 +7,8 @@ title:  "Grafiek 5.2 Aantal beoordeelde boeken, onderscheiden naar geslacht aute
 ---
 Interactieve kleurenversie van de grafiek op p. 92 van *Het raadsel literatuur*.
 
+Door op de balken in de grafiek te klikken ziet u hoe vaak een boek van een vrouwelijke of mannelijke auteur is beoordeeld door vrouwelijke of mannelijke deelnemers aan Het Nationale Lezersonderzoek.
+
 <script src="https://d3js.org/d3.v6.min.js" defer></script>
 <script src="https://d3js.org/d3-scale.v3.min.js" defer></script>
 
