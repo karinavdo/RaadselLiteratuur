@@ -33,7 +33,7 @@ Lezers die primair kiezen voor Spanning maken vaker een uitstapje naar een Liter
 
 De lezers die primair kiezen voor Romantiek of een boek uit de categorie Overige lezen samen een marginaal aantal boeken vergeleken bij de andere lezers. Hier speelt ongetwijfeld mee dat lezers die primair Romantiek lezen niet goed vertegenwoordigd zijn in de survey.
 
-Hieronder presenteren we deze grafiek in een relatieve variant, zodat beter is te zien hoe de verdeling over categorieën is voor deze lezers. Zo kunnen we het kwadrant rechtsboven, met de Literaire roman, als volgt lezen: voor lezers die vooral boeken uit de categorie Literaire roman lezen geld dat zij naast de 100 literaire romans die zij lezen ook 29 spannende boeken, 8 uit de categorie Overige en 2 uit de categorie Romantiek lezen.
+Hieronder presenteren we deze grafiek in een relatieve variant, zodat beter is te zien hoe de verdeling over categorieën is voor deze lezers. Zo kunnen we het kwadrant rechtsboven, met de Literaire roman, als volgt lezen: voor lezers die vooral boeken uit de categorie Literaire roman lezen geldt dat zij naast de 100 literaire romans die zij lezen ook 29 spannende boeken, 8 uit de categorie Overige en 2 uit de categorie Romantiek lezen.
 
 <div class="chart_float" id="chart_3-4b_genre-reading-diversity-rel"></div>
 
