@@ -16,4 +16,4 @@ Deze website is *work-in-progress* en wordt regelmatig aangevuld en bijgewerkt.
 
 De site is ontwikkeld door Joris van Zundert. De meeste bijdragen zijn van Karina van Dalen-Oskam, Joris van Zundert, Maciej Eder, en Saskia Lensink. Reacties? Mail [Karina van Dalen-Oskam](https://www.huygens.knaw.nl/medewerkers/karina-van-dalen-oskam/).
 
-*Laatst bijgewerkt op* 11 november 2021.
+*Laatst bijgewerkt op* 13 november 2021.
