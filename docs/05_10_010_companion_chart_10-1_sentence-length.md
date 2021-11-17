@@ -7,6 +7,8 @@ title:  "Grafiek 10.1 Gemiddelde zinslengte voor alle 401 boeken en Grafiek 10.2
 ---
 Interactieve kleurenversie van de grafieken op p. 274 en 275 van *Het raadsel literatuur*.
 
+Als u de muis boven een symbool in de grafiek laat rusten, wordt zichtbaar welk boek het betreft (de naam van de auteur en de titel van het boek).
+
 <style>
 path.regressionLine {
     stroke: #d85040;
