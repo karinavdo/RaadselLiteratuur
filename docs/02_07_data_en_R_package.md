@@ -11,7 +11,7 @@ R is een gratis software-omgeving waarin statistische analyses gedaan kunnen wor
 
 De nieuwste versie van het *litRiddle* R package is beschikbaar op CRAN (The Comprehensive R Archive Network). In R installeert u het package met de volgende opdracht:
 
-- install(litRiddle)<br>
+- install.packages("litRiddle")<br>
 
 Als u het package heeft geïnstalleerd, laadt u het als volgt:
 
