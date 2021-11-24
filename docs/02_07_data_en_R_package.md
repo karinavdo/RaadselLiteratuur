@@ -25,7 +25,7 @@ Het package is ontwikkeld door Maciej Eder en Saskia Lensink in samenwerking met
 
 **De data**
 
-De verzamelde gegevens zijn ondergebracht in drie verschillende tabellen: de tabel boeken (*books*), respondenten (*respondents*) en meningen (*reviews*). Elke tabel heeft een aantal kolommen met informatie. Die kolommen en veel van de informatie is in het Engels. Hieronder staan ze opgesomd, met een beschrijving van de inhoud in het Nederlands en met verwijzingen naar een uitvoeriger beschrijving in *Het raadsel literatuur*.
+De verzamelde gegevens zijn ondergebracht in vier verschillende tabellen: de tabel boeken (*books*), woordfrequenties (*frequencies*), respondenten (*respondents*) en meningen (*reviews*). Elke tabel heeft een aantal kolommen met informatie. Die kolommen en veel van de informatie is in het Engels. Hieronder staan ze opgesomd, met een beschrijving van de inhoud in het Nederlands en met verwijzingen naar een uitvoeriger beschrijving in *Het raadsel literatuur*.
 
 **Boeken (books)**
 
@@ -67,9 +67,9 @@ U kunt alle waarden in een kolom opvragen met bijvoorbeeld:
 23. **raw.TTR**  Type-token-ratio, de verhouding tussen aantal woordvoorkomens en aantal unieke woorden ter indicatie van de variatie in de woordenschat. De lengte van het boek heeft invloed op de TTR en maakt het lastg om de TTR van boeken van verschillende lengte met elkaar te vergelijken;
 24. **sampled.TTR**  Deze versie van TTR ondervindt minder invloed van verschil in boeklengte en heeft dus de voorkeur voor vergelijking van de omvang van de woordenschat in boeken van verschillende omvang.
 
-**Woordfrequentietabel**
+**Woordfrequenties (frequencies)**
 
-Een apart tabel bevat de woordfrequenties van alle 401 boeken.
+Deze tabel bevat de woordfrequenties van alle 401 boeken van de 5000 meest gebruikte woorden.
 
 **Respondenten (respondents)**
 
