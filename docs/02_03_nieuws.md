@@ -2,6 +2,10 @@
 title: "Nieuws"
 ---
 
+*6 April 2022*<br>
+**Atlas, NPO2<br>**
+Op 6 april 2022 geeft Karina van Dalen-Oskam antwoord op de vraag wat literatuur is in het wetenschapsprogramma Atlas. NPO2, 20.25 uur, https://www.ntr.nl/Atlas/439
+
 *11 November 2021*<br>
 **Lancering van *Het raadsel literatuur*<br>**
 

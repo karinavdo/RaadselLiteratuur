@@ -4,7 +4,7 @@
 
 title:  "Grafiek 11.4 Gemiddelde zinslengte voor de Nederlandse literaire romans en Grafiek 11.5 Zinslengtevariatie"
 ---
-Interactieve kleurenversie van de grafieken op p. 289 en 290 van *Het raadsel literatuur*.
+Interactieve kleurenversie van de grafieken op p. 289 en 290 van *Het raadsel literatuur*. In tegenstelling tot wat daar op p. 289 staat vermeld, zijn de 8 boekjes met apart uitgegeven langere verhalen wel meegenomen in deze grafieken (4 van vrouwelijke en 4 van mannelijke auteurs).
 
 Als u de muis boven een symbool in de grafiek laat rusten, wordt zichtbaar welk boek het betreft (de naam van de auteur en de titel van het boek).
 
