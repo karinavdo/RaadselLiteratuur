@@ -1,9 +1,12 @@
 d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/chart_9-1_shades.csv' ).then( function( data ) {
 
-  const xAxisTitle = 'Score';
-  const yAxisTitle = 'Number of respondents';
+  const xAxisTitle_en = 'Rating';
+  const yAxisTitle_en = 'Number of respondents';
   const xAxisTitle_nl = 'Score';
   const yAxisTitle_nl = 'Aantal respondenten';
+
+  const xAxisTitle = eval( 'xAxisTitle_' + LANG );
+  const yAxisTitle = eval( 'yAxisTitle_' + LANG );
 
   const axisStyle = 'font-size:11pt; font-family:PT Sans;'
   const scaleStyle = 'font-size:11pt; font-family:PT Sans;'
@@ -92,7 +95,7 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ch
       .append( 'text' )
         .attr( 'text-anchor', 'middle' )
         .attr( 'style', axisStyle ) // Was font-size: 80% which is smaller but looks way smarter!
-        .text( xAxisTitle_nl );
+        .text( xAxisTitle );
 
   // Render x and y axes labels
   // Compute the space left between axis ticks and edge of figure.
@@ -108,7 +111,7 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ch
         .attr( 'text-anchor', 'middle' )
         .attr( 'transform', 'rotate(-90)' )
         .attr( 'style', axisStyle )
-        .text( yAxisTitle_nl );
+        .text( yAxisTitle );
 
 
   // Let's try a legend
@@ -116,9 +119,19 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ch
   // Add one dot in the legend for each name.
   var keys = [ 'fifty_shades_grey', 'fifty_shades_darker',
                'fifty_shades_freed' ]
-  var keys_nl = { 'fifty_shades_grey': 'Vijftig tinten grijs',
-                  'fifty_shades_darker': 'Vijftig tinten donkerder',
-                  'fifty_shades_freed': 'Vijftig tinten vrij' }
+  var keys_locale = { 'fifty_shades_grey':
+                  { 'en': 'Fifty Shades Grey',
+                    'nl': 'Vijftig tinten grijs'
+                  },
+                  'fifty_shades_darker':
+                  { 'en': 'Fifty Shades Darker',
+                    'nl': 'Vijftig tinten donkerder'
+                  },
+                  'fifty_shades_freed':
+                  { 'en': 'Fifty Shades Freed',
+                    'nl': 'Vijftig tinten vrij'
+                  }
+                }
 
   var size = 17
   svg.selectAll( 'legend_key' )
@@ -129,7 +142,7 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ch
       .attr( 'y', function(d,i){ return 100 + i*( size+10 ) } ) // 100 is where the first dot appears. 25 is the distance between dots
       .attr( 'width', size )
       .attr( 'height', size )
-      .style( 'fill', function(d){ return color( keys_nl[ d ] ) } )
+      .style( 'fill', function(d){ return color( keys_locale[ d ]['nl'] ) } )
 
   // Add one dot in the legend for each name.
   svg.selectAll( 'legend_key_labels' )
@@ -139,7 +152,7 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ch
       .attr( 'x', 520 + size*1.2 )
       .attr( 'y', function(d,i){ return 105 + i*( size+10 ) + ( size/2 ) } ) // 100 is where the first dot appears. 25 is the distance between dots
       .attr( 'style', axisStyle )
-      .text( function(d){ return keys_nl[ d ] } )
+      .text( function(d){ return keys_locale[ d ][ LANG ] } )
       .attr( 'text-anchor', 'left' )
       .style( 'alignment-baseline', 'middle' )
 });

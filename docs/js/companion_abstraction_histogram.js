@@ -119,7 +119,7 @@ class Histogram{
       .append( 'text' )
         .attr( 'text-anchor', 'middle' )
         .attr( 'style', this.settings.axis_style )
-        .text( this.settings.x_axis_title_nl );
+        .text( eval( 'this.settings.x_axis_title_' + LANG ) );
 
     // Render y axis label.
     // Compute the space left between axis ticks and edge of figure.
@@ -135,7 +135,7 @@ class Histogram{
         .attr( 'text-anchor', 'middle' )
         .attr( 'transform', 'rotate(-90)' )
         .attr( 'style', this.settings.axis_style )
-        .text( this.settings.y_axis_title_nl );
+        .text( eval( 'this.settings.y_axis_title_' + LANG ) );
 
   } // End function render_histogram
 

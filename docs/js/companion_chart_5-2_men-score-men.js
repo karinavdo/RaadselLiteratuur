@@ -6,9 +6,12 @@ d3.csv( url_csv ).then( function( data ) {
   // Set some options.
   var options = {
     group_column: 'group',
-    group_labels: { 'author_man': 'man', 'author_woman': 'vrouw '},
+    group_labels_nl: { 'author_man': 'man', 'author_woman': 'vrouw '},
+    group_labels_en: { 'author_man': 'male', 'author_woman': 'female '},
     x_axis_title_nl: 'Auteur',
     y_axis_title_nl: 'Aantal beoordeelde boeken',
+    x_axis_title_en: 'Author',
+    y_axis_title_en: 'Number of rated books',
     y_max: 100000,
     num_y_ticks: 5,
     figure_height: 350,
@@ -16,7 +19,8 @@ d3.csv( url_csv ).then( function( data ) {
     // Only margin right is different, take care of this in differently
     // named default?
     plot_margin: { top: 20, right: 200, bottom: 70, left: 110 },
-    series_labels: { 'men_readers': 'Beoordelaar is man', 'women_readers': 'Beoordelaar is vrouw' },
+    series_labels_nl: { 'men_readers': 'Beoordelaar is man', 'women_readers': 'Beoordelaar is vrouw' },
+    series_labels_en: { 'men_readers': 'Reader is male', 'women_readers': 'Reader is female' },
     legend_x_adjust: -80
   }
   // Create the barchart.

@@ -12,6 +12,8 @@ d3.csv( url_csv ).then( function( data ) {
     y_max: 6000,
     x_axis_title_nl: 'Literaire roman',
     y_axis_title_nl: 'Respondenten',
+    x_axis_title_en: 'Literary novel',
+    y_axis_title_en: 'Respondents',
     num_x_ticks: 4,
     num_y_ticks: 4,
     figure_height: 220,
@@ -23,7 +25,9 @@ d3.csv( url_csv ).then( function( data ) {
   new Histogram( data, 'resp_read_fiction', options );
   var enlarger_options = {
     x_axis_title_nl: 'Literaire roman',
-    y_axis_title_nl: 'Respondenten'
+    y_axis_title_nl: 'Respondenten',
+    x_axis_title_en: 'Literary novel',
+    y_axis_title_en: 'Respondents',
   }
   d3.select( '#resp_read_fiction' )
     .on( 'click', function(){ enlarge( 'resp_read_fiction', enlarger_options ) } );

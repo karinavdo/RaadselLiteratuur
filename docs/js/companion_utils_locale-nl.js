@@ -1,3 +1,4 @@
+LANG = 'nl'; // options are: 'nl', 'en'.
 const locale = d3.formatLocale({
      'decimal': ',',
      'thousands': '.',

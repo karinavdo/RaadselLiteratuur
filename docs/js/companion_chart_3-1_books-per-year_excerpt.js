@@ -10,6 +10,8 @@ d3.csv( url_csv ).then( function( data ) {
   var options = {
     x_axis_title_nl: 'Aantal gelezen boeken per jaar',
     y_axis_title_nl: 'Aantal respondenten',
+    x_axis_title_en: 'Number of books read per year',
+    y_axis_title_en: 'Number of respondents',
     x_min: 0,
     x_max: 200
   }
