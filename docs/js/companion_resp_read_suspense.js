@@ -12,6 +12,8 @@ d3.csv( url_csv ).then( function( data ) {
     y_max: 6000,
     x_axis_title_nl: 'Spanning',
     y_axis_title_nl: 'Respondenten',
+    x_axis_title_en: 'Suspense',
+    y_axis_title_en: 'Respondents',
     num_x_ticks: 4,
     num_y_ticks: 4,
     figure_height: 220,
@@ -23,7 +25,9 @@ d3.csv( url_csv ).then( function( data ) {
   new Histogram( data, 'resp_read_suspense', options );
   var enlarger_options = {
     x_axis_title_nl: 'Spanning',
-    y_axis_title_nl: 'Respondenten'
+    y_axis_title_nl: 'Respondenten',
+    x_axis_title_en: 'Suspense',
+    y_axis_title_en: 'Respondents',
   }
   d3.select( '#resp_read_suspense' )
     .on( 'click', function(){ enlarge( 'resp_read_suspense', enlarger_options ) } )

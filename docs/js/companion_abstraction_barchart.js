@@ -50,8 +50,8 @@ class Barchart{
 
     // Add X axis.
     var group_labels = this.groups;
-    if( typeof this.settings.group_labels != 'undefined' ){
-      group_labels = group_labels.map( group => this.settings.group_labels[ group ] );
+    if( typeof eval( 'this.settings.group_labels_' + LANG ) != 'undefined' ){
+      group_labels = group_labels.map( group => eval( 'this.settings.group_labels_' + LANG )[ group ] );
     }
     this.x_scale = d3.scaleBand()
       .domain( group_labels )
@@ -104,9 +104,9 @@ class Barchart{
       .data( this.data )
       .enter()
       .append( 'g' )
-        .attr( 'transform', function(d) { return 'translate(' + _this.x_scale( data_group_name_to_group_label( d[_this.settings.group_column], _this.settings.group_labels ) ) + ',0)'; } )
+        .attr( 'transform', function(d) { return 'translate(' + _this.x_scale( data_group_name_to_group_label( d[_this.settings.group_column], eval( '_this.settings.group_labels_' + LANG  ) ) ) + ',0)'; } )
       .selectAll( 'rect' )
-      .data( function( d ){ return _this.subgroups.map( function( key ) { return { score: data_group_name_to_group_label( d[_this.settings.group_column], _this.settings.group_labels ), key: key, value: d[key] } } ) } )
+      .data( function( d ){ return _this.subgroups.map( function( key ) { return { score: data_group_name_to_group_label( d[_this.settings.group_column], eval( '_this.settings.group_labels_' + LANG ) ), key: key, value: d[key] } } ) } )
       .enter().append( 'rect' )
         .attr( 'x', function( d ){ return _this.x_subgroup( d.key ) } )
         .attr( 'y', function( d ){ return _this.y_scale( d.value ) } )
@@ -126,7 +126,7 @@ class Barchart{
       .append( 'text' )
         .attr( 'text-anchor', 'middle' )
         .attr( 'style', this.settings.axis_style ) // Was font-size: 80% which is smaller but looks way smarter!
-        .text( this.settings.x_axis_title_nl );
+        .text( eval( 'this.settings.x_axis_title_' + LANG ) );
 
     // Render y axis label.
     // Compute the space left between axis ticks and edge of figure.
@@ -142,15 +142,15 @@ class Barchart{
         .attr( 'text-anchor', 'middle' )
         .attr( 'transform', 'rotate(-90)' )
         .attr( 'style', this.settings.axis_style )
-        .text( this.settings.y_axis_title_nl );
+        .text( eval( 'this.settings.y_axis_title_' + LANG ) );
 
   } // End function render_barchart
 
 
   render_legend(){
     var keys = this.data.columns.slice(2);
-    if( typeof this.settings.series_labels != 'undefined' ){
-      keys = Object.keys( this.settings.series_labels );
+    if( typeof eval( 'this.settings.series_labels' + LANG ) != 'undefined' ){
+      keys = Object.keys( eval( 'this.settings.series_labels' + LANG ) );
     }
     var _this = this;
     this.key_size = 17;
@@ -175,8 +175,8 @@ class Barchart{
         .attr( 'y', function(d,i){ return 105 + i*( _this.key_size+10 ) + ( _this.key_size/2 ) } )
         .attr( 'style', this.settings.axis_style )
         .text( function(d){
-          if( typeof _this.settings.series_labels != 'undefined'){
-            return _this.settings.series_labels[ d ]
+          if( typeof eval( '_this.settings.series_labels_' + LANG ) != 'undefined'){
+            return eval( '_this.settings.series_labels_' + LANG )[ d ]
           } else {
             return d;
           }

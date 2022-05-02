@@ -1,9 +1,12 @@
 d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/chart_11-1_male-matthew.csv' ).then( function( data ) {
 
-  const xAxisTitle = 'Number of books read annually';
-  const yAxisTitle = 'Number of respondents';
+  const xAxisTitle_en = 'Rank in Top 10 per gender';
+  const yAxisTitle_en = 'Mean score for literary quality';
   const xAxisTitle_nl = 'Plaats in de Top 10 per geslacht';
   const yAxisTitle_nl = 'Gemiddelde score voor literaire kwaliteit';
+
+  const xAxisTitle = eval( 'xAxisTitle_' + LANG );
+  const yAxisTitle = eval( 'yAxisTitle_' + LANG );
 
   const axisStyle = 'font-size:11pt; font-family:PT Sans;'
   const scaleStyle = 'font-size:11pt; font-family:PT Sans;'
@@ -92,7 +95,7 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ch
       .append( 'text' )
         .attr( 'text-anchor', 'middle' )
         .attr( 'style', axisStyle ) // Was font-size: 80% which is smaller but looks way smarter!
-        .text( xAxisTitle_nl );
+        .text( xAxisTitle );
 
   // Render x and y axes labels
   // Compute the space left between axis ticks and edge of figure.
@@ -108,15 +111,24 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ch
         .attr( 'text-anchor', 'middle' )
         .attr( 'transform', 'rotate(-90)' )
         .attr( 'style', axisStyle )
-        .text( yAxisTitle_nl );
+        .text( yAxisTitle );
 
 
   // Let's try a legend
 
   // Add one dot in the legend for each name.
   var keys = [ 'score_m', 'score_f' ]
-  var keys_nl = { 'score_m': 'Auteur is man',
-                  'score_f': 'Auteur is vrouw' }
+  var keys_locale = { 'score_m':
+                      {
+                        'en': 'Author is male',
+                        'nl': 'Auteur is man'
+                      },
+                      'score_f':
+                      {
+                        'en': 'Author is female',
+                        'nl': 'Auteur is vrouw'
+                      }
+                    }
   var size = 17
   svg.selectAll( 'legend_key' )
     .data( keys )
@@ -136,7 +148,7 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ch
       .attr( 'x', 435 + size*1.2 )
       .attr( 'y', function(d,i){ return 105 + i*( size+10 ) + ( size/2 ) } ) // 100 is where the first dot appears. 25 is the distance between dots
       .attr( 'style', axisStyle )
-      .text( function(d){ return keys_nl[ d ] } )
+      .text( function(d){ return keys_locale[ d ][ LANG ] } )
       .attr( 'text-anchor', 'left' )
       .style( 'alignment-baseline', 'middle' )
 
@@ -148,10 +160,13 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ch
 
 d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/chart_11-2_male-matthew-all.csv' ).then( function( data ) {
 
-  const xAxisTitle = 'Number of books read annually';
-  const yAxisTitle = 'Number of respondents';
+  const xAxisTitle_en = 'Rank in Top 10 per gender';
+  const yAxisTitle_en = 'Mean score for literary quality';
   const xAxisTitle_nl = 'Plaats in de Top 10 per geslacht';
   const yAxisTitle_nl = 'Gemiddelde score voor literaire kwaliteit';
+
+  const xAxisTitle = eval( 'xAxisTitle_' + LANG );
+  const yAxisTitle = eval( 'yAxisTitle_' + LANG );
 
   const axisStyle = 'font-size:11pt; font-family:PT Sans;'
   const scaleStyle = 'font-size:11pt; font-family:PT Sans;'
@@ -232,7 +247,7 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ch
       .append( 'text' )
         .attr( 'text-anchor', 'middle' )
         .attr( 'style', axisStyle ) // Was font-size: 80% which is smaller but looks way smarter!
-        .text( xAxisTitle_nl );
+        .text( xAxisTitle );
 
   // Render x and y axes labels
   // Compute the space left between axis ticks and edge of figure.
@@ -248,15 +263,24 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ch
         .attr( 'text-anchor', 'middle' )
         .attr( 'transform', 'rotate(-90)' )
         .attr( 'style', axisStyle )
-        .text( yAxisTitle_nl );
+        .text( yAxisTitle );
 
 
   // Let's try a legend
 
   // Add one dot in the legend for each name.
   var keys = [ 'male_authors', 'female_authors' ];
-  var keys_nl = { 'male_authors': 'Auteur is man',
-                  'female_authors': 'Auteur is vrouw' };
+  var keys_locale = { 'male_authors':
+                      {
+                        'en': 'Author is male',
+                        'nl': 'Auteur is man'
+                      },
+                      'female_authors':
+                      {
+                        'en': 'Author is female',
+                        'nl': 'Auteur is vrouw'
+                      }
+                    }
   var size = 17
   svg.selectAll( 'legend_key' )
     .data( keys )
@@ -276,7 +300,7 @@ d3.csv( 'https://raw.githubusercontent.com/jorisvanzundert/riddle_d3/main/csv/ch
       .attr( 'x', 435 + size*1.2 )
       .attr( 'y', function(d,i){ return 105 + i*( size+10 ) + ( size/2 ) } ) // 100 is where the first dot appears. 25 is the distance between dots
       .attr( 'style', axisStyle )
-      .text( function(d){ return keys_nl[ d ] } )
+      .text( function(d){ return keys_locale[ d ][ LANG ] } )
       .attr( 'text-anchor', 'left' )
       .style( 'alignment-baseline', 'middle' )
 
