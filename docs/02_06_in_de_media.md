@@ -5,7 +5,7 @@ title: "In de media"
 
 Een overzicht van de aandacht in de media voor Karina van Dalen-Oskam, *Het raadsel literatuur. Is literaire kwaliteit meetbaar?*.
 
-**29 Arpil 2022** Karina van Dalen-Oskam, 'Wat is literatuur, James Worthy?' Een reactie op de column van James Worthy van 16 april 2022, in [Tzum](https://www.tzum.info/2022/04/column-karina-van-dalen-oskam-wat-is-literatuur-james-worthy/)
+**29 April 2022** Karina van Dalen-Oskam, 'Wat is literatuur, James Worthy?' Een reactie op de column van James Worthy van 16 april 2022, in [Tzum](https://www.tzum.info/2022/04/column-karina-van-dalen-oskam-wat-is-literatuur-james-worthy/)
 
 **16 April 2022** James Worthy is aan het denken gezet door een vraag van de redactie van Atlas en schrijft daarover in zijn [column in Nieuwe Revu](https://revu.nl/artikel/477183/wat-literatuur-dan-ook-mag-zijn-kennelijk-is-het-stervende) 'Wat literatuur dan ook mag zijn, kennelijk is het stervende'.
 
