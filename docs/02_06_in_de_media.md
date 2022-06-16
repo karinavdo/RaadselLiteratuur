@@ -5,11 +5,11 @@ title: "In de media"
 
 Een overzicht van de aandacht in de media voor Karina van Dalen-Oskam, *Het raadsel literatuur. Is literaire kwaliteit meetbaar?*.
 
-**Zomer 2022** Lisa Kuitert, recensie van K. van Dalen-Oskam, Het raadsel literatuur. Is literaire kwaliteit meetbaar? In [Boekman 2022-131, p. 58-60](https://www.boekman.nl/wp-content/uploads/2022/05/BM131_Boekbesprekingen.pdf).
+**Zomer 2022** Lisa Kuitert, recensie van K. van Dalen-Oskam, *Het raadsel literatuur. Is literaire kwaliteit meetbaar?* In [*Boekman* 2022-131, p. 58-60](https://www.boekman.nl/wp-content/uploads/2022/05/BM131_Boekbesprekingen.pdf).
 
-**29 April 2022** Karina van Dalen-Oskam, 'Wat is literatuur, James Worthy?' Een reactie op de column van James Worthy van 16 april 2022, in [Tzum](https://www.tzum.info/2022/04/column-karina-van-dalen-oskam-wat-is-literatuur-james-worthy/)
+**29 April 2022** Karina van Dalen-Oskam, 'Wat is literatuur, James Worthy?' Een reactie op de column van James Worthy van 16 april 2022, in [*Tzum*](https://www.tzum.info/2022/04/column-karina-van-dalen-oskam-wat-is-literatuur-james-worthy/)
 
-**16 April 2022** James Worthy is aan het denken gezet door een vraag van de redactie van Atlas en schrijft daarover in zijn [column in Nieuwe Revu](https://revu.nl/artikel/477183/wat-literatuur-dan-ook-mag-zijn-kennelijk-is-het-stervende) 'Wat literatuur dan ook mag zijn, kennelijk is het stervende'.
+**16 April 2022** James Worthy is aan het denken gezet door een vraag van de redactie van Atlas en schrijft daarover in zijn [column in *Nieuwe Revu*](https://revu.nl/artikel/477183/wat-literatuur-dan-ook-mag-zijn-kennelijk-is-het-stervende) 'Wat literatuur dan ook mag zijn, kennelijk is het stervende'.
 
 **6 April 2022** Op 6 april 2022 gaf Karina van Dalen-Oskam antwoord op de vraag wat literatuur is in het wetenschapsprogramma [Atlas](https://www.npostart.nl/wat-is-literatuur/06-04-2022/POMS_NTR_16866231).
 
