@@ -5,6 +5,8 @@ title: "In de media"
 
 Een overzicht van de aandacht in de media voor Karina van Dalen-Oskam, *Het raadsel literatuur. Is literaire kwaliteit meetbaar?*.
 
+**26 t/m 28 augustus 2022** Jerry Dewnarain, bespreking van *Het raadsel literatuur. Is literaire kwaliteit meetbaar?* In *De Ware Tijd*, weekendeditie van 26 t/m 28 augustus 2022, A11 (Literair, nr.1672, jrg. 37). Niet online beschikbaar.
+
 **Zomer 2022** Lisa Kuitert, recensie van K. van Dalen-Oskam, *Het raadsel literatuur. Is literaire kwaliteit meetbaar?* In [*Boekman* 2022-131, p. 58-60](https://www.boekman.nl/wp-content/uploads/2022/05/BM131_Boekbesprekingen.pdf).
 
 **29 April 2022** Karina van Dalen-Oskam, 'Wat is literatuur, James Worthy?' Een reactie op de column van James Worthy van 16 april 2022, in [*Tzum*](https://www.tzum.info/2022/04/column-karina-van-dalen-oskam-wat-is-literatuur-james-worthy/)
