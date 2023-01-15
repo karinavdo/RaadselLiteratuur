@@ -3,7 +3,11 @@ title: "In de media"
 
 ---
 
-Een overzicht van de aandacht in de media voor Karina van Dalen-Oskam, *Het raadsel literatuur. Is literaire kwaliteit meetbaar?*.
+Een overzicht van recensies van en aandacht in de media voor Karina van Dalen-Oskam, *Het raadsel literatuur. Is literaire kwaliteit meetbaar?*.
+
+**December 2022** Mathijs Sanders, 'Het raadsel vergroten'. Recensie van K. van Dalen-Oskam, *Het raadsel literatuur. Is literaire kwaliteit meetbaar?* In [*Tijdschrift voor Nederlandse Taal- en Letterkunde* 138 (2022), 4, p. 239-241](https://doi.org/10.5117/TNTL2022.4.005.SAND).
+
+**Najaar 2022** Lizet Duyvendak, Recensie van K. van Dalen-Oskam, *Het raadsel literatuur. Is literaire kwaliteit meetbaar?* In [*Nederlandse Letterkunde* 27 (2022), 2, p. 370-373](https://doi-org.proxy.uba.uva.nl/10.5117/NEDLET2022.2.005.DUYV).
 
 **26 t/m 28 augustus 2022** Jerry Dewnarain, bespreking van *Het raadsel literatuur. Is literaire kwaliteit meetbaar?* In *De Ware Tijd*, weekendeditie van 26 t/m 28 augustus 2022, A11 (Literair, nr.1672, jrg. 37). Niet online beschikbaar.
 
