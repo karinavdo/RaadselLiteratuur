@@ -3,7 +3,7 @@ title: "In de media"
 
 ---
 
-Een overzicht van de aandacht in de media voor Karina van Dalen-Oskam, *Het raadsel literatuur. Is literaire kwaliteit meetbaar?*.
+Overzicht van de aandacht in de media voor Karina van Dalen-Oskam, *Het raadsel literatuur. Is literaire kwaliteit meetbaar?*.
 
 **26 t/m 28 augustus 2022** Jerry Dewnarain, bespreking van *Het raadsel literatuur. Is literaire kwaliteit meetbaar?* In *De Ware Tijd*, weekendeditie van 26 t/m 28 augustus 2022, A11 (Literair, nr.1672, jrg. 37). Niet online beschikbaar.
 
