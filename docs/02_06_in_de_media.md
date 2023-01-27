@@ -3,9 +3,15 @@ title: "In de media"
 
 ---
 
-Overzicht van de aandacht in de media voor Karina van Dalen-Oskam, *Het raadsel literatuur. Is literaire kwaliteit meetbaar?*.
+Een overzicht van recensies van en aandacht in de media voor Karina van Dalen-Oskam, *Het raadsel literatuur. Is literaire kwaliteit meetbaar?*.
 
-**26 t/m 28 augustus 2022** Jerry Dewnarain, bespreking van *Het raadsel literatuur. Is literaire kwaliteit meetbaar?* In *De Ware Tijd*, weekendeditie van 26 t/m 28 augustus 2022, A11 (Literair, nr.1672, jrg. 37). Niet online beschikbaar.
+**Januari 2023** Kim Smeenk, 'Literaire kwaliteit tussen sociologische processen en talige kenmerken'. Recensie van K. van Dalen-Oskam, *Het raadsel literatuur. Is literaire kwaliteit meetbaar?* In [*Internationale Neerlandistiek*, Volume 60, Issue 3, Dec 2022, p. 326 - 329](https://doi.org/10.5117/IN2022.3.007.SMEE).
+
+**December 2022** Mathijs Sanders, 'Het raadsel vergroten'. Recensie van K. van Dalen-Oskam, *Het raadsel literatuur. Is literaire kwaliteit meetbaar?* In [*Tijdschrift voor Nederlandse Taal- en Letterkunde* 138 (2022), 4, p. 239-241](https://doi.org/10.5117/TNTL2022.4.005.SAND).
+
+**Najaar 2022** Lizet Duyvendak, Recensie van K. van Dalen-Oskam, *Het raadsel literatuur. Is literaire kwaliteit meetbaar?* In [*Nederlandse Letterkunde* 27 (2022), 2, p. 370-373](https://doi-org.proxy.uba.uva.nl/10.5117/NEDLET2022.2.005.DUYV).
+
+**26 t/m 28 augustus 2022** Jerry Dewnarain, bespreking van *Het raadsel literatuur. Is literaire kwaliteit meetbaar?* In *De Ware Tijd*, weekendeditie van 26 t/m 28 augustus 2022, A11 (Literair, nr.1672, jrg. 37). Online verschenen in [*Caraïbisch uitzicht*, blog van de werkgroep caraïbische letteren](https://werkgroepcaraibischeletteren.nl/het-raadsel-literatuur-is-literaire-kwaliteit-meetbaar/).
 
 **Zomer 2022** Lisa Kuitert, recensie van K. van Dalen-Oskam, *Het raadsel literatuur. Is literaire kwaliteit meetbaar?* In [*Boekman* 2022-131, p. 58-60](https://www.boekman.nl/wp-content/uploads/2022/05/BM131_Boekbesprekingen.pdf).
 
