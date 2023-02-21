@@ -30,7 +30,7 @@ function save_chart( chart_element_id ) {
 
   var close_button = document.createElement( 'img' );
   close_button.setAttribute( 'id', 'close_button' );
-  close_button.setAttribute( 'src', '/riddle_d3/public/close.svg' );
+  close_button.setAttribute( 'src', 'public/close.svg' );
   close_button.setAttribute( 'style', 'position:absolute;left:10px;top:10px;width:30px;height:30px;z-index:21;' );
   close_button.setAttribute( 'onclick', "elem=document.querySelector( '#modal_canvas' );document.body.removeChild(elem);" );
   canvas_modal.appendChild( close_button );
