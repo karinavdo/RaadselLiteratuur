@@ -5,7 +5,7 @@ title: "In de media"
 
 Een overzicht van recensies van en aandacht in de media voor Karina van Dalen-Oskam, *Het raadsel literatuur. Is literaire kwaliteit meetbaar?*.
 
-**Januari 2023** Kim Smeenk, 'Literaire kwaliteit tussen sociologische processen en talige kenmerken'. Recensie van K. van Dalen-Oskam, *Het raadsel literatuur. Is literaire kwaliteit meetbaar?* In [*Internationale Neerlandistiek*, Volume 60, Issue 3, Dec 2022, p. 326 - 329](https://doi.org/10.5117/IN2022.3.007.SMEE.
+**Januari 2023** Kim Smeenk, 'Literaire kwaliteit tussen sociologische processen en talige kenmerken'. Recensie van K. van Dalen-Oskam, *Het raadsel literatuur. Is literaire kwaliteit meetbaar?* In [*Internationale Neerlandistiek*, Volume 60, Issue 3, Dec 2022, p. 326 - 329](https://doi.org/10.5117/IN2022.3.007.SMEE).
 
 **December 2022** Mathijs Sanders, 'Het raadsel vergroten'. Recensie van K. van Dalen-Oskam, *Het raadsel literatuur. Is literaire kwaliteit meetbaar?* In [*Tijdschrift voor Nederlandse Taal- en Letterkunde* 138 (2022), 4, p. 239-241](https://doi.org/10.5117/TNTL2022.4.005.SAND).
 
